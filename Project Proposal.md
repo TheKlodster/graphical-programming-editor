@@ -1,5 +1,6 @@
 # A Graphical Programming Language Editor
 
+<sup>Klodiano Gjergji</sup> <br>
 <sup>Candidate Number: 198719</sup> <br>
 <sup>Supervisor: Dr Ian Mackie</sup>
 
@@ -24,6 +25,7 @@ I am going to program this is Java, my most experienced language, making use of 
 ## Objectives
 
 The main objectives are:
+
 1. To investigate system requirements and produce a requirements specification.
 2. To select and justify an appropiate research design for the project.
 3. Implement a simple user-friendly interface which is easy to use.
@@ -38,19 +40,9 @@ The main objectives are:
 
 ## Relevance
 
-This project involves modules across my degree, from further programming and
+This project involves modules across my degree, as well as Java; the most extensively used language across my university education thus far. This project will use skills learnt in Human Computer Interaction; test my ability to understand the user's perspective and struggles, involving the evaluation of the software, rather than my own when designing the interface for them to use.
 
-This project will test my ability to understand the user's perspective and struggles, rather than my own when designing the interface for them to use.
-
-
-
-
-
-
-
-This project not only involves the development of software, but also involves analysis and evaluation of software, HCI design principles, user-testing and the potential for the development of network tools. This project will test not only my technical skills as a programmer but also my ability to critically assess my work and the work of others, organise and conduct user-testing, gather requirements via interviews and manage an agile-developed project using user-centered design. Thereby, this project will test my ability to utilise many of the skills of my degree in a way they are likely to be utilised beyond my university education.
-
-As a TTRPG player of 7 years, with 4 of which as a Game Master, this project also incorporates my personal hobbies and interests. The first games I ever played in used digital tools to facilitate play and I have been using digital tools in my own games for two and a half years now. I personally use 7 separate pieces of software to facilitate my games and there are still several things I wish my software could do and many things I wish could be integrated between them. This project provides me the opportunity to attempt to solve a problem I have encountered in my own life by bringing my technical skills and my personal interests together.
+This project also incorporates key concepts understood from Software Engineering. The ability to criticse my own work, collect requirements, manage time and manage an agile approach to the project. Therefore, this project will test my ability to make use of several skills in such a way that they will be used outside of my university education.
 
 ## Resources Required
 
@@ -58,3 +50,8 @@ None, I think haha but pretty sure no resources required.
 
 ## Personal Timetable
 
+<center>
+
+<img src="https://i.gyazo.com/4fad9900f87b226ee8494f0e7b10be42.png">
+
+</center>
