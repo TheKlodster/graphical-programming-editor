@@ -1,17 +1,17 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
-[1] Config.pm:307> INFO - Logfile is 'interim-report.blg'
-[175] biber-MSWIN32:322> INFO - === 
-[219] Biber.pm:415> INFO - Reading 'interim-report.bcf'
-[486] Biber.pm:943> INFO - Found 1 citekeys in bib section 0
-[529] Biber.pm:4256> INFO - Processing section 0
-[529] Utils.pm:75> INFO - Globbing data source 'bibliography.bib'
-[554] Utils.pm:91> INFO - Globbed data source 'bibliography.bib' to bibliography.bib
-[584] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[588] bibtex.pm:1653> INFO - LaTeX decoding ...
-[598] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliography.bib'
-[667] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[668] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[669] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[669] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[673] bbl.pm:652> INFO - Writing 'interim-report.bbl' with encoding 'UTF-8'
-[675] bbl.pm:755> INFO - Output to interim-report.bbl
+[0] Config.pm:307> INFO - Logfile is 'interim-report.blg'
+[132] biber-MSWIN32:322> INFO - === 
+[164] Biber.pm:415> INFO - Reading 'interim-report.bcf'
+[363] Biber.pm:943> INFO - Found 3 citekeys in bib section 0
+[394] Biber.pm:4256> INFO - Processing section 0
+[395] Utils.pm:75> INFO - Globbing data source 'bibliography.bib'
+[496] Utils.pm:91> INFO - Globbed data source 'bibliography.bib' to bibliography.bib
+[534] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[539] bibtex.pm:1653> INFO - LaTeX decoding ...
+[550] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliography.bib'
+[622] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[623] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[624] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[624] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[629] bbl.pm:652> INFO - Writing 'interim-report.bbl' with encoding 'UTF-8'
+[632] bbl.pm:755> INFO - Output to interim-report.bbl

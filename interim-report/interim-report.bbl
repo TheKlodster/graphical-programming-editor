@@ -19,6 +19,28 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{adafruit}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b12bdafdffdac908da089beae7e62403}{%
+           family={Albritton},
+           familyi={A\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{b12bdafdffdac908da089beae7e62403}
+      \strng{fullhash}{b12bdafdffdac908da089beae7e62403}
+      \strng{bibnamehash}{b12bdafdffdac908da089beae7e62403}
+      \strng{authorbibnamehash}{b12bdafdffdac908da089beae7e62403}
+      \strng{authornamehash}{b12bdafdffdac908da089beae7e62403}
+      \strng{authorfullhash}{b12bdafdffdac908da089beae7e62403}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{https://learn.adafruit.com/mit-app-inventor-and-particle-io}
+      \field{title}{What is App Inventor?}
+      \field{year}{2018}
+    \endentry
     \entry{dehouck2015maturity}{article}{}
       \name{author}{1}{}{%
         {{hash=2468a3441f11066e881748aa65c8614e}{%
@@ -37,9 +59,31 @@
       \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{http://www. craft. ai/blog/the-maturity-of-visualprogramming}
+      \field{journaltitle}{http://www.craft.ai/blog/the-maturity-of-visualprogramming}
       \field{title}{The maturity of visual programming}
       \field{year}{2015}
+    \endentry
+    \entry{thescratchteam}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2969c9c9cf15950cdacbc2f57962dc04}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={The\bibnamedelima Scratch},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{2969c9c9cf15950cdacbc2f57962dc04}
+      \strng{fullhash}{2969c9c9cf15950cdacbc2f57962dc04}
+      \strng{bibnamehash}{2969c9c9cf15950cdacbc2f57962dc04}
+      \strng{authorbibnamehash}{2969c9c9cf15950cdacbc2f57962dc04}
+      \strng{authornamehash}{2969c9c9cf15950cdacbc2f57962dc04}
+      \strng{authorfullhash}{2969c9c9cf15950cdacbc2f57962dc04}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{https://www.medium.com/scratchteam-blog/3-things-to-know-about-scratch-3-0-18ee2f564278}
+      \field{title}{3 Things To Know About Scratch 3.0}
+      \field{year}{2018}
     \endentry
   \enddatalist
 \endrefsection

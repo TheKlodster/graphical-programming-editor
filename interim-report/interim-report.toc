@@ -2,18 +2,26 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Introduction}{1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1}Project Aim and Objectives}{1}%
+\contentsline {subsection}{\numberline {1.1}Aims}{2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Professional and Ethical Considerations}{1}%
+\contentsline {subsection}{\numberline {1.2}Objectives}{2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Related Work}{1}%
+\contentsline {subsection}{\numberline {1.3}Problem Area}{3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Requirements Analysis}{2}%
+\contentsline {subsection}{\numberline {1.4}Expected Outcomes}{3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Project Plan}{2}%
+\contentsline {section}{\numberline {2}Professional and Ethical Considerations}{3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Interim Log}{2}%
+\contentsline {section}{\numberline {3}Related Work}{4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Appendices}{2}%
+\contentsline {section}{\numberline {4}Requirements Analysis}{5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Project Proposal}{2}%
+\contentsline {subsection}{\numberline {4.1}Mandatory Requirements}{5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Project Plan}{6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Interim Log}{6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Appendices}{6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1}Project Proposal}{6}%
