@@ -1,3 +1,3 @@
-# Final Year Project
+# A Graphical Programming Editor
 
-My final year project.
+This is my 3rd Year Project for my MComp at the University of Sussex, where I will be designing and implementing a Graphical Programming Editor in Java!

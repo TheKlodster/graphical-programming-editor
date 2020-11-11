@@ -2185,6 +2185,17 @@
     <bcf:citekey order="1">dehouck2015maturity</bcf:citekey>
     <bcf:citekey order="2">thescratchteam</bcf:citekey>
     <bcf:citekey order="3">adafruit</bcf:citekey>
+    <bcf:citekey order="4">maloney2010scratch</bcf:citekey>
+    <bcf:citekey order="5">xie2016skill</bcf:citekey>
+    <bcf:citekey order="6">park2019comparing</bcf:citekey>
+    <bcf:citekey order="7">park2019comparing</bcf:citekey>
+    <bcf:citekey order="8">park2019comparing</bcf:citekey>
+    <bcf:citekey order="9">nbcbayarea</bcf:citekey>
+    <bcf:citekey order="10">blockly</bcf:citekey>
+    <bcf:citekey order="11">blockly</bcf:citekey>
+    <bcf:citekey order="12">fraser2015ten</bcf:citekey>
+    <bcf:citekey order="13">pasternak2017tips</bcf:citekey>
+    <bcf:citekey order="14">gregoryvisual</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

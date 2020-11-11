@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.18)  8 NOV 2020 17:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.18)  11 NOV 2020 13:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -407,55 +407,143 @@ File: ./images/app_inventor.png Graphic file (type png)
 <use ./images/app_inventor.png>
 Package pdftex.def Info: ./images/app_inventor.png  used on input line 74.
 (pdftex.def)             Requested size: 426.79134pt x 320.0989pt.
+ [2
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--96
-
- []
-
-[2
-
- <./images/app_inventor.png (PNG copy)>] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 138--144
+ <./images/app_inventor.png (PNG copy)>] [3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 167--184
 
  []
 
-[4]
-Overfull \hbox (17.00328pt too wide) in paragraph at lines 156--169
-[][] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--184
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--184
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--184
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--184
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--184
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--184
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--184
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--184
+
  []
 
 [5
 
 ]
-Overfull \hbox (15.12103pt too wide) in paragraph at lines 200--200
+<./images/scratch_blocks.png, id=32, 152.82094pt x 86.57344pt>
+File: ./images/scratch_blocks.png Graphic file (type png)
+<use ./images/scratch_blocks.png>
+Package pdftex.def Info: ./images/scratch_blocks.png  used on input line 196.
+(pdftex.def)             Requested size: 152.82054pt x 86.57321pt.
+<./images/scratch_vs_appinventor.png, id=34, 437.83575pt x 159.35535pt>
+File: ./images/scratch_vs_appinventor.png Graphic file (type png)
+<use ./images/scratch_vs_appinventor.png>
+Package pdftex.def Info: ./images/scratch_vs_appinventor.png  used on input line 212.
+(pdftex.def)             Requested size: 355.65944pt x 129.45157pt.
+ [6
+
+ <./images/scratch_blocks.png> <./images/scratch_vs_appinventor.png>]
+<./images/blockly.png, id=39, 1606.0pt x 903.375pt>
+File: ./images/blockly.png Graphic file (type png)
+<use ./images/blockly.png>
+Package pdftex.def Info: ./images/blockly.png  used on input line 247.
+(pdftex.def)             Requested size: 426.79134pt x 240.06866pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7
+
+] [8 <./images/blockly.png (PNG copy)>]
+<./images/lowercase_convention.png, id=47, 160.34906pt x 59.47218pt>
+File: ./images/lowercase_convention.png Graphic file (type png)
+<use ./images/lowercase_convention.png>
+Package pdftex.def Info: ./images/lowercase_convention.png  used on input line 274.
+(pdftex.def)             Requested size: 160.34866pt x 59.47203pt.
+ [9
+
+ <./images/lowercase_convention.png>]
+Overfull \hbox (33.46559pt too wide) in paragraph at lines 292--306
+[][] 
+ []
+
+[10
+
+] [11
+
+]
+<./images/gantt_chart.png, id=59, 510.27pt x 286.014pt>
+File: ./images/gantt_chart.png Graphic file (type png)
+<use ./images/gantt_chart.png>
+Package pdftex.def Info: ./images/gantt_chart.png  used on input line 338.
+(pdftex.def)             Requested size: 426.79134pt x 239.2289pt.
+ [12
+
+ <./images/gantt_chart.png>]
+Overfull \hbox (15.13611pt too wide) in paragraph at lines 376--376
+\OT1/cmr/m/n/12 tions''. In: \OT1/cmr/m/it/12 https://medium.com/vapurrmaid/visual-programming-version-control-future-
+ []
+
+
+Overfull \hbox (20.99597pt too wide) in paragraph at lines 376--376
 []\OT1/cmr/m/n/12 REMI De-houck. ``The ma-tu-rity of vi-sual pro-gram-ming''. In: \OT1/cmr/m/it/12 http://www.craft.ai/blog/the-
  []
 
 
-Overfull \hbox (82.85745pt too wide) in paragraph at lines 200--200
+Overfull \hbox (60.31155pt too wide) in paragraph at lines 376--376
+[]\OT1/cmr/m/n/12 ``Google's Blockly Teaches You to Cre-ate Apps''. In: \OT1/cmr/m/it/12 https://www.nbcbayarea.com/news/national-
+ []
+
+
+Overfull \hbox (88.73239pt too wide) in paragraph at lines 376--376
 []\OT1/cmr/m/n/12 The Scratch Team. ``3 Things To Know About Scratch 3.0''. In: \OT1/cmr/m/it/12 https://www.medium.com/scratchteam-
  []
 
-[6
-
-] (d:/Klodi/Documents/computer-science-project/interim-report/interim-report.aux)
+[13] [14] (d:/Klodi/Documents/computer-science-project/interim-report/interim-report.aux)
 Package logreq Info: Writing requests to 'interim-report.run.xml'.
 \openout1 = `interim-report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 10096 strings out of 480994
- 181590 string characters out of 5916032
- 808506 words of memory out of 5000000
- 25520 multiletter control sequences out of 15000+600000
- 538190 words of font info for 43 fonts, out of 8000000 for 9000
+ 10148 strings out of 480994
+ 183262 string characters out of 5916032
+ 807952 words of memory out of 5000000
+ 25566 multiletter control sequences out of 15000+600000
+ 538359 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,14n,46p,895b,1286s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on d:/Klodi/Documents/computer-science-project/interim-report/interim-report.pdf (8 pages, 344851 bytes).
+ 38i,14n,46p,895b,1287s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on d:/Klodi/Documents/computer-science-project/interim-report/interim-report.pdf (16 pages, 1782232 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 92 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

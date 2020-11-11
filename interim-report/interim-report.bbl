@@ -41,6 +41,28 @@
       \field{title}{What is App Inventor?}
       \field{year}{2018}
     \endentry
+    \entry{gregoryvisual}{article}{}
+      \name{author}{1}{}{%
+        {{hash=fd27081366f4a1b1eaa9b542c2d05e09}{%
+           family={Barkans},
+           familyi={B\bibinitperiod},
+           given={Gregory},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd27081366f4a1b1eaa9b542c2d05e09}
+      \strng{fullhash}{fd27081366f4a1b1eaa9b542c2d05e09}
+      \strng{bibnamehash}{fd27081366f4a1b1eaa9b542c2d05e09}
+      \strng{authorbibnamehash}{fd27081366f4a1b1eaa9b542c2d05e09}
+      \strng{authornamehash}{fd27081366f4a1b1eaa9b542c2d05e09}
+      \strng{authorfullhash}{fd27081366f4a1b1eaa9b542c2d05e09}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{https://medium.com/vapurrmaid/visual-programming-version-control-future-considerations-b18c9a49c187}
+      \field{title}{Visual Programming and Version Control: Future Considerations}
+      \field{year}{2018}
+    \endentry
     \entry{dehouck2015maturity}{article}{}
       \name{author}{1}{}{%
         {{hash=2468a3441f11066e881748aa65c8614e}{%
@@ -63,6 +85,161 @@
       \field{title}{The maturity of visual programming}
       \field{year}{2015}
     \endentry
+    \entry{fraser2015ten}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=a15029ab2bd6d2b9bb9f258ca6f4d39b}{%
+           family={Fraser},
+           familyi={F\bibinitperiod},
+           given={Neil},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{a15029ab2bd6d2b9bb9f258ca6f4d39b}
+      \strng{fullhash}{a15029ab2bd6d2b9bb9f258ca6f4d39b}
+      \strng{bibnamehash}{a15029ab2bd6d2b9bb9f258ca6f4d39b}
+      \strng{authorbibnamehash}{a15029ab2bd6d2b9bb9f258ca6f4d39b}
+      \strng{authornamehash}{a15029ab2bd6d2b9bb9f258ca6f4d39b}
+      \strng{authorfullhash}{a15029ab2bd6d2b9bb9f258ca6f4d39b}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 IEEE Blocks and Beyond Workshop (Blocks and Beyond)}
+      \field{title}{Ten things we've learned from Blockly}
+      \field{year}{2015}
+      \field{pages}{49\bibrangedash 50}
+      \range{pages}{2}
+    \endentry
+    \entry{nbcbayarea}{article}{}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{https://www.nbcbayarea.com/news/national-international/googles-blockly-teaches-you-to-create-apps/1918242/}
+      \field{title}{Google's Blockly Teaches You to Create Apps}
+      \field{year}{2012}
+    \endentry
+    \entry{maloney2010scratch}{article}{}
+      \name{author}{5}{}{%
+        {{hash=de2860fd9460947e14283ce60dfbb8f1}{%
+           family={Maloney},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=233322a94fdc535f0974d3219e0defcf}{%
+           family={Resnick},
+           familyi={R\bibinitperiod},
+           given={Mitchel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d08f95c85f2a628c949e9b873336c7f1}{%
+           family={Rusk},
+           familyi={R\bibinitperiod},
+           given={Natalie},
+           giveni={N\bibinitperiod}}}%
+        {{hash=7774a75ded80a2cb4d96fe9d19a77c32}{%
+           family={Silverman},
+           familyi={S\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=34568b279c4fa97714a18ccb1aba4727}{%
+           family={Eastmond},
+           familyi={E\bibinitperiod},
+           given={Evelyn},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY, USA}%
+      }
+      \strng{namehash}{ce6be3ab03c7afbb3ef06fa4ae81e0d4}
+      \strng{fullhash}{82f086bde835bde8f9c572fa5b05d57c}
+      \strng{bibnamehash}{ce6be3ab03c7afbb3ef06fa4ae81e0d4}
+      \strng{authorbibnamehash}{ce6be3ab03c7afbb3ef06fa4ae81e0d4}
+      \strng{authornamehash}{ce6be3ab03c7afbb3ef06fa4ae81e0d4}
+      \strng{authorfullhash}{82f086bde835bde8f9c572fa5b05d57c}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Transactions on Computing Education (TOCE)}
+      \field{number}{4}
+      \field{title}{The scratch programming language and environment}
+      \field{volume}{10}
+      \field{year}{2010}
+      \field{pages}{1\bibrangedash 15}
+      \range{pages}{15}
+    \endentry
+    \entry{park2019comparing}{article}{}
+      \name{author}{2}{}{%
+        {{hash=3c5774d33c5fe1ee84559023c3834d16}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Youngki},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=17b5f9099ef845ffee94d6c97f7ab79e}{%
+           family={Shin},
+           familyi={S\bibinitperiod},
+           given={Youhyun},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
+      \strng{namehash}{c59e8d2b6fb57da8f600b26fd78c7e4c}
+      \strng{fullhash}{c59e8d2b6fb57da8f600b26fd78c7e4c}
+      \strng{bibnamehash}{c59e8d2b6fb57da8f600b26fd78c7e4c}
+      \strng{authorbibnamehash}{c59e8d2b6fb57da8f600b26fd78c7e4c}
+      \strng{authornamehash}{c59e8d2b6fb57da8f600b26fd78c7e4c}
+      \strng{authorfullhash}{c59e8d2b6fb57da8f600b26fd78c7e4c}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronics}
+      \field{number}{11}
+      \field{title}{Comparing the Effectiveness of Scratch and App Inventor with Regard to Learning Computational Thinking Concepts}
+      \field{volume}{8}
+      \field{year}{2019}
+      \field{pages}{1269}
+      \range{pages}{1}
+    \endentry
+    \entry{pasternak2017tips}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=2530df6653630ecf63f467fbbcfc8d4b}{%
+           family={Pasternak},
+           familyi={P\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+        {{hash=4b137416541df3e86f0b996a083a7833}{%
+           family={Fenichel},
+           familyi={F\bibinitperiod},
+           given={Rachel},
+           giveni={R\bibinitperiod}}}%
+        {{hash=232fa40e4d889ceb116077e24d4db2eb}{%
+           family={Marshall},
+           familyi={M\bibinitperiod},
+           given={Andrew\bibnamedelima N},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{4c092f071cdd9c56a50947d525cc147c}
+      \strng{fullhash}{4c092f071cdd9c56a50947d525cc147c}
+      \strng{bibnamehash}{4c092f071cdd9c56a50947d525cc147c}
+      \strng{authorbibnamehash}{4c092f071cdd9c56a50947d525cc147c}
+      \strng{authornamehash}{4c092f071cdd9c56a50947d525cc147c}
+      \strng{authorfullhash}{4c092f071cdd9c56a50947d525cc147c}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 IEEE Blocks and Beyond Workshop (B\&B)}
+      \field{title}{Tips for creating a block language with blockly}
+      \field{year}{2017}
+      \field{pages}{21\bibrangedash 24}
+      \range{pages}{4}
+    \endentry
     \entry{thescratchteam}{article}{}
       \name{author}{1}{}{%
         {{hash=2969c9c9cf15950cdacbc2f57962dc04}{%
@@ -84,6 +261,46 @@
       \field{journaltitle}{https://www.medium.com/scratchteam-blog/3-things-to-know-about-scratch-3-0-18ee2f564278}
       \field{title}{3 Things To Know About Scratch 3.0}
       \field{year}{2018}
+    \endentry
+    \entry{blockly}{article}{}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{https://developers.google.com/blockly}
+      \field{title}{Try Blockly}
+      \field{year}{2020}
+    \endentry
+    \entry{xie2016skill}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=02151d33c852d154657147a3e09cbcf9}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=82a6b5a0194e9c1d60a9e2198e41af5a}{%
+           family={Abelson},
+           familyi={A\bibinitperiod},
+           given={Hal},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{0e559746303214ccb896d93012654197}
+      \strng{fullhash}{0e559746303214ccb896d93012654197}
+      \strng{bibnamehash}{0e559746303214ccb896d93012654197}
+      \strng{authorbibnamehash}{0e559746303214ccb896d93012654197}
+      \strng{authornamehash}{0e559746303214ccb896d93012654197}
+      \strng{authorfullhash}{0e559746303214ccb896d93012654197}
+      \field{sortinit}{X}
+      \field{sortinithash}{e90038f30fa4b9ce59606fc8347e3cc7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2016 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)}
+      \field{title}{Skill progression in MIT app inventor}
+      \field{year}{2016}
+      \field{pages}{213\bibrangedash 217}
+      \range{pages}{5}
     \endentry
   \enddatalist
 \endrefsection

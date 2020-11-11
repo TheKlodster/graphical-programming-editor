@@ -17,6 +17,8 @@ The aim of this project is to design and implement a user friendly interface for
   - this includes <code>for</code> and <code>while</code> loops.
 - conditional statements, such as <code>if</code>.
 - implementing and interacting with data structures, such as lists.
+- procedures like methods/functions.
+- variables!
 
 This is necessary as it provides another programming viewpoint for the user, which can aid them understand the process and flow of how said program may be running. It is also friendly and less intimidating for newer users, relative to a textual/command line script.
 
