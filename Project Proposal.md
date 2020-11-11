@@ -9,7 +9,7 @@ The motivation behind this project it that it will push my Java programming skil
 
 This project will further put content learnt from modules in my degree to practice. Time management techniques from Software Engineering will help me manage when and what I should be focusing on. Furthermore, concepts learnt from Human Computer Interaction will aid me in focussing on user design for the user's goals; implementing a user interface that everyone will be able to use effectively.
 
-Finally, the ability to use Java this extensively will most definitely improve my proficiency of the skill.
+Finally, the ability to use Java this extensively will most definitely improve my proficiency of the skill!
 
 ## Aims
 The aim of this project is to design and implement a user friendly interface for the user to graphically program basic functions. Simple functions may include:
