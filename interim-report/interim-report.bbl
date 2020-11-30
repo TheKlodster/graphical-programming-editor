@@ -240,6 +240,35 @@
       \field{pages}{21\bibrangedash 24}
       \range{pages}{4}
     \endentry
+    \entry{petre1995looking}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4f0e5169c48e02fa91be6f820f2eccb9}{%
+           family={Petre},
+           familyi={P\bibinitperiod},
+           given={Marian},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY, USA}%
+      }
+      \strng{namehash}{4f0e5169c48e02fa91be6f820f2eccb9}
+      \strng{fullhash}{4f0e5169c48e02fa91be6f820f2eccb9}
+      \strng{bibnamehash}{4f0e5169c48e02fa91be6f820f2eccb9}
+      \strng{authorbibnamehash}{4f0e5169c48e02fa91be6f820f2eccb9}
+      \strng{authornamehash}{4f0e5169c48e02fa91be6f820f2eccb9}
+      \strng{authorfullhash}{4f0e5169c48e02fa91be6f820f2eccb9}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications of the ACM}
+      \field{number}{6}
+      \field{title}{Why looking isn't always seeing: readership skills and graphical programming}
+      \field{volume}{38}
+      \field{year}{1995}
+      \field{pages}{33\bibrangedash 44}
+      \range{pages}{12}
+    \endentry
     \entry{thescratchteam}{article}{}
       \name{author}{1}{}{%
         {{hash=2969c9c9cf15950cdacbc2f57962dc04}{%

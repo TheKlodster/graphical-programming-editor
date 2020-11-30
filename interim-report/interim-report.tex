@@ -35,7 +35,7 @@
 
     \title{A Graphical Programming Language Editor}
     \author{Candidate No. 198719}
-    \date{November 3, 2020}
+    \date{Interim Report}
     \clearpage\maketitle
     \thispagestyle{empty}
 
@@ -108,17 +108,52 @@
         \subsection{Objectives}
             The main objectives are:
 
-            \subsubsection{To investigate system requirements to produce a requirements
+            \subsubsection{To investigate software requirements to produce a requirements
             specification.}
+                It is important to clarify what the software requirements are for this project as they
+                define whether this project will work or not. Without the mandatory requirements,
+                the game will not be properly functional. I investigated what requirements are mandatory
+                by doing research on existing softwares such as App Inventor and Blockly. For instance,
+                all softwares I found had a \texttt{run} button in order to be able to run the graphical
+                entities. Without this, how else is the canvas run? Of course it is not a big deal, and
+                there would probably be another solution, but it's a simple feature that also provides
+                simple UI for the user, which is self explanatory.
 
             \subsubsection{To select and justify an appropiate simple design for the
             project.}
-
+                This objective is to research other designs of similar projects and to understand
+                why their interface works well from a new user's perspective, but also why it
+                doesn't work very well. My knowledge in Human-Computer Interaction will help me
+                to focus on the design, and what defines a \textit{"user-friendly"} design.
+                The goal here isn't implementing the design, it's creating a design, on pen paper,
+                attempting to make it as self-explanatory as possible. But that also begs the question,
+                \textit{"what determines a self-explanatory design?"} It's important to realise that
+                everyone's judgement of what a simple design looks like is different. It's a subjective
+                topic but I must ensure I use the principles learnt from HCI about simple design and
+                user-friendly interaction to make a design at the best of my ability.
+            
             \subsubsection{Implement a simple interface for users which is easy to
             understand.}
+                An important objective, which builds off of \texttt{1.2.2}. I have limited GUI
+                experience, where the first and last GUI building I engaged with was in 2nd year,
+                Further Programming module, with Dr. Ian Wakeman. I spent a lot of time during that
+                assignment at the time focusing on a simple interface for the Futoshiki puzzle.
 
-            \subsubsection{Functional and working loops, conditionals and data structures
-            that can be interacted with.}
+                This objective will benefit me greatly. Through research and problems, I will
+                get through this objective and implement an interface, whether it be outstanding,
+                or just about finished, and I will gain a lot of knowledge and experience on
+                the way.
+
+            \subsubsection{Functional and working loops, conditionals, data structures and
+            variables that can be interacted with.}
+                What's the point of having a pretty canvas if you can't do anything with it?
+                This is the meat of the project, what's going to make the project be useful.
+                The main objective here is this one. My main priority is the ability to get
+                this project off its feet.
+                Variables for user's to be able to create and store data with, as well as
+                interact with within the project. Loops to allow the user to work with logic,
+                data structures that can be possibly altered, such as sorting. Without this
+                objective being met, it's just a pretty GUI with no functionality.
 
         \subsection{Problem Area}
             The main challenge of implementing an interface to be able to program on is the required 
@@ -155,6 +190,31 @@
                 \item interface - an interface for users to be able to interact with and perform the
                 above outcomes.
             \end{itemize}
+
+            What do we expect it to behave/look like? A blank canvas should appear upon starting, with
+            a heading on the left hand side, presenting the user with a selection of choice such as
+            \textit{"Loops, Procedures"} and so on, for each category of block. They will be able to click
+            on said heading, which will expand and show the different blocks they can choose from. So if
+            they chose the \textit{loops} heading (a draft name for now, I know), this will expand and show
+            for \& while loops for them to choose from.
+
+            An important point to address, is what will happen when the user runs the program? This is a key
+            concept which will be an ongoing investigation throughout the project. But the current idea is
+            simple: an output screen showing the terminal. Upon running, a heading on the right hand side,
+            or perhaps underneath, will pop out with the terminal showing you the output of your program.
+
+
+            \subsection{Relevance}
+            This project involves modules across my degree, as well as Java; the most extensively
+            used language across my university education thus far. This project will use skills learnt
+            in Human Computer Interaction; test my ability to understand the user's perspective and
+            struggles, involving the evaluation of the software, rather than my own when designing
+            the interface for them to use.
+        
+            This project also incorporates key concepts understood from Software Engineering.
+            The ability to criticse my own work, collect requirements, manage time and manage an
+            agile approach to the project. Therefore, this project will test my ability to make use
+            of several skills in such a way that they will be used outside of my university education.
 
     \clearpage
     \section{Professional and Ethical Considerations}
@@ -276,7 +336,11 @@
             \end{figure}
 
             Graphical programming is not a permanent solution to programming, but rather an 
-            introduction~\cite{gregoryvisual}.
+            introduction~\cite{gregoryvisual}. Users are being taught the convention of the key
+            syntax that is used across all languages. I plan to follow this convetion too. A
+            picture is worth a thousand words~\cite{petre1995looking}, and reading code isn't learnt
+            nearly as fast and reading a picture. The strength of graphical representations is
+            that they complement perceptually something also expressed textually in this case.
 
     \clearpage
     \section{Requirements Analysis}
@@ -332,7 +396,8 @@
 
     \clearpage
     \section{Project Plan}
-
+        Below in figure 7 is a gantt chart outlining my process to progress through this task.
+            
         \begin{figure}[h]
             \centering
             \includegraphics[width=150mm]{gantt_chart.png}
@@ -345,9 +410,12 @@
             far are the following:
 
             \begin{itemize}
-                \item Project proposal.
-                \item Background research.
-                \item Requirements gathering.
+                \item Project proposal - outlining my objecives, aims and motivations for the
+                project.
+                \item Background research - related work to the project I am working on.
+                \item Requirements gathering - software requirements that must be met for
+                the project to work, as well as some desirable objectives for quality of
+                life improvements!
                 \item Interim report.
             \end{itemize}
 
@@ -362,15 +430,113 @@
         \subsection{Other Tools}
             I have utilised a private Github repository for version control.
 
-    \section{Interim Log}
-        Log of the meetings with your supervisor. \\
-        Should cover discussions of every important project stage. \\
-        Record the prupose and the outcome of every meetings. \\
-        Note how these meetings helped you follow your plan. \\
-        Include this log as an appendix to your report.
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=110mm]{github.png}
+                \caption{My Github private repository for the project.}
+            \end{figure}
     
-    \section{Appendices}
-        \subsection{Project Proposal}
+    \section{Appendix}
+        \subsection{Interim Log}
+            \textbf{Friday 23\textsuperscript{rd} October}
+                \begin{itemize}
+                    \item Discussing what my key interests are.
+                    \item Deciding which projects are suitable for me.
+                    \item Showing me some of my supervisor's projects. 
+                    \item Going through the introduction of the project proposal. \\
+                \end{itemize}
+            \textbf{Monday 9\textsuperscript{th} November} 
+                \begin{itemize}
+                    \item Focusing on time management between project and university
+                    studies.
+                    \item Strong introduction, that explains what I'm doing!!
+                    \item Project proposal:
+                    \begin{itemize}
+                        \item deeper detailed objectives.
+                        \item be more specific if I can.
+                    \end{itemize}
+                    \item grouping objectives into one group, not several.
+                \end{itemize}
 
+        \clearpage
+        \subsection{Project Proposal}
+            \textbf{Motivations} \\\\    
+            The motivation behind this project it that it will push my Java programming
+            skills to limit, and experience designing software for other people rather
+            than just for my own benefit. This will help me put my focus on the user's
+            goals rather than my own. Additionally, I can put this project on my portfolio
+            to show future employers!
+
+            This project will further put content learnt from modules in my degree to                practice. Time management techniques from Software Engineering will help me
+            manage when and what I should be focusing on. Furthermore, concepts learnt
+            from Human Computer Interaction will aid me in focussing on user design for
+            the user's goals; implementing a user interface that everyone will be able to
+            use effectively.
+        
+            Finally, the ability to use Java this extensively will most definitely improve
+            my proficiency of the skill! \\\\
+            \textbf{Aims} \\\\
+            The aim of this project is to design and implement a user friendly interface for
+            the user to graphically program basic functions. Simple functions may include:
+            \begin{itemize}
+                \item loops.
+                \begin{itemize}
+                    \item this includes \texttt{for} and \texttt{while} loops.
+                \end{itemize}
+                \item conditional statements, such as \texttt{if} statements.
+                \item implementing and interacting with data structures, such as lists.
+                \item procedures like methods/functions.
+                \item variables!
+            \end{itemize}
+            
+            This is necessary as it provides another programming viewpoint for the user,
+            which can aid them understand the process and flow of how said program may be running.
+            It is also friendly and less intimidating for newer users, relative to a textual/command
+            line script.
+                
+            I am going to program this is Java, my most experienced language, making use of Java's
+            smart GUI design feature, whilst learning and building knowledge on said feature for my
+            own experience. \\\\
+            \textbf{Objectives} \\\\
+            The main objectives are:
+            \begin{enumerate}
+                \item To investigate system requirements and produce a requirements specification.
+                \item To select and justify an appropiate research design for the project.
+                \item Implement a simple user-friendly interface which is easy to use.
+                \item Functional and working loops, conditionals and data stuctures that can be interacted
+                with. \\
+            \end{enumerate}        
+            \textbf{Exta Objectives}
+            \begin{enumerate}
+                \item Colour coordinate the different functions.
+                \begin{itemize}
+                    \item for instance, the loops and conditionals can be coloured differently to show more
+                    clearly what they represent.
+                \end{itemize}
+                \item Implement an undo button.
+                \item Implement a redo button.
+                \item Testing by a regular user, of the software.
+            \end{enumerate}
+            \textbf{Relevance} \\\\
+            This project involves modules across my degree, as well as Java; the most extensively
+            used language across my university education thus far. This project will use skills learnt
+            in Human Computer Interaction; test my ability to understand the user's perspective and
+            struggles, involving the evaluation of the software, rather than my own when designing
+            the interface for them to use.
+        
+            This project also incorporates key concepts understood from Software Engineering.
+            The ability to criticse my own work, collect requirements, manage time and manage an
+            agile approach to the project. Therefore, this project will test my ability to make use
+            of several skills in such a way that they will be used outside of my university education. \\\\
+            \textbf{Resources Required} \\\\
+            None. \\\\
+            \clearpage
+            \textbf{Personal Timetable}
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=175mm]{timetable.png}
+                \end{figure}    
+
+    \clearpage
     \printbibliography
 \end{document}
