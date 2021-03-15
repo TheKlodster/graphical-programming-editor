@@ -436,6 +436,99 @@
                 \caption{My Github private repository for the project.}
             \end{figure}
     
+    \clearpage
+    \section{Some section}
+    What I do at the beginning of this project is crucial to what will come up ahead since this
+    will be the foundation of the entire project. How I will present the work to the user. Before
+    I can begin getting into the deep fundamentals of this project, I must first, but most
+    importantly of all, design the basic canvas GUI (graphical user interface) for the user to
+    be able to see! This initial design of this interface will be a blank canvas, hopefully
+    with a left-hand side panel where the blocks will be.
+
+    To begin, I will start with the blank canvas, then leading onto dividing the canvas into two
+    so there is a left side panel, and in this panel, a print block that the user will be able
+    to drag and drop. The functionality will not matter currently at this stage, but it's
+    essential I research how I will implement the blocks, as this is the commitment I will need
+    to take for the rest of the project. I will start with making the blocks out of buttons.
+    I should note that the reason the start of this project is the most important and requires
+    careful thought and consideration is simply that this is not a small project. I must
+    ensure that whatever I do now will work for the remainder of the project, and that it will
+    be compatible with any functionality I will implement later. If I don't consider this
+    carefully, there may be a chance that I might hit a dead end and I will have to come back
+    to this stage, at a time where I shouldn't be. \\
+
+    Jack from the following thread on stackoverflow provided a interesting answer to center
+    the JFrame for the user.
+    https://stackoverflow.com/questions/2442599/how-to-set-jframe-to-appear-centered-regardless-of-monitor-resolution \\
+
+    The design on the program will look like this. https://stackoverflow.com/questions/13057836/using-two-jpanels-in-one-jframe
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=150mm]{design.png}
+        \caption{Credit to user Kynian for the design, one which will be similar to mine.}
+    \end{figure}
+
+    Add space to buttons to prevent them from hugging the wall https://stackoverflow.com/questions/2212647/java-how-do-i-prevent-borderlayout-east-from-hugging-the-side-of-the-screen \\
+
+    stop resizing program to small !!!!!!!!!!!!!!! \\
+    i need another panel for console output, spawn a new instance to output console \\
+
+    \clearpage
+    I ran into a problem whereby in Java Swing, when I added padding to the border edges that
+    are touching the edges of the JFrame, the background colour filled outside the border. \\
+
+    https://docs.oracle.com/javase/tutorial/uiswing/painting/closer.html \\
+
+    Firstly, the background of the panel is painted. Then the border is painted afterwards
+    - weather a compound border function is used where the function allows you to
+    specify the border objects for the outside and inside edges. Secondly, then the border
+    is painted on top of the panel. In the case of my panels, only the line is painted on
+    top of the background. I will be used a compound border to adjust the margins for the
+    borders around the panels. I will run into this issue where the white background colour
+    I choose will overflow. \\
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=80mm]{colour_overfill.png}
+        \includegraphics[width=100mm]{overfill_solution.png}
+        \includegraphics[width=80mm]{no_overfill.png}
+        \caption{The white background overflowing above the border in the top image; my solution
+        to the current problem, and the gray background now just appearing as a white background.
+        No one liked a gray background anyway.}
+    \end{figure}
+
+    The procedure forward is to design the application only using a print statement. Upon
+    succeeding with said functionality, the follow up for the remainder of the implementations
+    would function more or less the same, and it should be an easy job of copy and paste.
+    I created a button named "print statement" that would be the button used to initialise
+    - you got it - a print statement! Woohoooo. The next importatnt step was reproducing this
+    in the main canvas panel. I implemented functionality that listens to the mouse clicks,
+    thus once the button is pressed, it clones it on the canvas to be used. Initially I was
+    going to implement the \texttt{Cloneable} library but I came across an article that suggested
+    otherwise. \texttt{Cloneable} is broken and shouldn't be used as the architecture was
+    essentially mistaken, and it's only there for backward compatibility reasons. /cite/ So
+    I followed up by implementing the copy constructor suggestion that takes a component
+    as an argument and returns the said component as a new entity.
+    https://www.artima.com/intv/bloch.html \\
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics{copy_constructor.png}
+        \caption{Some caption of the constructor.}
+    \end{figure}
+
+
+    interpreter comparative programming \\
+
+    click button to spawn the block on the canvas
+
+    and drag.
+
+    and rubbish bin
+
+
+    \clearpage
     \section{Appendix}
         \subsection{Interim Log}
             \textbf{Friday 23\textsuperscript{rd} October}
@@ -457,6 +550,10 @@
                     \end{itemize}
                     \item grouping objectives into one group, not several.
                 \end{itemize}
+
+    \clearpage
+        \subsection{Project Log}
+            \textbf{}
 
         \clearpage
         \subsection{Project Proposal}

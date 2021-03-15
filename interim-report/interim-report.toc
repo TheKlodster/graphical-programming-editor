@@ -48,8 +48,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.3}Other Tools}{14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Appendix}{14}%
+\contentsline {section}{\numberline {6}Some section}{15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Interim Log}{14}%
+\contentsline {section}{\numberline {7}Appendix}{19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Project Proposal}{15}%
+\contentsline {subsection}{\numberline {7.1}Interim Log}{19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2}Project Log}{20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3}Project Proposal}{21}%

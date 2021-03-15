@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.18)  30 NOV 2020 17:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.18)  15 MAR 2021 12:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -511,102 +511,199 @@ Package pdftex.def Info: ./images/github.png  used on input line 435.
 (pdftex.def)             Requested size: 312.9803pt x 180.72903pt.
  [13
 
- <./images/gantt_chart.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 446--447
-
- []
-
-[14 <./images/github.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 463--469
+ <./images/gantt_chart.png>] [14 <./images/github.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 448--459
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--481
+Underfull \hbox (badness 10000) in paragraph at lines 460--463
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--481
+Overfull \hbox (62.49648pt too wide) in paragraph at lines 464--465
+[]\OT1/cmr/m/n/12 The de-sign on the pro-gram will look like this. https://stackoverflow.com/questions/13057836/using-
+ []
+
+<./images/design.png, id=72, 576.65437pt x 414.04688pt>
+File: ./images/design.png Graphic file (type png)
+<use ./images/design.png>
+Package pdftex.def Info: ./images/design.png  used on input line 468.
+(pdftex.def)             Requested size: 426.79134pt x 306.45306pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (124.22269pt too wide) in paragraph at lines 472--473
+[]\OT1/cmr/m/n/12 Add space to but-tons to pre-vent them from hug-ging the wall https://stackoverflow.com/questions/2212647/java-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 472--473
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 497--502
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 497--502
+Underfull \hbox (badness 10000) in paragraph at lines 474--476
 
  []
 
 [15
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 506--508
+] [16 <./images/design.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 478--480
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 520--526
+Underfull \hbox (badness 10000) in paragraph at lines 481--482
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 527--533
+Underfull \hbox (badness 10000) in paragraph at lines 483--490
 
  []
 
+<./images/colour_overfill.png, id=79, 232.87pt x 140.525pt>
+File: ./images/colour_overfill.png Graphic file (type png)
+<use ./images/colour_overfill.png>
+Package pdftex.def Info: ./images/colour_overfill.png  used on input line 493.
+(pdftex.def)             Requested size: 227.62204pt x 137.36403pt.
+<./images/overfill_solution.png, id=80, 359.3425pt x 23.08624pt>
+File: ./images/overfill_solution.png Graphic file (type png)
+<use ./images/overfill_solution.png>
+Package pdftex.def Info: ./images/overfill_solution.png  used on input line 494.
+(pdftex.def)             Requested size: 284.52756pt x 18.28088pt.
+<./images/no_overfill.png, id=81, 236.885pt x 138.5175pt>
+File: ./images/no_overfill.png Graphic file (type png)
+<use ./images/no_overfill.png>
+Package pdftex.def Info: ./images/no_overfill.png  used on input line 495.
+(pdftex.def)             Requested size: 227.62204pt x 133.1042pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 527--533
+Underfull \hbox (badness 10000) in paragraph at lines 501--514
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 527--533
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 527--533
-
- []
-
-[16]
-<./images/timetable.png, id=79, 989.94844pt x 594.72188pt>
-File: ./images/timetable.png Graphic file (type png)
-<use ./images/timetable.png>
-Package pdftex.def Info: ./images/timetable.png  used on input line 537.
-(pdftex.def)             Requested size: 497.92322pt x 299.12978pt.
-
-Overfull \hbox (37.20198pt too wide) in paragraph at lines 537--538
- [][] 
  []
 
 [17
 
+ <./images/colour_overfill.png> <./images/overfill_solution.png> <./images/no_overfill.png>]
+<./images/copy_constructor.png, id=89, 578.16pt x 265.99374pt>
+File: ./images/copy_constructor.png Graphic file (type png)
+<use ./images/copy_constructor.png>
+Package pdftex.def Info: ./images/copy_constructor.png  used on input line 517.
+(pdftex.def)             Requested size: 578.15858pt x 265.99309pt.
+
+Overfull \hbox (117.43735pt too wide) in paragraph at lines 517--518
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 522--523
+
+ []
+
+[18 <./images/copy_constructor.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 539--540
+
+ []
+
+[19
+
+] [20
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 560--566
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 573--578
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 573--578
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 594--599
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 594--599
+
+ []
+
+[21
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 603--605
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 617--623
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 624--630
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 624--630
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 624--630
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 624--630
+
+ []
+
+[22]
+<./images/timetable.png, id=107, 989.94844pt x 594.72188pt>
+File: ./images/timetable.png Graphic file (type png)
+<use ./images/timetable.png>
+Package pdftex.def Info: ./images/timetable.png  used on input line 634.
+(pdftex.def)             Requested size: 497.92322pt x 299.12978pt.
+
+Overfull \hbox (37.20198pt too wide) in paragraph at lines 634--635
+ [][] 
+ []
+
+[23
+
  <./images/timetable.png>]
-Overfull \hbox (15.13611pt too wide) in paragraph at lines 542--542
+Overfull \hbox (15.13611pt too wide) in paragraph at lines 639--639
 \OT1/cmr/m/n/12 tions''. In: \OT1/cmr/m/it/12 https://medium.com/vapurrmaid/visual-programming-version-control-future-
  []
 
 
-Overfull \hbox (20.99597pt too wide) in paragraph at lines 542--542
+Overfull \hbox (20.99597pt too wide) in paragraph at lines 639--639
 []\OT1/cmr/m/n/12 REMI De-houck. ``The ma-tu-rity of vi-sual pro-gram-ming''. In: \OT1/cmr/m/it/12 http://www.craft.ai/blog/the-
  []
 
 
-Overfull \hbox (60.31155pt too wide) in paragraph at lines 542--542
+Overfull \hbox (60.31155pt too wide) in paragraph at lines 639--639
 []\OT1/cmr/m/n/12 ``Google's Blockly Teaches You to Cre-ate Apps''. In: \OT1/cmr/m/it/12 https://www.nbcbayarea.com/news/national-
  []
 
 
-Overfull \hbox (88.73239pt too wide) in paragraph at lines 542--542
+Overfull \hbox (88.73239pt too wide) in paragraph at lines 639--639
 []\OT1/cmr/m/n/12 The Scratch Team. ``3 Things To Know About Scratch 3.0''. In: \OT1/cmr/m/it/12 https://www.medium.com/scratchteam-
  []
 
-[18
+[24
 
 ] (d:/Klodi/Documents/computer-science-project/interim-report/interim-report.aux)
 Package logreq Info: Writing requests to 'interim-report.run.xml'.
@@ -614,18 +711,18 @@ Package logreq Info: Writing requests to 'interim-report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 10164 strings out of 480994
- 183626 string characters out of 5916032
- 808013 words of memory out of 5000000
- 25579 multiletter control sequences out of 15000+600000
+ 10194 strings out of 480994
+ 184411 string characters out of 5916032
+ 809013 words of memory out of 5000000
+ 25604 multiletter control sequences out of 15000+600000
  538668 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,14n,46p,895b,1287s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on d:/Klodi/Documents/computer-science-project/interim-report/interim-report.pdf (20 pages, 1842588 bytes).
+Output written on d:/Klodi/Documents/computer-science-project/interim-report/interim-report.pdf (26 pages, 1865430 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 141 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
