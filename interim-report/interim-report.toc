@@ -50,10 +50,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6}Some section}{15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Appendix}{19}%
+\contentsline {section}{\numberline {7}Appendix}{20}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Interim Log}{19}%
+\contentsline {subsection}{\numberline {7.1}Interim Log}{20}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}Project Log}{20}%
+\contentsline {subsection}{\numberline {7.2}Project Log}{21}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3}Project Proposal}{21}%
+\contentsline {subsection}{\numberline {7.3}Project Proposal}{22}%

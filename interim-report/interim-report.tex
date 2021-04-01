@@ -502,7 +502,7 @@
     succeeding with said functionality, the follow up for the remainder of the implementations
     would function more or less the same, and it should be an easy job of copy and paste.
     I created a button named "print statement" that would be the button used to initialise
-    - you got it - a print statement! Woohoooo. The next importatnt step was reproducing this
+    - you got it - a print statement! Woohoooo. The next important step was reproducing this
     in the main canvas panel. I implemented functionality that listens to the mouse clicks,
     thus once the button is pressed, it clones it on the canvas to be used. Initially I was
     going to implement the \texttt{Cloneable} library but I came across an article that suggested
@@ -518,8 +518,25 @@
         \caption{Some caption of the constructor.}
     \end{figure}
 
+    Now i need to talk about draglayout and component mover that I downloaded to use. \\
+
 
     interpreter comparative programming \\
+
+    I was stuck so I decided to work on something else. In regards to my action listener events,
+    when a button on the side panel is clicked, it's going to do the same process every time,
+    no matter what button is being clicked. It would be lazy to create action listener events
+    for every single button to do the exact same process. Thinking ahead for when I add future
+    buttons to the side panel, I decided to create an action listener variable so that all the
+    buttons can call this single event instead creating the same event for every button. \\
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=120mm]{actionlistener.png}
+        \caption{Creating the action listener one time and one time only to be used for all
+        the buttons.}
+    \end{figure}
+
 
     click button to spawn the block on the canvas
 
