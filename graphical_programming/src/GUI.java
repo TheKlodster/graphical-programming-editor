@@ -95,6 +95,7 @@ public class GUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("It's graphic time");
         frame.setVisible(true);
+        frame.setResizable(false);
 
         printButton.addActionListener(spawn);
         printLabel.addMouseListener(spawnLabel);

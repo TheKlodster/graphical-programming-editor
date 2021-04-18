@@ -443,7 +443,7 @@
     I can begin getting into the deep fundamentals of this project, I must first, but most
     importantly of all, design the basic canvas GUI (graphical user interface) for the user to
     be able to see! This initial design of this interface will be a blank canvas, hopefully
-    with a left-hand side panel where the blocks will be.
+    with a left-hand side panel where the blocks will be. \\
 
     To begin, I will start with the blank canvas, then leading onto dividing the canvas into two
     so there is a left side panel, and in this panel, a print block that the user will be able
@@ -457,22 +457,38 @@
     carefully, there may be a chance that I might hit a dead end and I will have to come back
     to this stage, at a time where I shouldn't be. \\
 
-    Jack from the following thread on stackoverflow provided a interesting answer to center
-    the JFrame for the user.
-    https://stackoverflow.com/questions/2442599/how-to-set-jframe-to-appear-centered-regardless-of-monitor-resolution \\
+    Upon building basic GUI upon running the program, it would be nice if it was centered so it
+    can be visible on any resolution that the user will be using. Thinking it would be a simple
+    case of researching the Java JFrame documentation, I did not find what I was looking for and
+    branched out. \textit{Jack} from this thread about setting up JFrames to the centre of the
+    screen regardless of resolution provided an excellent function which takes the resolution of
+    the screen and mathematically applies divisions so that it will be centred of any screen
+    resolution we use \cite{jackSO}. Figure 9 shows a rough sketch about the idea I have for what the interface will roughly look
+    like. This may change in the near future when I begin implementing the JPanels, but for now
+    this sort of design would look appropriate and make sense for the user. This type of formation
+    is adopted too by other applications such as Scratch and App Inventor - both use a design
+    similar to this where the control panel is on the left hand side with all the different
+    blocks the user can use, followed by the big canvas in the centre. \\
 
-    The design on the program will look like this. https://stackoverflow.com/questions/13057836/using-two-jpanels-in-one-jframe
 
+    Upon implementing the buttons I had them hugging the sides of the button panel, which didn't
+    look appealing at all, so I had a read through the BorderLayout documentation which revealed
+    that I could enter some padding to sort out the issue.
+
+    \clearpage
     \begin{figure}[h]
         \centering
-        \includegraphics[width=150mm]{design.png}
-        \caption{Credit to user Kynian for the design, one which will be similar to mine.}
+        \includegraphics[width=120mm]{design.png}
+        \caption{Drawn out plan on essentially what the interface may look like, subject to change.}
     \end{figure}
 
-    Add space to buttons to prevent them from hugging the wall https://stackoverflow.com/questions/2212647/java-how-do-i-prevent-borderlayout-east-from-hugging-the-side-of-the-screen \\
-
-    stop resizing program to small !!!!!!!!!!!!!!! \\
-    i need another panel for console output, spawn a new instance to output console \\
+    In regards to the console output for the user, I could do this several ways. A particular way
+    I had in mind specifically was to research whether Java Swing could be able to open another
+    window showing the output as a result of running the user's program. This is not the focus
+    for the time being, so more on this later. Furthermore, I didn't want the user to be able
+    to resize the program as this could potentially lead to issues in the GUI not showing the
+    user all the information they need to work, or not giving them enough space - a simple
+    \texttt{frame.setResizable(false);} worked like a charm. \\
 
     \clearpage
     I ran into a problem whereby in Java Swing, when I added padding to the border edges that

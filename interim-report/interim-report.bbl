@@ -41,6 +41,26 @@
       \field{title}{What is App Inventor?}
       \field{year}{2018}
     \endentry
+    \entry{jackSO}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8d3d31432ff8b7c0720d7dc7b93cd767}{%
+           family={AmateurProgrammer},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d3d31432ff8b7c0720d7dc7b93cd767}
+      \strng{fullhash}{8d3d31432ff8b7c0720d7dc7b93cd767}
+      \strng{bibnamehash}{8d3d31432ff8b7c0720d7dc7b93cd767}
+      \strng{authorbibnamehash}{8d3d31432ff8b7c0720d7dc7b93cd767}
+      \strng{authornamehash}{8d3d31432ff8b7c0720d7dc7b93cd767}
+      \strng{authorfullhash}{8d3d31432ff8b7c0720d7dc7b93cd767}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{https://stackoverflow.com/a/2442610/4552257}
+      \field{title}{How to set JFrame to appear centered, regardless of monitor resolution?}
+      \field{year}{2010}
+    \endentry
     \entry{gregoryvisual}{article}{}
       \name{author}{1}{}{%
         {{hash=fd27081366f4a1b1eaa9b542c2d05e09}{%
