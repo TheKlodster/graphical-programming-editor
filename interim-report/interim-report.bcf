@@ -2198,6 +2198,9 @@
     <bcf:citekey order="14">gregoryvisual</bcf:citekey>
     <bcf:citekey order="15">petre1995looking</bcf:citekey>
     <bcf:citekey order="16">jackSO</bcf:citekey>
+    <bcf:citekey order="17">billVenners</bcf:citekey>
+    <bcf:citekey order="18">dragLayout</bcf:citekey>
+    <bcf:citekey order="19">componentMover</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

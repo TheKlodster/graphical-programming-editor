@@ -1,17 +1,23 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
 [0] Config.pm:307> INFO - Logfile is 'interim-report.blg'
-[150] biber-MSWIN32:322> INFO - === 
-[179] Biber.pm:415> INFO - Reading 'interim-report.bcf'
-[390] Biber.pm:943> INFO - Found 13 citekeys in bib section 0
-[426] Biber.pm:4256> INFO - Processing section 0
-[427] Utils.pm:75> INFO - Globbing data source 'bibliography.bib'
-[448] Utils.pm:91> INFO - Globbed data source 'bibliography.bib' to bibliography.bib
-[474] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[480] bibtex.pm:1653> INFO - LaTeX decoding ...
-[537] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliography.bib'
-[669] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[669] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[669] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[669] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[690] bbl.pm:652> INFO - Writing 'interim-report.bbl' with encoding 'UTF-8'
-[704] bbl.pm:755> INFO - Output to interim-report.bbl
+[103] biber-MSWIN32:322> INFO - === 
+[127] Biber.pm:415> INFO - Reading 'interim-report.bcf'
+[277] Biber.pm:943> INFO - Found 16 citekeys in bib section 0
+[302] Biber.pm:4256> INFO - Processing section 0
+[302] Utils.pm:75> INFO - Globbing data source 'bibliography.bib'
+[315] Utils.pm:91> INFO - Globbed data source 'bibliography.bib' to bibliography.bib
+[333] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[337] bibtex.pm:1653> INFO - LaTeX decoding ...
+[372] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliography.bib'
+[510] Utils.pm:304> WARN - year field 'January 4, 2002' in entry 'billVenners' is not an integer - this will probably not sort properly.
+[513] Utils.pm:304> WARN - year field 'October 23, 2011' in entry 'dragLayout' is not an integer - this will probably not sort properly.
+[517] Utils.pm:304> WARN - year field 'June 14, 2009' in entry 'componentMover' is not an integer - this will probably not sort properly.
+[517] Utils.pm:304> WARN - BibTeX subsystem: C:\Users\klodi\AppData\Local\Temp\biber_tmp_Rvrv\bibliography.bib_21148.utf8, line 120, warning: entry started with "(", but ends with "}"
+[517] Utils.pm:304> WARN - BibTeX subsystem: C:\Users\klodi\AppData\Local\Temp\biber_tmp_Rvrv\bibliography.bib_21148.utf8, line 127, warning: entry started with "(", but ends with "}"
+[549] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[549] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[549] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[549] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[570] bbl.pm:652> INFO - Writing 'interim-report.bbl' with encoding 'UTF-8'
+[581] bbl.pm:755> INFO - Output to interim-report.bbl
+[581] Biber.pm:128> INFO - WARNINGS: 5

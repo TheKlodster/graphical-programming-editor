@@ -144,16 +144,16 @@
                 or just about finished, and I will gain a lot of knowledge and experience on
                 the way.
 
-            \subsubsection{Functional and working loops, conditionals, data structures and
+            \subsubsection{Functional and working loops, conditionals and
             variables that can be interacted with.}
                 What's the point of having a pretty canvas if you can't do anything with it?
                 This is the meat of the project, what's going to make the project be useful.
                 The main objective here is this one. My main priority is the ability to get
                 this project off its feet.
+
                 Variables for user's to be able to create and store data with, as well as
-                interact with within the project. Loops to allow the user to work with logic,
-                data structures that can be possibly altered, such as sorting. Without this
-                objective being met, it's just a pretty GUI with no functionality.
+                interact with within the project. Loops to allow the user to work with logic.
+                Without this objective being met, it's just a pretty GUI with no functionality.
 
         \subsection{Problem Area}
             The main challenge of implementing an interface to be able to program on is the required 
@@ -184,7 +184,6 @@
 
             \begin{itemize}
                 \item loops - create and work with basic for \& while loops.
-                \item data structures - create and interact with data structures such as lists.
                 \item variables - create, store data and interact with variables.
                 \item procedures - create functions/methods to perform certain tasks inside them!
                 \item interface - an interface for users to be able to interact with and perform the
@@ -437,130 +436,166 @@
             \end{figure}
     
     \clearpage
-    \section{Some section}
-    What I do at the beginning of this project is crucial to what will come up ahead since this
-    will be the foundation of the entire project. How I will present the work to the user. Before
-    I can begin getting into the deep fundamentals of this project, I must first, but most
-    importantly of all, design the basic canvas GUI (graphical user interface) for the user to
-    be able to see! This initial design of this interface will be a blank canvas, hopefully
-    with a left-hand side panel where the blocks will be. \\
+    \section{Main Report}
+        \subsection{Designing a rough GUI}
+            What I do at the beginning of this project is crucial to what will come up ahead since this
+            will be the foundation of the entire project. How I will present the work to the user. Before
+            I can begin getting into the deep fundamentals of this project, I must first, but most
+            importantly of all, design the basic canvas GUI (graphical user interface) for the user to
+            be able to see! This initial design of this interface will be a blank canvas, hopefully
+            with a left-hand side panel where the blocks will be. \\
 
-    To begin, I will start with the blank canvas, then leading onto dividing the canvas into two
-    so there is a left side panel, and in this panel, a print block that the user will be able
-    to drag and drop. The functionality will not matter currently at this stage, but it's
-    essential I research how I will implement the blocks, as this is the commitment I will need
-    to take for the rest of the project. I will start with making the blocks out of buttons.
-    I should note that the reason the start of this project is the most important and requires
-    careful thought and consideration is simply that this is not a small project. I must
-    ensure that whatever I do now will work for the remainder of the project, and that it will
-    be compatible with any functionality I will implement later. If I don't consider this
-    carefully, there may be a chance that I might hit a dead end and I will have to come back
-    to this stage, at a time where I shouldn't be. \\
+            To begin, I will start with the blank canvas, then leading onto dividing the canvas into two
+            so there is a left side panel, and in this panel, a print block that the user will be able
+            to drag and drop. The functionality will not matter currently at this stage, but it's
+            essential I research how I will implement the blocks, as this is the commitment I will need
+            to take for the rest of the project. I will start with making the blocks out of buttons.
+            I should note that the reason the start of this project is the most important and requires
+            careful thought and consideration is simply that this is not a small project. I must
+            ensure that whatever I do now will work for the remainder of the project, and that it will
+            be compatible with any functionality I will implement later. If I don't consider this
+            carefully, there may be a chance that I might hit a dead end and I will have to come back
+            to this stage, at a time where I shouldn't be. \\
 
-    Upon building basic GUI upon running the program, it would be nice if it was centered so it
-    can be visible on any resolution that the user will be using. Thinking it would be a simple
-    case of researching the Java JFrame documentation, I did not find what I was looking for and
-    branched out. \textit{Jack} from this thread about setting up JFrames to the centre of the
-    screen regardless of resolution provided an excellent function which takes the resolution of
-    the screen and mathematically applies divisions so that it will be centred of any screen
-    resolution we use \cite{jackSO}. Figure 9 shows a rough sketch about the idea I have for what the interface will roughly look
-    like. This may change in the near future when I begin implementing the JPanels, but for now
-    this sort of design would look appropriate and make sense for the user. This type of formation
-    is adopted too by other applications such as Scratch and App Inventor - both use a design
-    similar to this where the control panel is on the left hand side with all the different
-    blocks the user can use, followed by the big canvas in the centre. \\
-
-
-    Upon implementing the buttons I had them hugging the sides of the button panel, which didn't
-    look appealing at all, so I had a read through the BorderLayout documentation which revealed
-    that I could enter some padding to sort out the issue.
-
-    \clearpage
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=120mm]{design.png}
-        \caption{Drawn out plan on essentially what the interface may look like, subject to change.}
-    \end{figure}
-
-    In regards to the console output for the user, I could do this several ways. A particular way
-    I had in mind specifically was to research whether Java Swing could be able to open another
-    window showing the output as a result of running the user's program. This is not the focus
-    for the time being, so more on this later. Furthermore, I didn't want the user to be able
-    to resize the program as this could potentially lead to issues in the GUI not showing the
-    user all the information they need to work, or not giving them enough space - a simple
-    \texttt{frame.setResizable(false);} worked like a charm. \\
-
-    \clearpage
-    I ran into a problem whereby in Java Swing, when I added padding to the border edges that
-    are touching the edges of the JFrame, the background colour filled outside the border. \\
-
-    https://docs.oracle.com/javase/tutorial/uiswing/painting/closer.html \\
-
-    Firstly, the background of the panel is painted. Then the border is painted afterwards
-    - weather a compound border function is used where the function allows you to
-    specify the border objects for the outside and inside edges. Secondly, then the border
-    is painted on top of the panel. In the case of my panels, only the line is painted on
-    top of the background. I will be used a compound border to adjust the margins for the
-    borders around the panels. I will run into this issue where the white background colour
-    I choose will overflow. \\
-
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=80mm]{colour_overfill.png}
-        \includegraphics[width=100mm]{overfill_solution.png}
-        \includegraphics[width=80mm]{no_overfill.png}
-        \caption{The white background overflowing above the border in the top image; my solution
-        to the current problem, and the gray background now just appearing as a white background.
-        No one liked a gray background anyway.}
-    \end{figure}
-
-    The procedure forward is to design the application only using a print statement. Upon
-    succeeding with said functionality, the follow up for the remainder of the implementations
-    would function more or less the same, and it should be an easy job of copy and paste.
-    I created a button named "print statement" that would be the button used to initialise
-    - you got it - a print statement! Woohoooo. The next important step was reproducing this
-    in the main canvas panel. I implemented functionality that listens to the mouse clicks,
-    thus once the button is pressed, it clones it on the canvas to be used. Initially I was
-    going to implement the \texttt{Cloneable} library but I came across an article that suggested
-    otherwise. \texttt{Cloneable} is broken and shouldn't be used as the architecture was
-    essentially mistaken, and it's only there for backward compatibility reasons. /cite/ So
-    I followed up by implementing the copy constructor suggestion that takes a component
-    as an argument and returns the said component as a new entity.
-    https://www.artima.com/intv/bloch.html \\
-
-    \begin{figure}[h]
-        \centering
-        \includegraphics{copy_constructor.png}
-        \caption{Some caption of the constructor.}
-    \end{figure}
-
-    Now i need to talk about draglayout and component mover that I downloaded to use. \\
+            Upon building basic GUI upon running the program, it would be nice if it was centered so it
+            can be visible on any resolution that the user will be using. Thinking it would be a simple
+            case of researching the Java JFrame documentation, I did not find what I was looking for and
+            branched out. \textit{Jack} from this thread about setting up JFrames to the centre of the
+            screen regardless of resolution provided an excellent function which takes the resolution of
+            the screen and mathematically applies divisions so that it will be centred of any screen
+            resolution we use \cite{jackSO}. Figure 9 shows a rough sketch about the idea I have for what the interface will roughly look
+            like. This may change in the near future when I begin implementing the JPanels, but for now
+            this sort of design would look appropriate and make sense for the user. This type of formation
+            is adopted too by other applications such as Scratch and App Inventor - both use a design
+            similar to this where the control panel is on the left hand side with all the different
+            blocks the user can use, followed by the big canvas in the centre. \\
 
 
-    interpreter comparative programming \\
+            Upon implementing the buttons I had them hugging the sides of the button panel, which didn't
+            look appealing at all, so I had a read through the BorderLayout documentation which revealed
+            that I could enter some padding to sort out the issue.
 
-    I was stuck so I decided to work on something else. In regards to my action listener events,
-    when a button on the side panel is clicked, it's going to do the same process every time,
-    no matter what button is being clicked. It would be lazy to create action listener events
-    for every single button to do the exact same process. Thinking ahead for when I add future
-    buttons to the side panel, I decided to create an action listener variable so that all the
-    buttons can call this single event instead creating the same event for every button. \\
+            \clearpage
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=120mm]{design.png}
+                \caption{Drawn out plan on essentially what the interface may look like, subject to change.}
+            \end{figure}
 
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=120mm]{actionlistener.png}
-        \caption{Creating the action listener one time and one time only to be used for all
-        the buttons.}
-    \end{figure}
+            In regards to the console output for the user, I could do this several ways. A particular way
+            I had in mind specifically was to research whether Java Swing could be able to open another
+            window showing the output as a result of running the user's program. This is not the focus
+            for the time being, so more on this later. Furthermore, I didn't want the user to be able
+            to resize the program as this could potentially lead to issues in the GUI not showing the
+            user all the information they need to work, or not giving them enough space - a simple
+            \texttt{frame.setResizable(false);} worked like a charm. \\
 
+            I ran into a problem whereby in Java Swing, when I added padding to the border edges that
+            are touching the edges of the JFrame, the background colour filled outside the border. \\
 
-    click button to spawn the block on the canvas
+            \clearpage
+            Firstly, the background of the panel is painted. Then the border is painted afterwards
+            - weather a compound border function is used where the function allows you to
+            specify the border objects for the outside and inside edges. Secondly, then the border
+            is painted on top of the panel. In the case of my panels, only the line is painted on
+            top of the background. I will be used a compound border to adjust the margins for the
+            borders around the panels. I will run into this issue where the white background colour
+            I choose will overflow. \\
 
-    and drag.
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=80mm]{colour_overfill.png}
+                \includegraphics[width=100mm]{overfill_solution.png}
+                \includegraphics[width=80mm]{no_overfill.png}
+                \caption{The white background overflowing above the border in the top image; my solution
+                to the current problem, and the gray background now just appearing as a white background.
+                No one liked a gray background anyway.}
+            \end{figure}
+        
+        \clearpage
+        \subsection{Copy Constructor}
+            The procedure forward is to design the application only using a print statement. Upon
+            succeeding with said functionality, the follow up for the remainder of the implementations
+            would function more or less the same, and it should be an easy job of copy and paste.
+            I created a button named \texttt{print statement} that would be the button used to initialise
+            a print statement.The next important step was reproducing this in the main canvas panel.
+            I implemented functionality that listens to the mouse clicks, thus once the button is
+            pressed, it clones it on the canvas to be used. Initially I was going to implement the
+            \texttt{Cloneable} library but I came across an article that suggested otherwise.
+            \texttt{Cloneable} is broken and shouldn't be used as the architecture was essentially
+            mistaken, and it's only there for backward compatibility reasons~\cite{billVenners}. So I followed up
+            by implementing the copy constructor suggestion that takes a component as an argument and
+            returns the said component as a new entity. \\
 
-    and rubbish bin
+            \begin{figure}[h]
+                \centering
+                \includegraphics{copy_constructor.png}
+                \caption{Some caption of the constructor.}
+            \end{figure}
+        
+        \clearpage
+        \subsection{DragLayout \& ComponentMover}
+            It is a key objecive, although it may not be explicitly noted in this report, but
+            it is implied, that when designing a project such as this that the user has, not only
+            to be able to interact with the features the program provides, but be able to edit these
+            features - one way being through movement. The user will need access to drag
+            components around to their desirable positions. \textit{Rob Camick's} blog on this specific
+            feature provides a \texttt{DragLayout.java} class file that does exactly that, and it is
+            paired up with another class file \texttt{ComponentMover.java}. Both classes are dependent
+            on eachother to work~\cite{dragLayout}. The decision was between using a null layout or a drag layout manager.
+            The answer is drawn from the 3 different functions a manager performs:
 
+            \begin{itemize}
+                \item sets the locations of the components in the container.
+                \item sets the size of the components in the container.
+                \item calculates the preferred size of the containter.
+            \end{itemize}
 
+            A null layout is a layout that technically it's a legitimate layout manager. This means that
+            no layout manager is assigned, meaning the components can be put at specific \texttt{(x,y,z)}
+            coordinates. It can be particularly useful for making quick prototypes but that is essentially it.
+            When dragging components inside a JPanel container, it should be clear that the manager
+            should not replace the location of the component. That being said, there's no reason a layout
+            manager could \textit{not} set the size of the objective to calculate the preferred size
+            for the container. Essentially, the \texttt{DragLayout} manager was designed to replace
+            a null layout. \\
+            
+            The manager uses the \texttt{ComponentMove.java} class to drag the objects.
+            \texttt{DragLayout.java} is just the foundation - it is not responsible for the moving
+            of any components. One could use a \texttt{mouseListener} to handle the \texttt{mousePressed}
+            event to track the original location of the component, followed by a \texttt{MouseMotionListener}
+            to handle the \texttt{mouseDragged} event so the component can allow itself to be moved via
+            each drag event. However once tested, I notice this was producing flickering results on the
+            components that I was trying to move on the drag layout. This wasn't appealing and rather
+            distracting instead, the user's experience would decline as a result. \texttt{ComponentMover.java}
+            gives us the flexibility for controlling which component is responsible for moving a window
+            \cite{componentMover}.
+
+            \clearpage
+            In regards to my action listener events, when a button on the side panel is clicked,
+            it's going to do the same process every time, no matter what button is being
+            clicked. It would be lazy to create action listener events for every single button
+            to do the exact same process. Thinking ahead for when I add future buttons to the
+            side panel, I decided to create an action listener variable so that all the buttons
+            can call this single event instead creating the same event for every button. \\
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=120mm]{actionlistener.png}
+                \caption{Creating the action listener one time and one time only to be used for all
+                the buttons.}
+            \end{figure}
+        
+        \clearpage
+        \subsection{Interpreter}
+            Interpreter comparative programming \\
+
+            click button to spawn the block on the canvas \\
+
+            and drag. \\
+
+            and rubbish bin \\
+ 
     \clearpage
     \section{Appendix}
         \subsection{Interim Log}

@@ -83,6 +83,52 @@
       \field{title}{Visual Programming and Version Control: Future Considerations}
       \field{year}{2018}
     \endentry
+    \entry{dragLayout}{article}{}
+      \name{author}{1}{}{%
+        {{hash=40e4c2870092e22c10394d0d2bac9164}{%
+           family={Camick},
+           familyi={C\bibinitperiod},
+           given={Rob},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{40e4c2870092e22c10394d0d2bac9164}
+      \strng{fullhash}{40e4c2870092e22c10394d0d2bac9164}
+      \strng{bibnamehash}{40e4c2870092e22c10394d0d2bac9164}
+      \strng{authorbibnamehash}{40e4c2870092e22c10394d0d2bac9164}
+      \strng{authornamehash}{40e4c2870092e22c10394d0d2bac9164}
+      \strng{authorfullhash}{40e4c2870092e22c10394d0d2bac9164}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{https://tips4java.wordpress.com/2011/10/23/drag-layout/}
+      \field{title}{Drag Layout}
+      \field{year}{October 23, 2011}
+    \endentry
+    \entry{componentMover}{article}{}
+      \name{author}{1}{}{%
+        {{hash=40e4c2870092e22c10394d0d2bac9164}{%
+           family={Camick},
+           familyi={C\bibinitperiod},
+           given={Rob},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{40e4c2870092e22c10394d0d2bac9164}
+      \strng{fullhash}{40e4c2870092e22c10394d0d2bac9164}
+      \strng{bibnamehash}{40e4c2870092e22c10394d0d2bac9164}
+      \strng{authorbibnamehash}{40e4c2870092e22c10394d0d2bac9164}
+      \strng{authornamehash}{40e4c2870092e22c10394d0d2bac9164}
+      \strng{authorfullhash}{40e4c2870092e22c10394d0d2bac9164}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{https://tips4java.wordpress.com/2009/06/14/moving-windows/}
+      \field{title}{Moving Windows}
+      \field{year}{June 14, 2009}
+    \endentry
     \entry{dehouck2015maturity}{article}{}
       \name{author}{1}{}{%
         {{hash=2468a3441f11066e881748aa65c8614e}{%
@@ -318,6 +364,28 @@
       \field{journaltitle}{https://developers.google.com/blockly}
       \field{title}{Try Blockly}
       \field{year}{2020}
+    \endentry
+    \entry{billVenners}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4f73d3c9fa69ceb9612bb63bdb7f5db5}{%
+           family={Venners},
+           familyi={V\bibinitperiod},
+           given={Bill},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{4f73d3c9fa69ceb9612bb63bdb7f5db5}
+      \strng{fullhash}{4f73d3c9fa69ceb9612bb63bdb7f5db5}
+      \strng{bibnamehash}{4f73d3c9fa69ceb9612bb63bdb7f5db5}
+      \strng{authorbibnamehash}{4f73d3c9fa69ceb9612bb63bdb7f5db5}
+      \strng{authornamehash}{4f73d3c9fa69ceb9612bb63bdb7f5db5}
+      \strng{authorfullhash}{4f73d3c9fa69ceb9612bb63bdb7f5db5}
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{https://www.artima.com/articles/josh-bloch-on-design}
+      \field{title}{A Conversation with Effective Java Author, Josh Bloch}
+      \field{year}{January 4, 2002}
     \endentry
     \entry{xie2016skill}{inproceedings}{}
       \name{author}{2}{}{%
