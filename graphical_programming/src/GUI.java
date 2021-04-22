@@ -1,33 +1,21 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.*;
 
 public class GUI {
 
-    private JFrame frame;
-    private JPanel buttonPanel, dragPanel, titlePanel, runPanel;
+    private JPanel buttonPanel, dragPanel, runPanel;
     private JButton runButton, printButton, forButton;
-    private JLabel printLabel;
-    private ComponentMover cm;
+    private final ComponentMover cm;
 
     private ActionListener spawn = new ActionListener() {
         public void actionPerformed(ActionEvent e) {
             JButton button = (JButton) e.getSource();
-            Component clone = cloneSwingComponent(button);
-            dragPanel.add(clone);
-            cm.registerComponent(clone);
-
-            dragPanel.repaint();
-            dragPanel.revalidate();
-        }
-    };
-
-    private MouseListener spawnLabel = new MouseAdapter() {
-        @Override
-        public void mouseClicked(MouseEvent mouseEvent) {
-            JLabel label = (JLabel) mouseEvent.getSource();
-            Component clone = cloneSwingComponent(label);
+            JButton clone = cloneSwingComponent(button);
+            assert clone != null;
+            clone.addMouseListener(new DeleteListener());
             dragPanel.add(clone);
             cm.registerComponent(clone);
 
@@ -39,7 +27,7 @@ public class GUI {
     public GUI() {
         // Initialising the frame for the program. This involves setting the size, creating the BorderLayout
         // as well as choosing the background colour.
-        frame = new JFrame();
+        JFrame frame = new JFrame();
         frame.setSize(1300, 900);
         frame.setLayout(new BorderLayout(10, 10));
         frame.getContentPane().setBackground(Color.WHITE);
@@ -51,7 +39,7 @@ public class GUI {
         // Creating the panels for the application.
         buttonPanel = new JPanel();
         dragPanel = new JPanel(new DragLayout());
-        titlePanel = new JPanel();
+        JPanel titlePanel = new JPanel();
         runPanel = new JPanel();
 
         cm = new ComponentMover();
@@ -97,15 +85,11 @@ public class GUI {
         frame.setVisible(true);
         frame.setResizable(false);
 
-        printButton.addActionListener(spawn);
-        printLabel.addMouseListener(spawnLabel);
+        ActionListener frameWindow = e -> createPrintFrame();
+        printButton.addActionListener(frameWindow);
+        printButton.addMouseListener(new DeleteListener());
 
-        runButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                runProcedure(actionEvent);
-            }
-        });
+        runButton.addActionListener(this::runProcedure);
     }
 
     /**
@@ -116,11 +100,11 @@ public class GUI {
         Component[] componentArray = dragPanel.getComponents();
         Component components = null;
         if(componentArray.length != 0) {
-            for(int i = 0; i < componentArray.length; i++) {
+            for (Component component : componentArray) {
                 //components = componentArray[i];
                 //System.out.println(components);
-                if(componentArray[i] instanceof JButton) {  // Checks if component is of Jbutton instance
-                    JButton print = (JButton) componentArray[i]; // Casts it to JButton
+                if (component instanceof JButton) {  // Checks if component is of Jbutton instance
+                    JButton print = (JButton) component; // Casts it to JButton
                     String printText = print.getText(); // Gets the text in the button.
                     System.out.println(printText); // Prints the text.
                 }
@@ -143,14 +127,9 @@ public class GUI {
         forButton = new JButton("For loop");
         forButton.setPreferredSize(new Dimension(150, 30));
 
-
-        printLabel = new JLabel("Print Statement", SwingConstants.CENTER);
-        printLabel.setPreferredSize(new Dimension(130, 30));
-
         runPanel.add(runButton);
         buttonPanel.add(printButton);
         buttonPanel.add(forButton);
-        buttonPanel.add(printLabel);
     }
 
     /**
@@ -160,17 +139,64 @@ public class GUI {
      * @param c component to be cloned.
      * @return the cloned component.
      */
-    private Component cloneSwingComponent(Component c) {
+    private JButton cloneSwingComponent(Component c) {
         try {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             ObjectOutputStream oos = new ObjectOutputStream(baos);
             oos.writeObject(c);
             ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
             ObjectInputStream ois = new ObjectInputStream(bais);
-            return (Component) ois.readObject();
+            return (JButton) ois.readObject();
         } catch (IOException | ClassNotFoundException ex) {
             ex.printStackTrace();
             return null;
         }
     }
+
+    /**
+     * Creating a small frame for the print statement
+     */
+    public void createPrintFrame()
+    {
+        EventQueue.invokeLater(() -> {
+            JFrame frameWindow = new JFrame("The printer");
+
+            JPanel inputPanel = new JPanel();
+            JTextField input = new JTextField(20);
+            JButton enterButton = new JButton("Enter");
+
+            inputPanel.add(input, BorderLayout.CENTER);
+            inputPanel.add(enterButton, BorderLayout.CENTER);
+
+            frameWindow.getContentPane().add(BorderLayout.CENTER, inputPanel);
+            frameWindow.pack();
+            frameWindow.setLocationByPlatform(true);
+            frameWindow.setVisible(true);
+            frameWindow.setResizable(false);
+            input.requestFocus();
+
+            frameWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            try
+            {
+                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            enterButton.addActionListener(e -> {
+                if(!input.getText().isEmpty()) {
+                    JButton button = (JButton) e.getSource();
+                    button.setText(input.getText());
+                    Component clone = cloneSwingComponent(button);
+                    dragPanel.add(clone);
+                    cm.registerComponent(clone);
+                    frameWindow.dispose();
+
+                    dragPanel.repaint();
+                    dragPanel.revalidate();
+                }
+            });
+        });
+    }
 }
+

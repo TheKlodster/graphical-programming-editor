@@ -1,152 +1,153 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.18)  19 APR 2021 14:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.4.20)  21 APR 2021 13:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/Klodi/Documents/computer-science-project/interim-report/interim-report.tex
-(d:/Klodi/Documents/computer-science-project/interim-report/interim-report.tex
-LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-02-25> (c:/texlive/2019/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
-(c:/texlive/2019/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+**c:/Users/klodi/Documents/graphical-programming-editor/interim-report/interim-report.tex
+(c:/Users/klodi/Documents/graphical-programming-editor/interim-report/interim-report.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18> (c:/texlive/2021/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(c:/texlive/2021/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
-\c@part=\count167
-\c@section=\count168
-\c@subsection=\count169
-\c@subsubsection=\count170
-\c@paragraph=\count171
-\c@subparagraph=\count172
-\c@figure=\count173
-\c@table=\count174
+\c@part=\count179
+\c@section=\count180
+\c@subsection=\count181
+\c@subsubsection=\count182
+\c@paragraph=\count183
+\c@subparagraph=\count184
+\c@figure=\count185
+\c@table=\count186
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
-\bibindent=\dimen134
-) (c:/texlive/2019/texmf-dist/tex/latex/a4wide/a4wide.sty
+\bibindent=\dimen138
+) (c:/texlive/2021/texmf-dist/tex/latex/a4wide/a4wide.sty
 Package: a4wide 1994/08/30
- (c:/texlive/2019/texmf-dist/tex/latex/ntgclass/a4.sty
+ (c:/texlive/2021/texmf-dist/tex/latex/ntgclass/a4.sty
 Package: a4 2020/02/18 v1.2g A4 based page layout
-)) (c:/texlive/2019/texmf-dist/tex/latex/base/textcomp.sty
+)) (c:/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-) (c:/texlive/2019/texmf-dist/tex/latex/listings/listings.sty (c:/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+) (c:/texlive/2021/texmf-dist/tex/latex/listings/listings.sty (c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-\lst@mode=\count175
-\lst@gtempboxa=\box45
+\lst@mode=\count187
+\lst@gtempboxa=\box47
 \lst@token=\toks16
-\lst@length=\count176
-\lst@currlwidth=\dimen135
-\lst@column=\count177
-\lst@pos=\count178
-\lst@lostspace=\dimen136
-\lst@width=\dimen137
-\lst@newlines=\count179
-\lst@lineno=\count180
-\lst@maxwidth=\dimen138
- (c:/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-\c@lstnumber=\count181
-\lst@skipnumbers=\count182
-\lst@framebox=\box46
-) (c:/texlive/2019/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2019/09/10 1.8c listings configuration
+\lst@length=\count188
+\lst@currlwidth=\dimen139
+\lst@column=\count189
+\lst@pos=\count190
+\lst@lostspace=\dimen140
+\lst@width=\dimen141
+\lst@newlines=\count191
+\lst@lineno=\count192
+\lst@maxwidth=\dimen142
+ (c:/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count193
+\lst@skipnumbers=\count194
+\lst@framebox=\box48
+) (c:/texlive/2021/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
-Package: listings 2019/09/10 1.8c (Carsten Heinz)
- (c:/texlive/2019/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
- (c:/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (c:/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+ (c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
- (c:/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
-)) (c:/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+ (c:/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+)) (c:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (c:/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 )
-\Gin@req@height=\dimen139
-\Gin@req@width=\dimen140
-) (c:/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
- (c:/texlive/2019/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO)
- (c:/texlive/2019/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+\Gin@req@height=\dimen143
+\Gin@req@width=\dimen144
+) (c:/texlive/2021/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2020/12/31 v3.16 programmable bibliographies (PK/MW)
+ (c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (c:/texlive/2019/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2019/11/07 v1.0c TeX engine tests
-) (c:/texlive/2019/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+) (c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+) (c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (c:/texlive/2019/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count183
-) (c:/texlive/2019/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
- (c:/texlive/2019/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+) (c:/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count195
+) (c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+ (c:/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-)) (c:/texlive/2019/texmf-dist/tex/latex/logreq/logreq.sty
+)) (c:/texlive/2021/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count184
- (c:/texlive/2019/texmf-dist/tex/latex/logreq/logreq.def
+\lrq@indent=\count196
+ (c:/texlive/2021/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-)) (c:/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
+)) (c:/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-) (c:/texlive/2019/texmf-dist/tex/latex/url/url.sty
+) (c:/texlive/2021/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count185
-\c@listtotal=\count186
-\c@listcount=\count187
-\c@liststart=\count188
-\c@liststop=\count189
-\c@citecount=\count190
-\c@citetotal=\count191
-\c@multicitecount=\count192
-\c@multicitetotal=\count193
-\c@instcount=\count194
-\c@maxnames=\count195
-\c@minnames=\count196
-\c@maxitems=\count197
-\c@minitems=\count198
-\c@citecounter=\count199
-\c@maxcitecounter=\count266
-\c@savedcitecounter=\count267
-\c@uniquelist=\count268
-\c@uniquename=\count269
-\c@refsection=\count270
-\c@refsegment=\count271
-\c@maxextratitle=\count272
-\c@maxextratitleyear=\count273
-\c@maxextraname=\count274
-\c@maxextradate=\count275
-\c@maxextraalpha=\count276
-\c@abbrvpenalty=\count277
-\c@highnamepenalty=\count278
-\c@lownamepenalty=\count279
-\c@maxparens=\count280
-\c@parenlevel=\count281
-\blx@tempcnta=\count282
-\blx@tempcntb=\count283
-\blx@tempcntc=\count284
-\blx@maxsection=\count285
-\blx@maxsegment@0=\count286
-\blx@notetype=\count287
-\blx@parenlevel@text=\count288
-\blx@parenlevel@foot=\count289
-\blx@sectionciteorder@0=\count290
-\blx@entrysetcounter=\count291
+\c@tabx@nest=\count197
+\c@listtotal=\count198
+\c@listcount=\count199
+\c@liststart=\count266
+\c@liststop=\count267
+\c@citecount=\count268
+\c@citetotal=\count269
+\c@multicitecount=\count270
+\c@multicitetotal=\count271
+\c@instcount=\count272
+\c@maxnames=\count273
+\c@minnames=\count274
+\c@maxitems=\count275
+\c@minitems=\count276
+\c@citecounter=\count277
+\c@maxcitecounter=\count278
+\c@savedcitecounter=\count279
+\c@uniquelist=\count280
+\c@uniquename=\count281
+\c@refsection=\count282
+\c@refsegment=\count283
+\c@maxextratitle=\count284
+\c@maxextratitleyear=\count285
+\c@maxextraname=\count286
+\c@maxextradate=\count287
+\c@maxextraalpha=\count288
+\c@abbrvpenalty=\count289
+\c@highnamepenalty=\count290
+\c@lownamepenalty=\count291
+\c@maxparens=\count292
+\c@parenlevel=\count293
+\blx@tempcnta=\count294
+\blx@tempcntb=\count295
+\blx@tempcntc=\count296
+\blx@maxsection=\count297
+\blx@maxsegment@0=\count298
+\blx@notetype=\count299
+\blx@parenlevel@text=\count300
+\blx@parenlevel@foot=\count301
+\blx@sectionciteorder@0=\count302
+\blx@entrysetcounter=\count303
+\blx@biblioinstance=\count304
 \labelnumberwidth=\skip49
 \labelalphawidth=\skip50
 \biblabelsep=\skip51
@@ -157,87 +158,87 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \bibhang=\skip56
 \blx@bcfin=\read2
 \blx@bcfout=\write3
-\blx@langwohyphens=\language85
-\c@mincomprange=\count292
-\c@maxcomprange=\count293
-\c@mincompwidth=\count294
+\blx@langwohyphens=\language87
+\c@mincomprange=\count305
+\c@maxcomprange=\count306
+\c@mincompwidth=\count307
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
- (c:/texlive/2019/texmf-dist/tex/latex/biblatex/blx-dm.def
-File: blx-dm.def 2019/12/01 v3.14 biblatex localization (PK/MW)
+ (c:/texlive/2021/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2020/12/31 v3.16 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count295
-\c@savedafterword=\count296
-\c@annotator=\count297
-\c@savedannotator=\count298
-\c@author=\count299
-\c@savedauthor=\count300
-\c@bookauthor=\count301
-\c@savedbookauthor=\count302
-\c@commentator=\count303
-\c@savedcommentator=\count304
-\c@editor=\count305
-\c@savededitor=\count306
-\c@editora=\count307
-\c@savededitora=\count308
-\c@editorb=\count309
-\c@savededitorb=\count310
-\c@editorc=\count311
-\c@savededitorc=\count312
-\c@foreword=\count313
-\c@savedforeword=\count314
-\c@holder=\count315
-\c@savedholder=\count316
-\c@introduction=\count317
-\c@savedintroduction=\count318
-\c@namea=\count319
-\c@savednamea=\count320
-\c@nameb=\count321
-\c@savednameb=\count322
-\c@namec=\count323
-\c@savednamec=\count324
-\c@translator=\count325
-\c@savedtranslator=\count326
-\c@shortauthor=\count327
-\c@savedshortauthor=\count328
-\c@shorteditor=\count329
-\c@savedshorteditor=\count330
-\c@labelname=\count331
-\c@savedlabelname=\count332
-\c@institution=\count333
-\c@savedinstitution=\count334
-\c@lista=\count335
-\c@savedlista=\count336
-\c@listb=\count337
-\c@savedlistb=\count338
-\c@listc=\count339
-\c@savedlistc=\count340
-\c@listd=\count341
-\c@savedlistd=\count342
-\c@liste=\count343
-\c@savedliste=\count344
-\c@listf=\count345
-\c@savedlistf=\count346
-\c@location=\count347
-\c@savedlocation=\count348
-\c@organization=\count349
-\c@savedorganization=\count350
-\c@origlocation=\count351
-\c@savedoriglocation=\count352
-\c@origpublisher=\count353
-\c@savedorigpublisher=\count354
-\c@publisher=\count355
-\c@savedpublisher=\count356
-\c@language=\count357
-\c@savedlanguage=\count358
-\c@origlanguage=\count359
-\c@savedoriglanguage=\count360
-\c@pageref=\count361
-\c@savedpageref=\count362
+\c@afterword=\count308
+\c@savedafterword=\count309
+\c@annotator=\count310
+\c@savedannotator=\count311
+\c@author=\count312
+\c@savedauthor=\count313
+\c@bookauthor=\count314
+\c@savedbookauthor=\count315
+\c@commentator=\count316
+\c@savedcommentator=\count317
+\c@editor=\count318
+\c@savededitor=\count319
+\c@editora=\count320
+\c@savededitora=\count321
+\c@editorb=\count322
+\c@savededitorb=\count323
+\c@editorc=\count324
+\c@savededitorc=\count325
+\c@foreword=\count326
+\c@savedforeword=\count327
+\c@holder=\count328
+\c@savedholder=\count329
+\c@introduction=\count330
+\c@savedintroduction=\count331
+\c@namea=\count332
+\c@savednamea=\count333
+\c@nameb=\count334
+\c@savednameb=\count335
+\c@namec=\count336
+\c@savednamec=\count337
+\c@translator=\count338
+\c@savedtranslator=\count339
+\c@shortauthor=\count340
+\c@savedshortauthor=\count341
+\c@shorteditor=\count342
+\c@savedshorteditor=\count343
+\c@labelname=\count344
+\c@savedlabelname=\count345
+\c@institution=\count346
+\c@savedinstitution=\count347
+\c@lista=\count348
+\c@savedlista=\count349
+\c@listb=\count350
+\c@savedlistb=\count351
+\c@listc=\count352
+\c@savedlistc=\count353
+\c@listd=\count354
+\c@savedlistd=\count355
+\c@liste=\count356
+\c@savedliste=\count357
+\c@listf=\count358
+\c@savedlistf=\count359
+\c@location=\count360
+\c@savedlocation=\count361
+\c@organization=\count362
+\c@savedorganization=\count363
+\c@origlocation=\count364
+\c@savedoriglocation=\count365
+\c@origpublisher=\count366
+\c@savedorigpublisher=\count367
+\c@publisher=\count368
+\c@savedpublisher=\count369
+\c@language=\count370
+\c@savedlanguage=\count371
+\c@origlanguage=\count372
+\c@savedoriglanguage=\count373
+\c@pageref=\count374
+\c@savedpageref=\count375
 \shorthandwidth=\skip57
 \shortjournalwidth=\skip58
 \shortserieswidth=\skip59
@@ -254,42 +255,42 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \localshorteditorwidth=\skip70
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
- (c:/texlive/2019/texmf-dist/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+ (c:/texlive/2021/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- (c:/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.def
-File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
-\c@textcitecount=\count363
-\c@textcitetotal=\count364
-\c@textcitemaxnames=\count365
-\c@biburlbigbreakpenalty=\count366
-\c@biburlbreakpenalty=\count367
-\c@biburlnumpenalty=\count368
-\c@biburlucpenalty=\count369
-\c@biburllcpenalty=\count370
+ (c:/texlive/2021/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
+\c@textcitecount=\count376
+\c@textcitetotal=\count377
+\c@textcitemaxnames=\count378
+\c@biburlbigbreakpenalty=\count379
+\c@biburlbreakpenalty=\count380
+\c@biburlnumpenalty=\count381
+\c@biburlucpenalty=\count382
+\c@biburllcpenalty=\count383
 \biburlbigskip=\muskip17
 \biburlnumskip=\muskip18
 \biburlucskip=\muskip19
 \biburllcskip=\muskip20
-\c@smartand=\count371
+\c@smartand=\count384
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
- (c:/texlive/2019/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
-File: numeric.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
+ (c:/texlive/2021/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
- (c:/texlive/2019/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count372
-\c@bbx:relatedtotal=\count373
+ (c:/texlive/2021/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count385
+\c@bbx:relatedtotal=\count386
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
- (c:/texlive/2019/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
-File: numeric.cbx 2019/12/01 v3.14 biblatex citation style (PK/MW)
+ (c:/texlive/2021/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2020/12/31 v3.16 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -304,18 +305,18 @@ Package biblatex Info: Redefining '\smartcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
- (c:/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.cfg
+ (c:/texlive/2021/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
-)) (c:/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2019/09/10 1.8c listings language file
+)) (c:/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-\@quotelevel=\count374
-\@quotereset=\count375
- (c:/texlive/2019/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-02-23 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count376
-\l__pdf_internal_box=\box47
-) (d:/Klodi/Documents/computer-science-project/interim-report/interim-report.aux)
+\@quotelevel=\count387
+\@quotereset=\count388
+ (c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count389
+\l__pdf_internal_box=\box49
+) (./interim-report.aux)
 \openout1 = `interim-report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
@@ -332,47 +333,58 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
-\c@lstlisting=\count377
- (c:/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+\c@lstlisting=\count390
+ (c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count378
-\scratchdimen=\dimen141
-\scratchbox=\box48
-\nofMPsegments=\count379
-\nofMParguments=\count380
+\scratchcounter=\count391
+\scratchdimen=\dimen145
+\scratchbox=\box50
+\nofMPsegments=\count392
+\nofMParguments=\count393
 \everyMPshowfont=\toks17
-\MPscratchCnt=\count381
-\MPscratchDim=\dimen142
-\MPnumerator=\count382
-\makeMPintoPDFobject=\count383
+\MPscratchCnt=\count394
+\MPscratchDim=\dimen146
+\MPnumerator=\count395
+\makeMPintoPDFobject=\count396
 \everyMPtoPDFconversion=\toks18
-) (c:/texlive/2019/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+) (c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
- (c:/texlive/2019/texmf-dist/tex/latex/grfext/grfext.sty
+ (c:/texlive/2021/texmf-dist/tex/latex/grfext/grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
- (c:/texlive/2019/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+ (c:/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 ))
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
- (c:/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+ (c:/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
- (c:/texlive/2019/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+ (c:/texlive/2021/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2020/12/31 v3.16 biblatex localization (PK/MW)
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
+Package biblatex Info: Document encoding is UTF8 ....
+ (c:/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2021-02-18 L3 programming layer (loader) 
+)
+Package biblatex Info: ... and expl3
+(biblatex)             2021-02-18 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+ (c:/texlive/2021/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty (c:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (c:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty (c:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)))
+Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
+)
 \openout3 = `interim-report.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'interim-report.bbl' found.
- (d:/Klodi/Documents/computer-science-project/interim-report/interim-report.bbl)
+ (./interim-report.bbl)
 Package biblatex Info: Reference section=0 on input line 34.
 Package biblatex Info: Reference segment=0 on input line 34.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -382,7 +394,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 
-{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (d:/Klodi/Documents/computer-science-project/interim-report/interim-report.toc
+{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./interim-report.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -396,20 +408,20 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [2
 
 ]
-<./images/scratch_image.png, id=12, 1284.8pt x 731.73375pt>
-File: ./images/scratch_image.png Graphic file (type png)
-<use ./images/scratch_image.png>
-Package pdftex.def Info: ./images/scratch_image.png  used on input line 62.
+<./images//scratch_image.png, id=12, 1284.8pt x 731.73375pt>
+File: ./images//scratch_image.png Graphic file (type png)
+<use ./images//scratch_image.png>
+Package pdftex.def Info: ./images//scratch_image.png  used on input line 62.
 (pdftex.def)             Requested size: 455.24408pt x 259.27043pt.
- [1 <./images/scratch_image.png (PNG copy)>]
-<./images/app_inventor.png, id=16, 642.4pt x 481.8pt>
-File: ./images/app_inventor.png Graphic file (type png)
-<use ./images/app_inventor.png>
-Package pdftex.def Info: ./images/app_inventor.png  used on input line 74.
+ [1 <./images//scratch_image.png (PNG copy)>]
+<./images//app_inventor.png, id=16, 642.4pt x 481.8pt>
+File: ./images//app_inventor.png Graphic file (type png)
+<use ./images//app_inventor.png>
+Package pdftex.def Info: ./images//app_inventor.png  used on input line 74.
 (pdftex.def)             Requested size: 426.79134pt x 320.0989pt.
  [2
 
- <./images/app_inventor.png (PNG copy)>] [3] [4] [5]
+ <./images//app_inventor.png (PNG copy)>] [3] [4] [5]
 Underfull \hbox (badness 10000) in paragraph at lines 226--243
 
  []
@@ -457,23 +469,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 226--243
 [6
 
 ]
-<./images/scratch_blocks.png, id=36, 152.82094pt x 86.57344pt>
-File: ./images/scratch_blocks.png Graphic file (type png)
-<use ./images/scratch_blocks.png>
-Package pdftex.def Info: ./images/scratch_blocks.png  used on input line 255.
+<./images//scratch_blocks.png, id=36, 152.82094pt x 86.57344pt>
+File: ./images//scratch_blocks.png Graphic file (type png)
+<use ./images//scratch_blocks.png>
+Package pdftex.def Info: ./images//scratch_blocks.png  used on input line 255.
 (pdftex.def)             Requested size: 152.82054pt x 86.57321pt.
-<./images/scratch_vs_appinventor.png, id=38, 437.83575pt x 159.35535pt>
-File: ./images/scratch_vs_appinventor.png Graphic file (type png)
-<use ./images/scratch_vs_appinventor.png>
-Package pdftex.def Info: ./images/scratch_vs_appinventor.png  used on input line 271.
+<./images//scratch_vs_appinventor.png, id=38, 437.83575pt x 159.35535pt>
+File: ./images//scratch_vs_appinventor.png Graphic file (type png)
+<use ./images//scratch_vs_appinventor.png>
+Package pdftex.def Info: ./images//scratch_vs_appinventor.png  used on input line 271.
 (pdftex.def)             Requested size: 355.65944pt x 129.45157pt.
  [7
 
- <./images/scratch_blocks.png> <./images/scratch_vs_appinventor.png>]
-<./images/blockly.png, id=43, 1606.0pt x 903.375pt>
-File: ./images/blockly.png Graphic file (type png)
-<use ./images/blockly.png>
-Package pdftex.def Info: ./images/blockly.png  used on input line 306.
+ <./images//scratch_blocks.png> <./images//scratch_vs_appinventor.png>]
+<./images//blockly.png, id=43, 1606.0pt x 903.375pt>
+File: ./images//blockly.png Graphic file (type png)
+<use ./images//blockly.png>
+Package pdftex.def Info: ./images//blockly.png  used on input line 306.
 (pdftex.def)             Requested size: 426.79134pt x 240.06866pt.
 
 
@@ -481,15 +493,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [8
 
-] [9 <./images/blockly.png (PNG copy)>]
-<./images/lowercase_convention.png, id=50, 160.34906pt x 59.47218pt>
-File: ./images/lowercase_convention.png Graphic file (type png)
-<use ./images/lowercase_convention.png>
-Package pdftex.def Info: ./images/lowercase_convention.png  used on input line 333.
+] [9 <./images//blockly.png (PNG copy)>]
+<./images//lowercase_convention.png, id=50, 160.34906pt x 59.47218pt>
+File: ./images//lowercase_convention.png Graphic file (type png)
+<use ./images//lowercase_convention.png>
+Package pdftex.def Info: ./images//lowercase_convention.png  used on input line 333.
 (pdftex.def)             Requested size: 160.34866pt x 59.47203pt.
  [10
 
- <./images/lowercase_convention.png>]
+ <./images//lowercase_convention.png>]
 Overfull \hbox (33.46559pt too wide) in paragraph at lines 355--369
 [][] 
  []
@@ -499,19 +511,19 @@ Overfull \hbox (33.46559pt too wide) in paragraph at lines 355--369
 ] [12
 
 ]
-<./images/gantt_chart.png, id=62, 510.27pt x 286.014pt>
-File: ./images/gantt_chart.png Graphic file (type png)
-<use ./images/gantt_chart.png>
-Package pdftex.def Info: ./images/gantt_chart.png  used on input line 402.
+<./images//gantt_chart.png, id=62, 510.27pt x 286.014pt>
+File: ./images//gantt_chart.png Graphic file (type png)
+<use ./images//gantt_chart.png>
+Package pdftex.def Info: ./images//gantt_chart.png  used on input line 402.
 (pdftex.def)             Requested size: 426.79134pt x 239.2289pt.
-<./images/github.png, id=63, 466.74374pt x 269.50688pt>
-File: ./images/github.png Graphic file (type png)
-<use ./images/github.png>
-Package pdftex.def Info: ./images/github.png  used on input line 434.
+<./images//github.png, id=63, 466.74374pt x 269.50688pt>
+File: ./images//github.png Graphic file (type png)
+<use ./images//github.png>
+Package pdftex.def Info: ./images//github.png  used on input line 434.
 (pdftex.def)             Requested size: 312.9803pt x 180.72903pt.
  [13
 
- <./images/gantt_chart.png>] [14 <./images/github.png>]
+ <./images//gantt_chart.png>] [14 <./images//github.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 441--447
 
  []
@@ -529,10 +541,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 460--472
 [15
 
 ]
-<./images/design.png, id=75, 576.65437pt x 414.04688pt>
-File: ./images/design.png Graphic file (type png)
-<use ./images/design.png>
-Package pdftex.def Info: ./images/design.png  used on input line 481.
+<./images//design.png, id=75, 576.65437pt x 414.04688pt>
+File: ./images//design.png Graphic file (type png)
+<use ./images//design.png>
+Package pdftex.def Info: ./images//design.png  used on input line 481.
 (pdftex.def)             Requested size: 341.43306pt x 245.16371pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 485--492
@@ -546,37 +558,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 493--495
 
 [16
 
- <./images/design.png>]
+ <./images//design.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 497--504
 
  []
 
-<./images/colour_overfill.png, id=79, 232.87pt x 140.525pt>
-File: ./images/colour_overfill.png Graphic file (type png)
-<use ./images/colour_overfill.png>
-Package pdftex.def Info: ./images/colour_overfill.png  used on input line 507.
+<./images//colour_overfill.png, id=79, 232.87pt x 140.525pt>
+File: ./images//colour_overfill.png Graphic file (type png)
+<use ./images//colour_overfill.png>
+Package pdftex.def Info: ./images//colour_overfill.png  used on input line 507.
 (pdftex.def)             Requested size: 227.62204pt x 137.36403pt.
-<./images/overfill_solution.png, id=80, 359.3425pt x 23.08624pt>
-File: ./images/overfill_solution.png Graphic file (type png)
-<use ./images/overfill_solution.png>
-Package pdftex.def Info: ./images/overfill_solution.png  used on input line 508.
+<./images//overfill_solution.png, id=80, 359.3425pt x 23.08624pt>
+File: ./images//overfill_solution.png Graphic file (type png)
+<use ./images//overfill_solution.png>
+Package pdftex.def Info: ./images//overfill_solution.png  used on input line 508.
 (pdftex.def)             Requested size: 284.52756pt x 18.28088pt.
-<./images/no_overfill.png, id=81, 236.885pt x 138.5175pt>
-File: ./images/no_overfill.png Graphic file (type png)
-<use ./images/no_overfill.png>
-Package pdftex.def Info: ./images/no_overfill.png  used on input line 509.
+<./images//no_overfill.png, id=81, 236.885pt x 138.5175pt>
+File: ./images//no_overfill.png Graphic file (type png)
+<use ./images//no_overfill.png>
+Package pdftex.def Info: ./images//no_overfill.png  used on input line 509.
 (pdftex.def)             Requested size: 227.62204pt x 133.1042pt.
 [17
 
- <./images/colour_overfill.png> <./images/overfill_solution.png> <./images/no_overfill.png>]
+ <./images//colour_overfill.png> <./images//overfill_solution.png> <./images//no_overfill.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 517--529
 
  []
 
-<./images/copy_constructor.png, id=89, 578.16pt x 265.99374pt>
-File: ./images/copy_constructor.png Graphic file (type png)
-<use ./images/copy_constructor.png>
-Package pdftex.def Info: ./images/copy_constructor.png  used on input line 532.
+<./images//copy_constructor.png, id=89, 578.16pt x 265.99374pt>
+File: ./images//copy_constructor.png Graphic file (type png)
+<use ./images//copy_constructor.png>
+Package pdftex.def Info: ./images//copy_constructor.png  used on input line 532.
 (pdftex.def)             Requested size: 578.15858pt x 265.99309pt.
 
 Overfull \hbox (117.43735pt too wide) in paragraph at lines 532--533
@@ -585,7 +597,7 @@ Overfull \hbox (117.43735pt too wide) in paragraph at lines 532--533
 
 [18
 
- <./images/copy_constructor.png>]
+ <./images//copy_constructor.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 554--562
 
  []
@@ -602,78 +614,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 575--581
 
  []
 
-<./images/actionlistener.png, id=97, 381.425pt x 219.82124pt>
-File: ./images/actionlistener.png Graphic file (type png)
-<use ./images/actionlistener.png>
-Package pdftex.def Info: ./images/actionlistener.png  used on input line 584.
+<./images//actionlistener.png, id=97, 381.425pt x 219.82124pt>
+File: ./images//actionlistener.png Graphic file (type png)
+<use ./images//actionlistener.png>
+Package pdftex.def Info: ./images//actionlistener.png  used on input line 584.
 (pdftex.def)             Requested size: 341.43306pt x 196.7807pt.
 [20
 
- <./images/actionlistener.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 591--592
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 593--594
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 595--596
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 597--598
-
- []
-
-[21
+ <./images//actionlistener.png>] [21
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 607--608
+Underfull \hbox (badness 10000) in paragraph at lines 598--599
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 600--601
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 602--603
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 604--605
 
  []
 
 [22
 
-] [23
+]
+Underfull \hbox (badness 10000) in paragraph at lines 614--615
+
+ []
+
+[23
+
+] [24
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 628--634
+Underfull \hbox (badness 10000) in paragraph at lines 635--641
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 641--646
+Underfull \hbox (badness 10000) in paragraph at lines 648--653
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 641--646
+Underfull \hbox (badness 10000) in paragraph at lines 648--653
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 662--667
+Underfull \hbox (badness 10000) in paragraph at lines 669--674
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 662--667
+Underfull \hbox (badness 10000) in paragraph at lines 669--674
 
  []
 
-[24
+[25
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 671--673
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 685--691
+Underfull \hbox (badness 10000) in paragraph at lines 678--680
 
  []
 
@@ -683,83 +692,88 @@ Underfull \hbox (badness 10000) in paragraph at lines 692--698
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 692--698
+Underfull \hbox (badness 10000) in paragraph at lines 699--705
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 692--698
+Underfull \hbox (badness 10000) in paragraph at lines 699--705
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 692--698
+Underfull \hbox (badness 10000) in paragraph at lines 699--705
 
  []
 
-[25]
-<./images/timetable.png, id=119, 989.94844pt x 594.72188pt>
-File: ./images/timetable.png Graphic file (type png)
-<use ./images/timetable.png>
-Package pdftex.def Info: ./images/timetable.png  used on input line 702.
+
+Underfull \hbox (badness 10000) in paragraph at lines 699--705
+
+ []
+
+[26]
+<./images//timetable.png, id=122, 989.94844pt x 594.72188pt>
+File: ./images//timetable.png Graphic file (type png)
+<use ./images//timetable.png>
+Package pdftex.def Info: ./images//timetable.png  used on input line 709.
 (pdftex.def)             Requested size: 497.92322pt x 299.12978pt.
 
-Overfull \hbox (37.20198pt too wide) in paragraph at lines 702--703
+Overfull \hbox (37.20198pt too wide) in paragraph at lines 709--710
  [][] 
- []
-
-[26
-
- <./images/timetable.png>]
-Overfull \hbox (15.13611pt too wide) in paragraph at lines 707--707
-\OT1/cmr/m/n/12 tions''. In: \OT1/cmr/m/it/12 https://medium.com/vapurrmaid/visual-programming-version-control-future-
- []
-
-
-Overfull \hbox (34.90102pt too wide) in paragraph at lines 707--707
-[]\OT1/cmr/m/n/12 Rob Cam-ick. ``Mov-ing Win-dows''. In: \OT1/cmr/m/it/12 https://tips4java.wordpress.com/2009/06/14/moving-
- []
-
-
-Overfull \hbox (20.99597pt too wide) in paragraph at lines 707--707
-[]\OT1/cmr/m/n/12 REMI De-houck. ``The ma-tu-rity of vi-sual pro-gram-ming''. In: \OT1/cmr/m/it/12 http://www.craft.ai/blog/the-
- []
-
-
-Overfull \hbox (60.31155pt too wide) in paragraph at lines 707--707
-[]\OT1/cmr/m/n/12 ``Google's Blockly Teaches You to Cre-ate Apps''. In: \OT1/cmr/m/it/12 https://www.nbcbayarea.com/news/national-
- []
-
-
-Overfull \hbox (88.73239pt too wide) in paragraph at lines 707--707
-[]\OT1/cmr/m/n/12 The Scratch Team. ``3 Things To Know About Scratch 3.0''. In: \OT1/cmr/m/it/12 https://www.medium.com/scratchteam-
- []
-
-
-Overfull \hbox (146.19405pt too wide) in paragraph at lines 707--707
-[]\OT1/cmr/m/n/12 Bill Ven-ners. ``A Con-ver-sa-tion with Ef-fec-tive Java Au-thor, Josh Bloch''. In: \OT1/cmr/m/it/12 https://www.artima.com/articles/josh-
  []
 
 [27
 
-] (d:/Klodi/Documents/computer-science-project/interim-report/interim-report.aux)
+ <./images//timetable.png>]
+Overfull \hbox (15.13611pt too wide) in paragraph at lines 714--714
+\OT1/cmr/m/n/12 tions''. In: \OT1/cmr/m/it/12 https://medium.com/vapurrmaid/visual-programming-version-control-future-
+ []
+
+
+Overfull \hbox (34.90102pt too wide) in paragraph at lines 714--714
+[]\OT1/cmr/m/n/12 Rob Cam-ick. ``Mov-ing Win-dows''. In: \OT1/cmr/m/it/12 https://tips4java.wordpress.com/2009/06/14/moving-
+ []
+
+
+Overfull \hbox (20.99597pt too wide) in paragraph at lines 714--714
+[]\OT1/cmr/m/n/12 REMI De-houck. ``The ma-tu-rity of vi-sual pro-gram-ming''. In: \OT1/cmr/m/it/12 http://www.craft.ai/blog/the-
+ []
+
+
+Overfull \hbox (60.31155pt too wide) in paragraph at lines 714--714
+[]\OT1/cmr/m/n/12 ``Google's Blockly Teaches You to Cre-ate Apps''. In: \OT1/cmr/m/it/12 https://www.nbcbayarea.com/news/national-
+ []
+
+
+Overfull \hbox (88.73239pt too wide) in paragraph at lines 714--714
+[]\OT1/cmr/m/n/12 The Scratch Team. ``3 Things To Know About Scratch 3.0''. In: \OT1/cmr/m/it/12 https://www.medium.com/scratchteam-
+ []
+
+
+Overfull \hbox (146.19405pt too wide) in paragraph at lines 714--714
+[]\OT1/cmr/m/n/12 Bill Ven-ners. ``A Con-ver-sa-tion with Ef-fec-tive Java Au-thor, Josh Bloch''. In: \OT1/cmr/m/it/12 https://www.artima.com/articles/josh-
+ []
+
+[28
+
+] (./interim-report.aux)
 Package logreq Info: Writing requests to 'interim-report.run.xml'.
 \openout1 = `interim-report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 10208 strings out of 480994
- 184916 string characters out of 5916032
- 809211 words of memory out of 5000000
- 25617 multiletter control sequences out of 15000+600000
- 538668 words of font info for 45 fonts, out of 8000000 for 9000
+ 10578 strings out of 478994
+ 194791 string characters out of 5862207
+ 909553 words of memory out of 5000000
+ 27947 multiletter control sequences out of 15000+600000
+ 409760 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,14n,46p,895b,1287s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on d:/Klodi/Documents/computer-science-project/interim-report/interim-report.pdf (29 pages, 1880908 bytes).
+ 73i,14n,78p,816b,1302s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on interim-report.pdf (30 pages, 1881451 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
+ 155 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
