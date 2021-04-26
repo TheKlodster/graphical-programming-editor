@@ -3,11 +3,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
+import java.util.ArrayList;
 
 public class GUI {
 
     private JPanel buttonPanel, dragPanel, runPanel;
-    private JButton runButton, printButton, forButton;
+    private JButton runButton, printButton, variableButton, forButton;
     private final ComponentMover cm;
 
     private ActionListener spawn = new ActionListener() {
@@ -85,10 +86,12 @@ public class GUI {
         frame.setVisible(true);
         frame.setResizable(false);
 
-        ActionListener frameWindow = e -> createPrintFrame();
+        // Adding the interaction with the buttons.
+        ActionListener frameWindow = e -> popUpFrame();
+        ActionListener frameWindow2 = e -> popUpFrame();
         printButton.addActionListener(frameWindow);
         printButton.addMouseListener(new DeleteListener());
-
+        variableButton.addActionListener(frameWindow2);
         runButton.addActionListener(this::runProcedure);
     }
 
@@ -97,19 +100,32 @@ public class GUI {
      * @param actionEvent
      */
     public void runProcedure(ActionEvent actionEvent) {
+        Structure assign = new Structure();
         Component[] componentArray = dragPanel.getComponents();
-        Component components = null;
+        String[] stringSplit;
+
         if(componentArray.length != 0) {
             for (Component component : componentArray) {
-                //components = componentArray[i];
-                //System.out.println(components);
                 if (component instanceof JButton) {  // Checks if component is of Jbutton instance
-                    JButton print = (JButton) component; // Casts it to JButton
-                    String printText = print.getText(); // Gets the text in the button.
-                    System.out.println(printText); // Prints the text.
+                    JButton value = (JButton) component; // Casts it to JButton
+                    String printText = value.getText(); // Gets the text in the button.
+
+                    if(printText.contains("=")) {
+                        stringSplit = printText.split("[\\\\s@&.?$+=]+");
+                        assign.set(stringSplit[0], stringSplit[1]);
+                        System.out.println(assign.getMap());
+                    } else {
+                        System.out.println(printText); // Prints the text.
+                    }
                 }
             }
-            System.out.println("................");
+            sortComponents(componentArray);
+            System.out.println("----------------------------");
+        }
+    }
+
+    public void sortComponents(Component[] array) {
+        for(Component component : array) {
         }
     }
 
@@ -117,19 +133,30 @@ public class GUI {
      *
      */
     public void createButtons() {
+        ArrayList<JButton> buttonArray = new ArrayList();
+
+        printButton = new JButton("Print");
+        variableButton = new JButton("Variable");
+        forButton = new JButton("For loop");
+
+        buttonArray.add(printButton);
+        buttonArray.add(variableButton);
+        buttonArray.add(forButton);
+
+        for(JButton button: buttonArray) {
+            button.setPreferredSize(new Dimension(150, 40));
+            button.setFont(new Font("Arial", Font.PLAIN, 20));
+            button.setBorder(new RoundedBorder(10));
+
+            // Adding the buttons to their respective panels.
+            buttonPanel.add(button);
+        }
+
         runButton = new JButton("Run");
         runButton.setPreferredSize(new Dimension(200, 58));
         runButton.setFont(new Font("Arial", Font.PLAIN, 30));
-
-        printButton = new JButton("Print Statement");
-        printButton.setPreferredSize(new Dimension(150, 30));
-
-        forButton = new JButton("For loop");
-        forButton.setPreferredSize(new Dimension(150, 30));
-
+        runButton.setBorder(new RoundedBorder(10));
         runPanel.add(runButton);
-        buttonPanel.add(printButton);
-        buttonPanel.add(forButton);
     }
 
     /**
@@ -154,12 +181,13 @@ public class GUI {
     }
 
     /**
-     * Creating a small frame for the print statement
+     * Creating a small window frame for the print statement. The user
+     * will be able to enter their statement that they wish to use for
+     * their print block.
      */
-    public void createPrintFrame()
-    {
+    public void popUpFrame() {
         EventQueue.invokeLater(() -> {
-            JFrame frameWindow = new JFrame("The printer");
+            JFrame frameWindow = new JFrame();
 
             JPanel inputPanel = new JPanel();
             JTextField input = new JTextField(20);
@@ -188,6 +216,7 @@ public class GUI {
                     JButton button = (JButton) e.getSource();
                     button.setText(input.getText());
                     Component clone = cloneSwingComponent(button);
+
                     dragPanel.add(clone);
                     cm.registerComponent(clone);
                     frameWindow.dispose();
