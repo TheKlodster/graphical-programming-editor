@@ -601,10 +601,78 @@
         
         \clearpage
         \subsection{Deleting blocks}
-            A big objective for the user is the ability to edit their programs. This includes
+            An important objective for the user is the ability to edit their programs. This includes
             deleting blocks they have made by mistake/no longer want anymore. There isn't any
             sense in having the user close and re-open the application each time they need to
-            delete a block as this would also clear all their progress.
+            delete a block as this would also clear all their progress. This isn't smart.
+
+            There are several concepts to think about when implementing this. Key questions to
+            ask include \textit{what will I use to delete a block} and \textit{how will I use this
+            to go about deleting the block}. There are many ways to go about this, one being that there
+            may be a recycling bin in the corner, where the user would be able to drag their blocks over
+            there and drop them, causing the blocks to be deleted in the process. App Inventor uses this
+            method, and Scratch uses a method where you drag the blocks back into the block palette on
+            the left hand side - where the blocks are to create your program - and this would cause those
+            blocks to be delete too. Both works with stacks of blocks too if they are interconnected. \\
+
+            Both current methods work and sound great - however I want to be a bit more simple than that.
+            My plan is to setup a new java class that deals specifically with deleting blocks. This class
+            will extend the \texttt{MouseAdapter} library - this library will be the answer as it holds
+            the functions that allow me to read mouse clicks - such as two specific functions that I will
+            override: \texttt{mousePressed} and \texttt{mouseReleased}.
+
+            Using these two functions together, I can detect the mouse clicks on the button and use these
+            to delete a button. How so? By use of the right click button. Currently, the user has no
+            reason to use the right click mouse button as it serves to purpose - this is about to change.
+            The user will be able to right click any block, resulting in deletion. This will work
+            dynamically at runtime, so the user will not need to restart the application.
+            \texttt{mousePressed} will become true when a mouse click has been pressed, followed by the
+            function \texttt{mouseReleased} which will confirm the press and a new condition if that press
+            is a right click - if so then it will proceed to remove the button and update the panel. Finally,
+            all that's left is for me to call this class on the clones that are created, a simple one line. \\
+
+            Figures 14-17 illustrate my point in practice, note this this instance is performed all at
+            runtime, hence the proof via console screenshots showing each program being run within the
+            overall instance.
+
+            \clearpage
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=120mm]{delete_block1.png}
+                \caption{Two print statements and a variable initialised in a hashmap.}
+            \end{figure}
+
+            In Figure 15 I delete the first print statement and run the program again.
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=120mm]{delete_block2.png}
+                \caption{Deleting the first print statement and running the program again.}
+            \end{figure}
+
+            So far I have created three blocks, deleted one and the process has worked. To
+            confirm, I am using the right click on the mouse in order to delete the component.
+
+            \clearpage
+            Further in Figure 16, I delete the variable and continue to run the program.
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=120mm]{delete_block3.png}
+                \caption{Deleting the variable and running the program, all working as intended.}
+            \end{figure}
+
+            Finally, I delete the final print statement. Programs cannot be run if there are no
+            contents in the panel, thus I create a new statement, and run this too.
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=120mm]{delete_block4.png}
+                \caption{Deleting the final print statement, and reintroducing a new one!}
+            \end{figure}
+
+            I now have a fully functional deleting mechanism allowing users to edit and change
+            their work as they go.
 
         \clearpage
         \subsection{Maintaining order of the program}
@@ -625,8 +693,8 @@
             rule - however if it is apparent that there are several components with the same Y coordinate,
             then they are further sorted on their X coordinates. \\
 
-            Below in Figures 14-17, we can see how the methods I have discussed work in practice. The console
-            in Figure 14 console reveals to us the block structure working as intended, sorting by their Y
+            Below in Figures 18-21, we can see how the methods I have discussed work in practice. The console
+            in Figure 18 console reveals to us the block structure working as intended, sorting by their Y
             coordinate. \\
 
             I would also like to point out that on my end as the developer, this entire program is being run
@@ -643,7 +711,7 @@
                 \caption{Normal block structure being sorted by their Y coordinates.}
             \end{figure}
 
-            In Figure 15, I reajust the program, moving one block further to the right but above the
+            In Figure 19, I reajust the program, moving one block further to the right but above the
             \texttt{Goodbye} print block. Running the program again also updates the block structure
             accordingly and correctly, sorted by their Y coordinate as main priority.
 
@@ -654,7 +722,7 @@
                 in this program.}
             \end{figure}
 
-            Figure 16 proves how when aligning all of the blocks by their Y coordinates, that their X
+            Figure 20 proves how when aligning all of the blocks by their Y coordinates, that their X
             coordinates are then learnt and used to determine their knew positions. Note that if their
             X \& Y coordinates are identical, then the block that was instantiated first will take priority.
             Although it would not be ideal as a programmer to have blocks hidden on top of one another.
@@ -666,13 +734,13 @@
                 \caption{All Y coordinates are the same so they are sorted by their X coordinate.}
             \end{figure}
 
-            Furthermore in Figure 17, continuing from Figure 16, if I were to move just a few of the
+            Furthermore in Figure 21, continuing from Figure 16, if I were to move just a few of the
             blocks up immediately, the block structure updates again and works as intended.
 
             \begin{figure}[h]
                 \centering
                 \includegraphics[width=120mm]{blockstructure4.png}
-                \caption{In relation to Figure 16, if we adjust their Y coordinate, it will update
+                \caption{In relation to Figure 20, if we adjust their Y coordinate, it will update
                 its block structure.}
             \end{figure}
             
@@ -682,8 +750,6 @@
         \clearpage
         \subsection{Interpreter}
             Interpreter comparative programming \\
-
-            and rubbish bin \\
  
     \clearpage
     \section{Appendix}

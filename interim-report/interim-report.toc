@@ -58,14 +58,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.4}Deleting blocks}{21}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.5}Maintaining order of the program}{22}{}%
+\contentsline {subsection}{\numberline {6.5}Maintaining order of the program}{24}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.6}Interpreter}{25}{}%
+\contentsline {subsection}{\numberline {6.6}Interpreter}{27}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Appendix}{26}{}%
+\contentsline {section}{\numberline {7}Appendix}{28}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Interim Log}{26}{}%
+\contentsline {subsection}{\numberline {7.1}Interim Log}{28}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}Project Log}{27}{}%
+\contentsline {subsection}{\numberline {7.2}Project Log}{29}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3}Project Proposal}{28}{}%
+\contentsline {subsection}{\numberline {7.3}Project Proposal}{30}{}%
