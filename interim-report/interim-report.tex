@@ -529,10 +529,23 @@
 
             \begin{figure}[h]
                 \centering
-                \includegraphics{copy_constructor.png}
+                \includegraphics[width=100mm]{copy_constructor.png}
                 \caption{Some caption of the constructor.}
             \end{figure}
         
+            Upon completion of cloning the button blocks available to the user on the button panel,
+            the user will need the ability to edit what's inside the print button to their choosing.
+            I implemented a simple window to popup to the user, whereby the user can enter what they
+            wish to be printed.
+
+            \begin{figure}[h]
+                \includegraphics[width=50mm]{print_statement1.png}
+                \includegraphics[width=50mm]{print_statement2.png}
+                \includegraphics[width=50mm]{print_statement3.png}
+                \caption{Ability to create a print statement block, with a text of the users' choosing,
+                and successfully print it out to the console.}
+            \end{figure}
+
         \clearpage
         \subsection{DragLayout \& ComponentMover}
             It is a key objecive, although it may not be explicitly noted in this report, but
@@ -594,12 +607,81 @@
             delete a block as this would also clear all their progress.
 
         \clearpage
+        \subsection{Maintaining order of the program}
+            A crucial objective to be fulfilled in this project is the flow of the program and ensuring
+            that where the user places their blocks determines its position in their program and
+            how they are interacted at compile time. It is key that if the user declares an assignment
+            variable, followed by a print statement in their program printing the variable, that when
+            they proceed with the \texttt{Run} button, there is a mechanism behind the scenes that will
+            maintain a block structure. So when the print statement is met at run time, it understands
+            what it is trying to print out, and where to get it from. Maintaining this block structure
+            enables the user to create high level programs and begin thinking about their programs
+            syntactically, which will help them develop skills for writing code in text-based languages. \\
+
+            I used the \texttt{Collections} and the \texttt{Comparator} library to achieve this. Using these libraries
+            together, I was able to interact with the data structure instantiated by collecting the components
+            of the panel in an arraylist of type \texttt{Component}. Using the latter library, I compared
+            the Y coordinate locations of all components in the arraylist and sorted them based on that
+            rule - however if it is apparent that there are several components with the same Y coordinate,
+            then they are further sorted on their X coordinates. \\
+
+            Below in Figures 14-17, we can see how the methods I have discussed work in practice. The console
+            in Figure 14 console reveals to us the block structure working as intended, sorting by their Y
+            coordinate. \\
+
+            I would also like to point out that on my end as the developer, this entire program is being run
+            in one go live at runtime! This is impressive and useful; if I wanted to I could, after full
+            completion, export the program as an executable \texttt{.exe} file that users can use by opening
+            it and letting the program run. Users are able to run their own program via the execution button
+            \texttt{Run} and this would work live for them as each time they run their own programs, it is
+            being updated and runs with any changes they have made.
+
+            \clearpage
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=120mm]{blockstructure1.png}
+                \caption{Normal block structure being sorted by their Y coordinates.}
+            \end{figure}
+
+            In Figure 15, I reajust the program, moving one block further to the right but above the
+            \texttt{Goodbye} print block. Running the program again also updates the block structure
+            accordingly and correctly, sorted by their Y coordinate as main priority.
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=120mm]{blockstructure2.png}
+                \caption{\texttt{and} print statement is classed as the first element
+                in this program.}
+            \end{figure}
+
+            Figure 16 proves how when aligning all of the blocks by their Y coordinates, that their X
+            coordinates are then learnt and used to determine their knew positions. Note that if their
+            X \& Y coordinates are identical, then the block that was instantiated first will take priority.
+            Although it would not be ideal as a programmer to have blocks hidden on top of one another.
+
+            \clearpage
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=120mm]{blockstructure3.png}
+                \caption{All Y coordinates are the same so they are sorted by their X coordinate.}
+            \end{figure}
+
+            Furthermore in Figure 17, continuing from Figure 16, if I were to move just a few of the
+            blocks up immediately, the block structure updates again and works as intended.
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=120mm]{blockstructure4.png}
+                \caption{In relation to Figure 16, if we adjust their Y coordinate, it will update
+                its block structure.}
+            \end{figure}
+            
+            Now I have a fully working block structure, capable of allowing blocks to be placed in a
+            syntactical manner that holds true as with almost any other programming languages' structure.
+
+        \clearpage
         \subsection{Interpreter}
             Interpreter comparative programming \\
-
-            click button to spawn the block on the canvas \\
-
-            and drag. \\
 
             and rubbish bin \\
  

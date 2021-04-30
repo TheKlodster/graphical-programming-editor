@@ -26,15 +26,3 @@ public class DeleteListener extends MouseAdapter {
         pressed = false;
     }
 }
-
-/*
-    private MouseListener remove = new MouseAdapter() {
-        @Override
-        public void mouseClicked(MouseEvent e) {
-            if(SwingUtilities.isRightMouseButton(e) && e.getClickCount() == 1) {
-                System.out.println("yes");
-                System.out.println(e.getSource());
-            }
-        }
-    };
-*/

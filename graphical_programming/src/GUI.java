@@ -4,6 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class GUI {
 
@@ -16,6 +19,7 @@ public class GUI {
             JButton button = (JButton) e.getSource();
             JButton clone = cloneSwingComponent(button);
             assert clone != null;
+
             clone.addMouseListener(new DeleteListener());
             dragPanel.add(clone);
             cm.registerComponent(clone);
@@ -84,14 +88,12 @@ public class GUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("It's graphic time");
         frame.setVisible(true);
-        frame.setResizable(false);
+        frame.setResizable(true);
 
         // Adding the interaction with the buttons.
         ActionListener frameWindow = e -> popUpFrame();
-        ActionListener frameWindow2 = e -> popUpFrame();
         printButton.addActionListener(frameWindow);
-        printButton.addMouseListener(new DeleteListener());
-        variableButton.addActionListener(frameWindow2);
+        variableButton.addActionListener(frameWindow);
         runButton.addActionListener(this::runProcedure);
     }
 
@@ -101,11 +103,11 @@ public class GUI {
      */
     public void runProcedure(ActionEvent actionEvent) {
         Structure assign = new Structure();
-        Component[] componentArray = dragPanel.getComponents();
+        ArrayList<Component> componentArray = new ArrayList<>(Arrays.asList(dragPanel.getComponents()));
         String[] stringSplit;
 
-        if(componentArray.length != 0) {
-            for (Component component : componentArray) {
+        if(componentArray.size() != 0) {
+            for (Component component : sortComponents(componentArray)) {
                 if (component instanceof JButton) {  // Checks if component is of Jbutton instance
                     JButton value = (JButton) component; // Casts it to JButton
                     String printText = value.getText(); // Gets the text in the button.
@@ -119,14 +121,19 @@ public class GUI {
                     }
                 }
             }
-            sortComponents(componentArray);
             System.out.println("----------------------------");
         }
     }
 
-    public void sortComponents(Component[] array) {
-        for(Component component : array) {
-        }
+    /**
+     *
+     * @param array the initial array of the components captured from the dragPanel.
+     * @return an arraylist of type <Component>, sorted
+     */
+    public ArrayList<Component> sortComponents(ArrayList<Component> array) {
+        Collections.sort(array, Comparator.comparingInt(Component::getY).
+                thenComparingInt(Component::getX)); // If both Y are equal -> compare X too
+        return array;
     }
 
     /**
@@ -147,6 +154,7 @@ public class GUI {
             button.setPreferredSize(new Dimension(150, 40));
             button.setFont(new Font("Arial", Font.PLAIN, 20));
             button.setBorder(new RoundedBorder(10));
+            button.setFocusPainted(false);
 
             // Adding the buttons to their respective panels.
             buttonPanel.add(button);
@@ -156,6 +164,7 @@ public class GUI {
         runButton.setPreferredSize(new Dimension(200, 58));
         runButton.setFont(new Font("Arial", Font.PLAIN, 30));
         runButton.setBorder(new RoundedBorder(10));
+        runButton.setFocusPainted(false);
         runPanel.add(runButton);
     }
 
@@ -217,6 +226,7 @@ public class GUI {
                     button.setText(input.getText());
                     Component clone = cloneSwingComponent(button);
 
+                    clone.addMouseListener(new DeleteListener());
                     dragPanel.add(clone);
                     cm.registerComponent(clone);
                     frameWindow.dispose();

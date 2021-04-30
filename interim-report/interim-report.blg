@@ -1,21 +1,21 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'interim-report.blg'
-[120] biber-MSWIN32:340> INFO - === 
-[158] Biber.pm:415> INFO - Reading 'interim-report.bcf'
-[286] Biber.pm:952> INFO - Found 16 citekeys in bib section 0
-[303] Biber.pm:4340> INFO - Processing section 0
-[316] Biber.pm:4531> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[362] bibtex.pm:1689> INFO - LaTeX decoding ...
-[381] bibtex.pm:1494> INFO - Found BibTeX data source 'bibliography.bib'
-[449] Utils.pm:395> WARN - legacy year field 'January 4, 2002' in entry 'billVenners' is not an integer - this will probably not sort properly.
-[451] Utils.pm:395> WARN - legacy year field 'October 23, 2011' in entry 'dragLayout' is not an integer - this will probably not sort properly.
-[454] Utils.pm:395> WARN - legacy year field 'June 14, 2009' in entry 'componentMover' is not an integer - this will probably not sort properly.
-[459] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\klodi\AppData\Local\Temp\biber_tmp_Baql\f4d088b3f9f145b5c3058da33afd57d4_6248.utf8, line 120, warning: entry started with "(", but ends with "}"
-[459] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\klodi\AppData\Local\Temp\biber_tmp_Baql\f4d088b3f9f145b5c3058da33afd57d4_6248.utf8, line 127, warning: entry started with "(", but ends with "}"
-[484] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[484] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[484] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[484] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[500] bbl.pm:654> INFO - Writing 'interim-report.bbl' with encoding 'UTF-8'
-[506] bbl.pm:757> INFO - Output to interim-report.bbl
-[507] Biber.pm:128> INFO - WARNINGS: 5
+[119] biber-MSWIN32:340> INFO - === 
+[160] Biber.pm:415> INFO - Reading 'interim-report.bcf'
+[288] Biber.pm:952> INFO - Found 16 citekeys in bib section 0
+[305] Biber.pm:4340> INFO - Processing section 0
+[319] Biber.pm:4531> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[366] bibtex.pm:1689> INFO - LaTeX decoding ...
+[386] bibtex.pm:1494> INFO - Found BibTeX data source 'bibliography.bib'
+[454] Utils.pm:395> WARN - legacy year field 'January 4, 2002' in entry 'billVenners' is not an integer - this will probably not sort properly.
+[456] Utils.pm:395> WARN - legacy year field 'October 23, 2011' in entry 'dragLayout' is not an integer - this will probably not sort properly.
+[459] Utils.pm:395> WARN - legacy year field 'June 14, 2009' in entry 'componentMover' is not an integer - this will probably not sort properly.
+[465] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\klodi\AppData\Local\Temp\biber_tmp_JNg_\f4d088b3f9f145b5c3058da33afd57d4_22512.utf8, line 120, warning: entry started with "(", but ends with "}"
+[465] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\klodi\AppData\Local\Temp\biber_tmp_JNg_\f4d088b3f9f145b5c3058da33afd57d4_22512.utf8, line 127, warning: entry started with "(", but ends with "}"
+[490] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[490] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[490] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[490] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[505] bbl.pm:654> INFO - Writing 'interim-report.bbl' with encoding 'UTF-8'
+[512] bbl.pm:757> INFO - Output to interim-report.bbl
+[512] Biber.pm:128> INFO - WARNINGS: 5
