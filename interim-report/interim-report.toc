@@ -60,12 +60,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.5}Maintaining order of the program}{24}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.6}Interpreter}{27}{}%
+\contentsline {subsection}{\numberline {6.6}Console Output}{27}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Appendix}{28}{}%
+\contentsline {subsection}{\numberline {6.7}Interpreter}{29}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Interim Log}{28}{}%
+\contentsline {section}{\numberline {7}Conclusions \& Evaluation}{30}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}Project Log}{29}{}%
+\contentsline {section}{\numberline {8}Appendix}{31}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3}Project Proposal}{30}{}%
+\contentsline {subsection}{\numberline {8.1}Interim Log}{31}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2}Project Log}{32}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3}Project Proposal}{33}{}%

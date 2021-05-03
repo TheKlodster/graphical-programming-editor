@@ -35,7 +35,7 @@
 
     \title{A Graphical Programming Language Editor}
     \author{Candidate No. 198719}
-    \date{Interim Report}
+    \date{Final Year Project}
     \clearpage\maketitle
     \thispagestyle{empty}
 
@@ -748,8 +748,77 @@
             syntactical manner that holds true as with almost any other programming languages' structure.
 
         \clearpage
+        \subsection{Console Output}
+            Earlier in the report I discussed about the means to which the user would be able to 
+            read their program outputs in a particular way, whether this be through a new window
+            that would pop up as they ran their program, or perhaps a new side panel dedicated to
+            a console output, similar to how Google's Blockly present how the user's blocks are
+            represented in textual code in a side panel. I think it's a given why this is a necessity
+            for this project or would purpose would it serve. Users will be able to learn what they
+            are producing through the console and this console will work live in runtime, where each
+            time they run their program, their console will run - similar to how the console works
+            in Java.
+
+            Figure 22 below shows an updated sketch of Figure 9 about how I intend to present the
+            application to the user, with the console fitted. As you can see the console fits neatly
+            along the right hand side of the program, showing clear output directly in front of
+            the user. Obviously it is not for me to conclude whether this is ideal or not, hence why
+            I will be asking my housemate for his permission on his opinion about the project and
+            whether he finds it appealing or not.
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=110mm]{design_updated.png}
+                \caption{Updated sketch of Figure 9, representing the new design for the program.}
+            \end{figure}
+
+            I will make a new Java class for the console. The implementation will consist of a \texttt{jTextArea}
+            to represent the textual output of the console, rather than the even older API, \texttt{textArea}.
+            The former API was developed after the significant issues that had come about with the latter,
+            and it can be used within a \texttt{JScrollPane} so that it's content can extend beyond the
+            bounds of its layout, with a horizontal and/or vertical scrollbar, incase output is too long
+            in either direction~\cite{jTextArea}. Finally, I will place the scroll pane within the panel, which
+            is placed within the border layout of the frame. That should complete the design side. \\
+
+            However, I ran into an issue where there was a border between the edge of the panel and the text area. I thought
+            that perhaps this was an issue with the border layout that I instantiated inside of the panel itself,
+            since the panel is also being controlled by a border layout by the initial frame, so it's sort of like
+            \textit{borderlayout-ception}. This was not the case. After researching the issue, I came to a
+            resolution, and that the problem occuring here is that there is a border for not only the scroll pane,
+            but for the text area too - thus I am seeing two different borders. To resolve this manually casted the
+            border of the scroll pane to \texttt{null}, removing it and therefore fixing the problem.
+
+            By placing the text area inside the scroll pane, followed by adding the scroll pane to the panel
+            with a layout fixes the size. The layout I'm using is a border layout for the specific console
+            pane, but this means that if I resize the program, or no matter how full the text area is,
+            the text area adjusts to its surroundings and fills the size of the panel accordingly, leaving
+            no padding or no borders that look unappealing and unnatural. \\
+
+            In practice, Figure 23 shows how my console fits in my program, and how it works with
+            any blocks that the user uses to programs. This is an excellent addition into the software
+            and easy for all users to see. Right there in front if them, users do not need to look/check
+            elsewhere to find where their programs are being outputted to. The scroll pane is a success
+            as any strings too long in length, or any programs running too wide in height will all be
+            accessible to the user via the scrollbars that will be readily available only when needed.
+            
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=160mm]{console.png}
+                \caption{Console on the newly created right hand side panel.}
+            \end{figure}
+          
+        
+        \clearpage
         \subsection{Interpreter}
             Interpreter comparative programming \\
+
+            code was spaghett so made it more abstracterino with cool jbutton setactioncommand functions.
+            no arithmetic exp in the FUCKING VARIABLE MATE nah mate im not letting them do that, pussios
+
+
+    \clearpage
+    \section{Conclusions \& Evaluation}
+    Most of the challenge and complexity of this project comes from the involvementof meta-programming and of handling unbounded user input. These two prop-erties significantly increase the possibility of mistakes and problems appearingwhich makes the software engineering practices used even more valuable.Overall I would consider this project to be a success, because most of theprimary aims have been met. A tool has been produced that significantly re-duces the amount of work needed to create a lexer in the Scala language. I havelearned much about the process of producing lexers, software design, automa-tion, testing and how to create tools for use by other developers. I have putinto practice many of the skills I have learned throughout my course such asfunctional programming, software engineering and compiler design.If I were to attempt this project or a similar project again, I would attemptto produce tools that integrate with existing libraries, for example in the case ofScalaLex, a version 2.0 would add compatibility with an existing FSA library tomake it easier to produce the output program, as many issues with serializationand other aspects can be solved by using an existing library. If I was producingScalaLex as a product, this is the approach I would take, but since this projectwas mainly about researching and testing my abilities, it made more sense toproduce the FSA library myself as this would allow me to gain deeper insightinto what was involved in producing these FSA.
  
     \clearpage
     \section{Appendix}

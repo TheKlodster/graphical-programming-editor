@@ -1,39 +1,25 @@
 import javax.swing.*;
+import javax.swing.border.EtchedBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
+import java.security.KeyException;
+import java.util.*;
 
 public class GUI {
 
-    private JPanel buttonPanel, dragPanel, runPanel;
-    private JButton runButton, printButton, variableButton, forButton;
+    private Console console = new Console();
+    private JPanel buttonPanel, dragPanel, runPanel, consolePanel;
+    private JButton runButton, printButton, variableButton, expButton, forButton, whileButton;
     private final ComponentMover cm;
-
-    private ActionListener spawn = new ActionListener() {
-        public void actionPerformed(ActionEvent e) {
-            JButton button = (JButton) e.getSource();
-            JButton clone = cloneSwingComponent(button);
-            assert clone != null;
-
-            clone.addMouseListener(new DeleteListener());
-            dragPanel.add(clone);
-            cm.registerComponent(clone);
-
-            dragPanel.repaint();
-            dragPanel.revalidate();
-        }
-    };
+    private HashMap<Character, Variable> variables;
 
     public GUI() {
         // Initialising the frame for the program. This involves setting the size, creating the BorderLayout
         // as well as choosing the background colour.
         JFrame frame = new JFrame();
-        frame.setSize(1300, 900);
+        frame.setSize(1000, 700);
         frame.setLayout(new BorderLayout(10, 10));
         frame.getContentPane().setBackground(Color.WHITE);
 
@@ -46,6 +32,8 @@ public class GUI {
         dragPanel = new JPanel(new DragLayout());
         JPanel titlePanel = new JPanel();
         runPanel = new JPanel();
+        consolePanel = new JPanel(new BorderLayout());
+        consolePanel.add(console.getConsolePane(), BorderLayout.CENTER);
 
         cm = new ComponentMover();
         cm.setAutoLayout(true);
@@ -55,18 +43,20 @@ public class GUI {
         titlePanel.setBackground(Color.WHITE);
         dragPanel.setBackground(Color.WHITE);
         runPanel.setBackground(Color.WHITE);
+        consolePanel.setBackground(Color.WHITE);
 
         // Setting the size for the panels.
-        buttonPanel.setPreferredSize(new Dimension(300, 100));
+        buttonPanel.setPreferredSize(new Dimension(200, 100));
         titlePanel.setPreferredSize(new Dimension(200, 100));
         runPanel.setPreferredSize(new Dimension(100, 100));
+        consolePanel.setPreferredSize(new Dimension(300, 100));
 
         // Initialising the borders/colours for the panels.
         buttonPanel.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createEmptyBorder(0, 10, 0, 0),
                 BorderFactory.createLineBorder(Color.GRAY)));
         dragPanel.setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createEmptyBorder(0, 0, 0, 10),
+                BorderFactory.createEmptyBorder(0, 0, 0, 0),
                 BorderFactory.createLineBorder(Color.GRAY)));
         titlePanel.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createEmptyBorder(10, 10, 0, 10),
@@ -74,6 +64,9 @@ public class GUI {
         runPanel.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createEmptyBorder(30, 10, 10, 10),
                 BorderFactory.createMatteBorder(2, 0, 0, 0, Color.GRAY)));
+        consolePanel.setBorder(BorderFactory.createCompoundBorder(
+                BorderFactory.createEmptyBorder(0, 0, 0, 10),
+                BorderFactory.createLineBorder(Color.GRAY)));
 
         //Implementing the button blocks.
         createButtons();
@@ -83,6 +76,7 @@ public class GUI {
         frame.add(dragPanel, BorderLayout.CENTER);
         frame.add(titlePanel, BorderLayout.NORTH);
         frame.add(runPanel, BorderLayout.SOUTH);
+        frame.add(consolePanel, BorderLayout.EAST);
 
         // MAKING DREAMS COME TRUE!
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -91,44 +85,84 @@ public class GUI {
         frame.setResizable(true);
 
         // Adding the interaction with the buttons.
-        ActionListener frameWindow = e -> popUpFrame();
-        printButton.addActionListener(frameWindow);
-        variableButton.addActionListener(frameWindow);
+        printButton.setActionCommand("print");
+        variableButton.setActionCommand("variable");
+        expButton.setActionCommand("expression");
         runButton.addActionListener(this::runProcedure);
+
+        printButton.addActionListener(e -> {
+            String action = e.getActionCommand();
+            popUpFrame(action);
+        });
+
+        variableButton.addActionListener(e -> {
+            String action = e.getActionCommand();
+            popUpFrame(action);
+        });
+
+        expButton.addActionListener(e -> {
+            String action = e.getActionCommand();
+            popUpFrame(action);
+        });
     }
 
     /**
+     * runProcedure method actually runs the program that the user creates with their blocks.
      *
-     * @param actionEvent
+     * @param actionEvent - the event that causes this procedure to take place, the click on the button
+     *                    for example.
      */
     public void runProcedure(ActionEvent actionEvent) {
-        Structure assign = new Structure();
-        ArrayList<Component> componentArray = new ArrayList<>(Arrays.asList(dragPanel.getComponents()));
-        String[] stringSplit;
+        try {
+            Console.clearTextArea();
+            variables = new HashMap<>();
 
-        if(componentArray.size() != 0) {
-            for (Component component : sortComponents(componentArray)) {
-                if (component instanceof JButton) {  // Checks if component is of Jbutton instance
+            ArrayList<Component> componentArray = new ArrayList<>(Arrays.asList(dragPanel.getComponents()));
+            String[] stringSplit;
+
+            if(componentArray.size() != 0) {
+                for (Component component : sortComponents(componentArray)) {
                     JButton value = (JButton) component; // Casts it to JButton
-                    String printText = value.getText(); // Gets the text in the button.
+                    String stringText = value.getText(); // Gets the text in the button.
 
-                    if(printText.contains("=")) {
-                        stringSplit = printText.split("[\\\\s@&.?$+=]+");
-                        assign.set(stringSplit[0], stringSplit[1]);
-                        System.out.println(assign.getMap());
-                    } else {
-                        System.out.println(printText); // Prints the text.
+                    if(value.getActionCommand().equals("variable")) {
+                        stringSplit = stringText.split("[@&.?$=]");
+
+                        String leftSide = stringSplit[0];
+                        String rightSide = stringSplit[1];
+                        char key = leftSide.charAt(0);
+                        char val = rightSide.charAt(0);
+
+                        if (Character.isDigit(val)) {
+                            variables.put(key, new Variable(key, Integer.parseInt(rightSide)));
+                        } else {
+                            if(!variables.containsKey(val)) {
+                                throw new KeyException(val + " does not exist.");
+                            }
+                            variables.put(key, new Variable(key, variables.get(val).value));
+                        }
+
+                    } else if(value.getActionCommand().equals("print")) {
+                        System.out.println(stringText); // Prints the text.
+                    } else if(value.getActionCommand().equals("expression")) {
+                        Parse p = new Parse(stringText, variables);
+                        Aexp e = p.parsePhrase();
+                        System.out.println(e.eval());
                     }
                 }
             }
-            System.out.println("----------------------------");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
     /**
+     * Sorts the components in the arraylist obtained by retrieving all components in the dragPanel
+     * when the user runs the program. Components are then sorted by their Y-coordinate (top-down approach)
+     * and by their X-coordinate if, and only if, their Y-coordinates are equal.
      *
      * @param array the initial array of the components captured from the dragPanel.
-     * @return an arraylist of type <Component>, sorted
+     * @return an arraylist of type <Component>, sorted.
      */
     public ArrayList<Component> sortComponents(ArrayList<Component> array) {
         Collections.sort(array, Comparator.comparingInt(Component::getY).
@@ -137,18 +171,16 @@ public class GUI {
     }
 
     /**
-     *
+     * Method called to simply create the buttons for the program.
      */
     public void createButtons() {
         ArrayList<JButton> buttonArray = new ArrayList();
 
-        printButton = new JButton("Print");
-        variableButton = new JButton("Variable");
-        forButton = new JButton("For loop");
-
-        buttonArray.add(printButton);
-        buttonArray.add(variableButton);
-        buttonArray.add(forButton);
+        buttonArray.add(printButton = new JButton("Print"));
+        buttonArray.add(variableButton = new JButton("Variable"));
+        buttonArray.add(expButton = new JButton("Expression"));
+        buttonArray.add(forButton = new JButton("For loop"));
+        buttonArray.add(whileButton = new JButton("While loop"));
 
         for(JButton button: buttonArray) {
             button.setPreferredSize(new Dimension(150, 40));
@@ -170,7 +202,7 @@ public class GUI {
 
     /**
      * cloneSwingComponent(Component c) - copy constructor which writes the object
-     * into ??? and then reads the object which is returned.
+     * into stream and then reads the object which is returned.
      *
      * @param c component to be cloned.
      * @return the cloned component.
@@ -194,7 +226,7 @@ public class GUI {
      * will be able to enter their statement that they wish to use for
      * their print block.
      */
-    public void popUpFrame() {
+    public void popUpFrame(String actionCommand) {
         EventQueue.invokeLater(() -> {
             JFrame frameWindow = new JFrame();
 
@@ -222,9 +254,10 @@ public class GUI {
 
             enterButton.addActionListener(e -> {
                 if(!input.getText().isEmpty()) {
-                    JButton button = (JButton) e.getSource();
-                    button.setText(input.getText());
-                    Component clone = cloneSwingComponent(button);
+                    JButton sourceButton = (JButton) e.getSource();
+                    sourceButton.setText(input.getText());
+                    sourceButton.setActionCommand(actionCommand);
+                    Component clone = cloneSwingComponent(sourceButton);
 
                     clone.addMouseListener(new DeleteListener());
                     dragPanel.add(clone);
@@ -238,4 +271,21 @@ public class GUI {
         });
     }
 }
+
+/*
+private ActionListener spawn = new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+            JButton button = (JButton) e.getSource();
+            JButton clone = cloneSwingComponent(button);
+            assert clone != null;
+
+            clone.addMouseListener(new DeleteListener());
+            dragPanel.add(clone);
+            cm.registerComponent(clone);
+
+            dragPanel.repaint();
+            dragPanel.revalidate();
+        }
+    };
+ */
 
