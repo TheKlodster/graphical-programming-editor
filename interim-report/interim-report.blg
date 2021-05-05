@@ -1,5 +1,23 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'interim-report.blg'
-[202] biber-MSWIN32:340> INFO - === 
-[274] Utils.pm:411> ERROR - interim-report.bcf is malformed, last biblatex run probably failed. Deleted interim-report.bbl
-[275] Biber.pm:132> INFO - ERRORS: 1
+[142] biber-MSWIN32:340> INFO - === 
+[192] Biber.pm:415> INFO - Reading 'interim-report.bcf'
+[330] Biber.pm:952> INFO - Found 17 citekeys in bib section 0
+[348] Biber.pm:4340> INFO - Processing section 0
+[363] Biber.pm:4531> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[448] bibtex.pm:1689> INFO - LaTeX decoding ...
+[485] bibtex.pm:1494> INFO - Found BibTeX data source 'bibliography.bib'
+[555] Utils.pm:395> WARN - legacy year field 'January 4, 2002' in entry 'billVenners' is not an integer - this will probably not sort properly.
+[558] Utils.pm:395> WARN - legacy year field 'October 23, 2011' in entry 'dragLayout' is not an integer - this will probably not sort properly.
+[560] Utils.pm:395> WARN - legacy year field 'June 14, 2009' in entry 'componentMover' is not an integer - this will probably not sort properly.
+[563] Utils.pm:395> WARN - legacy year field 'November 18, 2015' in entry 'jTextArea' is not an integer - this will probably not sort properly.
+[569] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\klodi\AppData\Local\Temp\biber_tmp_zrkd\f4d088b3f9f145b5c3058da33afd57d4_10428.utf8, line 120, warning: entry started with "(", but ends with "}"
+[569] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\klodi\AppData\Local\Temp\biber_tmp_zrkd\f4d088b3f9f145b5c3058da33afd57d4_10428.utf8, line 127, warning: entry started with "(", but ends with "}"
+[569] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\klodi\AppData\Local\Temp\biber_tmp_zrkd\f4d088b3f9f145b5c3058da33afd57d4_10428.utf8, line 134, warning: entry started with "(", but ends with "}"
+[595] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[595] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[595] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[595] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[612] bbl.pm:654> INFO - Writing 'interim-report.bbl' with encoding 'UTF-8'
+[620] bbl.pm:757> INFO - Output to interim-report.bbl
+[620] Biber.pm:128> INFO - WARNINGS: 7

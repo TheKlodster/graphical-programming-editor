@@ -810,7 +810,27 @@
         
         \clearpage
         \subsection{Interpreter}
-            Interpreter comparative programming \\
+            It's time to develop the application and make it more sophisticated. At this current stage, all
+            the user can do are print statements and create variables. The next big hurdle is the ability
+            to interact with these variables that they have created. So for instance if the user has
+            initialised a variable of \texttt{x=3}, then they would be able to create a block, with an
+            expression \texttt{x+3} and result in a console output of \texttt{6}. This would be developed
+            further to work with several variables. If initialised before hand, the user may also be able
+            to interact with several variables, perhaps performing expressions such as \texttt{x*y}.
+
+            To begin however, I think it's important to go back to our code and see if we can make anything
+            a bit more abstract to make our job easier in terms of parsing the expressions. If the user is
+            going to write the expressions in the print blocks, I would need to parse the print blocks each
+            time to check whether what is written is an expression or just a regular statement. However,
+            this leads to complications. In regards to printing a sentence, it's perfectly legal for
+            users to write meaningless expressions as a sentence. Furthermore, it's also legal for users
+            to include names that may so happen to be the name of their variable too, within their print
+            blocks as a sentence without actually parsing that name as a variable. They could be referring
+            to said variable instead. This seems far too complex to program into one simple button, and
+            I think it's a wise decision to make this more abstract and separate what they can and can't do
+            into different buttons. The print block will remain as a statement that will just print strings,
+            but creating a new block that can be used for the user to only use as expressions is a more
+            dynamic approach that I want to persevere.
 
             code was spaghett so made it more abstracterino with cool jbutton setactioncommand functions.
             no arithmetic exp in the FUCKING VARIABLE MATE nah mate im not letting them do that, pussios

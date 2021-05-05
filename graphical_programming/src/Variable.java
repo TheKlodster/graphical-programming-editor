@@ -9,8 +9,6 @@ public class Variable extends Aexp {
         this.value = value;
     }
 
-    public String toString(char var) { return var+""; }
-
     int eval() {
 
         return value; }

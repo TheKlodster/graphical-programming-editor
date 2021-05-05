@@ -1,6 +1,7 @@
 import java.security.KeyException;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.NoSuchElementException;
 
 public class Parse {
 
@@ -50,7 +51,7 @@ public class Parse {
 				nextToken();
 				return t;
 			} else {
-				throw new KeyException(token + " doesn't exist.");
+				throw new NoSuchElementException(token + " doesn't exist.");
 			}
         } else if (Character.isDigit(token)) {
 	    	String acc = token + "";

@@ -1,10 +1,7 @@
 import javax.swing.*;
-import javax.swing.border.EtchedBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.*;
-import java.security.KeyException;
 import java.util.*;
 
 public class GUI {
@@ -137,7 +134,7 @@ public class GUI {
                             variables.put(key, new Variable(key, Integer.parseInt(rightSide)));
                         } else {
                             if(!variables.containsKey(val)) {
-                                throw new KeyException(val + " does not exist.");
+                                throw new NoSuchElementException(val + " does not exist.");
                             }
                             variables.put(key, new Variable(key, variables.get(val).value));
                         }
@@ -152,7 +149,7 @@ public class GUI {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -260,6 +257,8 @@ public class GUI {
                     Component clone = cloneSwingComponent(sourceButton);
 
                     clone.addMouseListener(new DeleteListener());
+                    clone.setFont(new Font("Arial", Font.PLAIN, 20));
+
                     dragPanel.add(clone);
                     cm.registerComponent(clone);
                     frameWindow.dispose();
@@ -271,21 +270,3 @@ public class GUI {
         });
     }
 }
-
-/*
-private ActionListener spawn = new ActionListener() {
-        public void actionPerformed(ActionEvent e) {
-            JButton button = (JButton) e.getSource();
-            JButton clone = cloneSwingComponent(button);
-            assert clone != null;
-
-            clone.addMouseListener(new DeleteListener());
-            dragPanel.add(clone);
-            cm.registerComponent(clone);
-
-            dragPanel.repaint();
-            dragPanel.revalidate();
-        }
-    };
- */
-
