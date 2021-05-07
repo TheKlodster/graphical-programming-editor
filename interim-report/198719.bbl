@@ -357,6 +357,33 @@
       \field{pages}{33\bibrangedash 44}
       \range{pages}{12}
     \endentry
+    \entry{loops}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b6db06c14d8d8a61ce9573806aa9a3fe}{%
+           family={Siddiqui},
+           familyi={S\bibinitperiod},
+           given={Fareed},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6db06c14d8d8a61ce9573806aa9a3fe}
+      \strng{fullhash}{b6db06c14d8d8a61ce9573806aa9a3fe}
+      \strng{bibnamehash}{b6db06c14d8d8a61ce9573806aa9a3fe}
+      \strng{authorbibnamehash}{b6db06c14d8d8a61ce9573806aa9a3fe}
+      \strng{authornamehash}{b6db06c14d8d8a61ce9573806aa9a3fe}
+      \strng{authorfullhash}{b6db06c14d8d8a61ce9573806aa9a3fe}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Important of Loops}
+      \field{year}{July 26, 2014}
+      \verb{urlraw}
+      \verb https://schoolwires.henry.k12.ga.us/cms/lib/GA01000549/Centricity/Domain/3718/Importance%20of%20Loops.pdf
+      \endverb
+      \verb{url}
+      \verb https://schoolwires.henry.k12.ga.us/cms/lib/GA01000549/Centricity/Domain/3718/Importance%20of%20Loops.pdf
+      \endverb
+    \endentry
     \entry{thescratchteam}{article}{}
       \name{author}{1}{}{%
         {{hash=2969c9c9cf15950cdacbc2f57962dc04}{%

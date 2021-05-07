@@ -91,9 +91,9 @@
                     \item this includes \texttt{for} and \texttt{while} loops.
                 \end{itemize}
                 \item conditional statements, such as \texttt{if} statements.
-                \item implementing and interacting with data structures, such as lists.
-                \item procedures like methods/functions.
                 \item variables!
+                \item arithmetic expression.
+                \item print statements.
             \end{itemize}
             
             This is necessary as it provides another programming viewpoint for the user,
@@ -185,7 +185,6 @@
             \begin{itemize}
                 \item loops - create and work with basic for \& while loops.
                 \item variables - create, store data and interact with variables.
-                \item procedures - create functions/methods to perform certain tasks inside them!
                 \item interface - an interface for users to be able to interact with and perform the
                 above outcomes.
             \end{itemize}
@@ -362,9 +361,7 @@
                     \begin{tabular}[c]{@{}l@{}}4. The program will output any errors,\\ if any.\end{tabular}                                 & \begin{tabular}[c]{@{}l@{}}If there are any run-time errors, the terminal\\ will output those for the user to see.\end{tabular}        \\ \hline
                     \begin{tabular}[c]{@{}l@{}}5. The user shall be able to use functional\\ loops such as for and while loops.\end{tabular} & \begin{tabular}[c]{@{}l@{}}The user will have the ability to interact with\\ loops in the interface.\end{tabular}                      \\ \hline
                     \begin{tabular}[c]{@{}l@{}}6. The user shall be able to create\\ variables.\end{tabular}                                 & \begin{tabular}[c]{@{}l@{}}The user will be able to create and interact\\ with variables.\end{tabular}                                 \\ \hline
-                    \begin{tabular}[c]{@{}l@{}}7. The user shall be able to create\\ functions or procedures.\end{tabular}                   & \begin{tabular}[c]{@{}l@{}}Users will have the ability to create functions\\ /methods that perform a variety of tasks.\end{tabular}    \\ \hline
-                    \begin{tabular}[c]{@{}l@{}}8. The user will be able to create data\\ structures.\end{tabular}                            & \begin{tabular}[c]{@{}l@{}}Data structures such as lists will be available\\ for the user to implement and interact with.\end{tabular} \\ \hline
-                    9. A run button.                                                                                                         & A button to run to be able to run their program.                                                                                       \\ \hline
+                    7. A run button.                                                                                                         & A button to run to be able to run their program.                                                                                       \\ \hline
                 \end{tabular}
             \end{table}
 
@@ -809,14 +806,14 @@
           
         
         \clearpage
-        \subsection{Interpreter}
+        \subsection{Parser}
             It's time to develop the application and make it more sophisticated. At this current stage, all
             the user can do are print statements and create variables. The next big hurdle is the ability
             to interact with these variables that they have created. So for instance if the user has
             initialised a variable of \texttt{x=3}, then they would be able to create a block, with an
             expression \texttt{x+3} and result in a console output of \texttt{6}. This would be developed
             further to work with several variables. If initialised before hand, the user may also be able
-            to interact with several variables, perhaps performing expressions such as \texttt{x*y}.
+            to interact with several variables, perhaps performing expressions such as \texttt{x*y}. \\
 
             To begin however, I think it's important to go back to our code and see if we can make anything
             a bit more abstract to make our job easier in terms of parsing the expressions. If the user is
@@ -830,16 +827,227 @@
             I think it's a wise decision to make this more abstract and separate what they can and can't do
             into different buttons. The print block will remain as a statement that will just print strings,
             but creating a new block that can be used for the user to only use as expressions is a more
-            dynamic approach that I want to persevere.
+            dynamic approach that I want to persevere. As a result this allows me to use a specific JButton
+            function called the \texttt{setActionCommand}. Currently as I run the program, I would need to
+            parse the text to determine what the button is. However, using this command I can set strings
+            associated with each button, so with a print button I can label this an action \textit{print},
+            with variables \textit{variable} and so on. This abstract refactor is smart for simple reasons.
+            One being that if the user just wants to print out a statement, then if they're using a print
+            block, I can simply write a condition where if the block is of action \textit{print} then simply
+            print this out. That is the user's intention after all, I don't need to parse it and check for
+            special characters such as \texttt{=} incase the user is trying to assign a variable and so forth.
+            Users may want to use special characters and/or their variable names as a print statement, and
+            should do so freely. \\
 
-            code was spaghett so made it more abstracterino with cool jbutton setactioncommand functions.
-            no arithmetic exp in the FUCKING VARIABLE MATE nah mate im not letting them do that, pussios
+            Below in Figure 24 I have created the new button that will be used for interacting with variables
+            through basic methods such as arithmetic expressions, called \texttt{Expressions}. This will
+            have its own action set to it, which allows me to be more flexible in the code. When this
+            button is pressed, I understand what the user is trying to do and I can begin implementing the
+            functionality that will be used to calculate the expressions that the user is attempting to
+            solve. This is practical, knowing what the user is doing at runtime rather that trying to
+            deciper what the user is thinking.
+            
+            \clearpage
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=20mm]{updated_blocks.png}
+                \caption{The next blocks available to the user in the button panel. Note that the
+                \texttt{For} and \texttt{While} loop blocks are not functional and simply there
+                for display to show what the button panel is designed to look like.}
+            \end{figure}
 
+            Users need to be able to interact with variables. If a variable has been initialised,
+            my program will need to parse the expression they use, and identify if what they are
+            calculating a variable, or an arithmetic expression of numbers, or numbers against
+            variables. As a result, I will only be interacting with variables names of length
+            1 character. This is just a simple use case for now, that can be developed in future
+            work to allow variable names of any length. With a variable name of 1 character, I can
+            evaluate expressions each token at a time, so an expression of \texttt{1+2} has a total
+            of 3 tokens. Through this evaluation I can judge each token and decide whether the token
+            is a number, a character - and if so, a variable that exists - or an operator. I am
+            creating new classes for all the different tokens, such as for the operators - addition,
+            subtraction and so forth, as well a class for variables, a class for numbers and a parser
+            class which will parse the tokens in the expression and use their respective sub classes. \\
+
+            For basic simple arithmetic expressions such as \texttt{1+2}, my program is parsing this
+            expression firstly by identifying the first token, which is a number. I start to build a
+            string around this, scanning for the next token which is an operator, continuing the string
+            and scanning for the next token which is another number. After scanning one last time and
+            finding \texttt{null} or and empty byte, the string is built and we continue on to the
+            operator process - what operator is it? Through simple conditionals, I can check the equality
+            of the operator against the four different operators and those that match will then perform
+            the equation using the numbers inherited from their own class. The equation is evaluated and
+            the result is returned ready to be printed out.
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=56mm]{1+2.png}
+                \includegraphics[width=50mm]{1+.png}
+                \caption{The expression \texttt{1+2} in full effect, as well as just a single digit
+                expression, and an expression that is half completed printing out an error for the
+                user to see.}
+            \end{figure}
+
+            \clearpage
+            In regards to interaction with variables, the parser works the same. After scanning a
+            token, if said token happens to be a character, this token is searched up in the hashmap
+            I created where variables are stored alongside their values. If the variable is found,
+            their value is returned. If this variable is not found, a key exception is thrown,
+            printing an error to the user in their console that the so called variable does not exist.
+            This is also effective for variables that are initialised with the value of another variable
+            beforehand and vice versa. Figure 26 shows the parser working in full action, alongside
+            a small program I \textit{blockingly} created.
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=170mm]{working_interpreter.png}
+                \caption{The interpreter working and fully functional as it parse's the user's
+                expressions and understands where to find the necessary variables and
+                what values are assigned to them.}
+            \end{figure}
+
+            I now have a fully working parser in my project which finally means this project
+            is a little bit more sophisticated than what it used to be! Although this was definitely
+            the most challenging part of the project thus far and took up far more time than I
+            had planned, it's great to finally see the complexity of the project shining.
+
+
+        \clearpage
+        \subsection{For Loop}
+            The next challenge I am faced with are the loops to be performed. Loops are an essential
+            part to programming that all beginners must be aware of learn in order to make good
+            practice with the features available to them when working on any project. Loops in
+            computer programming are important that they can perform tasks within seconds while
+            reducing, to a great extent, time and efforts of the users~\cite{loops}. Without loops,
+            beginners will just be programming in a linear manner and will miss out on the fundamentals,
+            which in turn will help develop their problem solving skills. \\
+
+            The important part to focus and make sure I get correctly is how the for loop will
+            function with the blocks that follow. It was a decision between thinking about making
+            blocks connect to the for loop, or designing a for loop block that has a wide body and
+            blocks can fit inside it. These different issues can take up a lot of time thinking
+            about and attempting to implement, so to keep it simple, a foundation to this problem
+            would work sufficiently. The functionality of the for loop will work by scanning for
+            the next block that follows, and only applying the for loop to that block. This is
+            a basic infrastructure that can be developed in the future but will still serve as
+            a loop that users can use and learn from effectively. \\
+
+            In Figure 27, the following program works using 3 print statements, and a for block.
+            The for loop block is currently always set from 1 to \textit{x} amount of times that
+            the user is able to enter. For demonstration purposes, I have entered an amount of 10,
+            and ran the program, showing the for loop in practice, revealing that it is working
+            accordingly and can be used to loop statements and/or expressions. This is just the
+            beginning but this will be worked on in future work.
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=130mm]{for_loop.png}
+                \caption{For loop block in action using the next block as it's body, looping
+                it 10 times as indicated by the block.}
+            \end{figure}
+        
+    \clearpage
+    \section{User Feedback}
+        This section of the report involves feedback from one user, being my housemate. I have asked for
+        their permission and requested if they would like to take part and simply share their opinion on
+        the project. My housemate would use the program for fifteen minutes, and I handed them a task sheet
+        to complete the following tasks:
+
+        \begin{itemize}
+            \item print out a sentence.
+            \item create a variable of any value.
+            \begin{itemize}
+                \item use an expression to multiply this variable by 5.
+                \item create another new variable, assigning it to the previous variable you have made.
+                \item subtract the new variable by 1000.
+            \end{itemize}
+            \item loop a statement and/or an expression 100 times.
+        \end{itemize}
+
+        The user had no difficulties completing the following tasks. The instructions located at the top were
+        easy for them to follow, completing the tasks with ease. The user hesitated when it came to the task
+        of the for loop, but quickly caught on from re-reading the instructions that the for loop currently
+        only loops the next consecutive block. All tasks were completely without any problems. \\
+
+        Afterwards, I let the user explore the remainder of the time and share their thoughts. Overall, the
+        user reacted positively towards the compact but tidy layout of the program, with the console on the
+        right hand side being a fantastic feature that works dynamically with the programs they create. The
+        instructions at the top were just written out in a long sentence and the user suggested perhaps
+        formatting the instructions, making them larger and a less compact so it's not like a block of text.
+        The user also pointed out the following when initialising a variable of \texttt{a=5}, and performing
+        the expression \texttt{a/2} which printed out 2. All results are returned as integers hence why this
+        had not returned a decimal. This will be a note for future work to return to this part of the project
+        and develop the implementation further to allow float types to be returned, as well as long types
+        incase the numbers are too large to store in an integer type.
 
     \clearpage
     \section{Conclusions \& Evaluation}
-    Most of the challenge and complexity of this project comes from the involvementof meta-programming and of handling unbounded user input. These two prop-erties significantly increase the possibility of mistakes and problems appearingwhich makes the software engineering practices used even more valuable.Overall I would consider this project to be a success, because most of theprimary aims have been met. A tool has been produced that significantly re-duces the amount of work needed to create a lexer in the Scala language. I havelearned much about the process of producing lexers, software design, automa-tion, testing and how to create tools for use by other developers. I have putinto practice many of the skills I have learned throughout my course such asfunctional programming, software engineering and compiler design.If I were to attempt this project or a similar project again, I would attemptto produce tools that integrate with existing libraries, for example in the case ofScalaLex, a version 2.0 would add compatibility with an existing FSA library tomake it easier to produce the output program, as many issues with serializationand other aspects can be solved by using an existing library. If I was producingScalaLex as a product, this is the approach I would take, but since this projectwas mainly about researching and testing my abilities, it made more sense toproduce the FSA library myself as this would allow me to gain deeper insightinto what was involved in producing these FSA.
- 
+        A majority of the challenge and complexity that this project yielded comes from the
+        involvement of meta-programming and of handling unbounded user input. Combined, these
+        two practices have a significant impact to increase the possibility of mistakes and
+        problems appearing. In closing, I would consider this project to be a success - most,
+        if not all, of the primary objectives have been met. A program has been made to
+        ultimately serve as an alternative, I would argue a more simple approach, to the
+        current graphical programming languages out there, namely Scratch \& MIT App Inventor. \\
+
+        I have learnt a lot from this project, especially the Java Swing API and what it is
+        capable of creating. Skills I have learnt during my degree I put to practice in this
+        project, such as time management in regards to Software Engineering, keeping to an
+        agile plan and having regular meetings with my supervisor, as well as compiler design
+        and building a parser. One feature in particular that I learnt was the debugging feature
+        in the IDE I was susing - IntelliJ. This feature helped me debug any errors I had
+        throughout the program, in particular why my variables weren't being stored into the
+        hashmap, or why my parser wasn't looping through the entire expression properly. Both
+        issues were resolved through the debug feature - revealing that I had an infinite loop
+        in my parser which was why it wasn't looping through the expressions correctly.
+        To add on, not only have I learnt from this project but I have almost definitely
+        improved my ability to problem solve, and program at a higher level than what I could before,
+        learning to refactor and remove redundant code, as well as make code more abstract to work
+        in larger projects more efficiently, meaning less lines of code and more functions work
+        with one another. \\ 
+
+    \subsection{Requirements}
+        In section 4 of the Requirements Analysis, 4.1 in particular shows the mandatory
+        requirements that were to be met for this project to be fully complete and functional.
+        From the 7 requirements, all were met apart from half of the fifth requirement -
+        \textit{The user shall be able to use functional loops such as for and while loops}.
+        I have a basic implementation of the for loop functional, but not as complex as it can
+        be. As for the while loop, I have not implemented this at all. The basic infrastructure
+        for this project to evolve to become more sophistcated was the challenging part and
+        took a lot longer to complete than I aimed for, but it is complete. The infrastructure
+        was the most important part of this project however. Now that this is completed, for
+        future work I can continue to fully complete the basic features I have implemented,
+        as well as continue to work on new features that work around the infrastructure I have
+        finally created. As for the desirable requirements, in terms of editing, part of those requirements were
+        met too. The ability to delete blocks dynamically allows the user to freely edit their
+        work without having to restart the application. The rest of the desirable requirements
+        can also be met in future work after this report.
+
+    \subsection{Future Work}
+        I will be continuing this project after this report is complete. I want to embellish
+        the project, perhaps with some colour coded blocks, making it look less bland overall.
+        This is matching the desirable requirements that I stated in section 4.2. Before that,
+        I will work on improving the for loop and making it more functional working with
+        several blocks instead of just the next block. The while loop will be implemented
+        to work with conditional statements, as well as including booleans, \texttt{True} and
+        \texttt{False}. Booleans will be a great addition as this will also provide functionality
+        with creating conditional \texttt{if} statements that the user can do to run certain
+        blocks given certain conditions are met, resulting in their own programs becoming
+        more complex and sophisticated. So to summarise, I want to continue working on the
+        mandatory requirements, developing the existing features and working on implementing
+        the while loop. Such developments also include variables - in particular the ability
+        to have variables names of any length. Currently variables are of just 1 character,
+        but I want to abstract this and have variables names of any length allowing users to
+        use more meaningful variable names than just single characters. \\
+
+        In regards to the user feedback, I will definitely continue working on the design layout
+        and making it more appealing and more \textit{comfortable} since currently it is a bit
+        compact currently. Furthermore, all expressions are returned as integers, rather than
+        the correct result, which may be a long and/or a float type. I can work on embellishing
+        this implementation too and working on enabling users to interact with more results than
+        they currently can.
+
+    
     \clearpage
     \section{Appendix}
         \subsection{Interim Log}
@@ -865,7 +1073,68 @@
 
     \clearpage
         \subsection{Project Log}
-            \textbf{}
+            \textbf{Saturday 16\textsuperscript{th} January}
+                \begin{itemize}
+                    \item Meeting after Christmas break.
+                    \item Motivation to start the project.
+                    \item Planning how to being the project. \\
+                \end{itemize}
+            \textbf{Monday 15\textsuperscript{th} February}
+                \begin{itemize}
+                    \item Basic GUI completed and shown.
+                    \item Discussing the next steps, side panels.
+                    \item Begin with two panels, buttons on the left hand side. \\
+                \end{itemize}
+            \textbf{Monday 22\textsuperscript{nd} February}
+                \begin{itemize}
+                    \item Panels completed and shown.
+                    \item Print button created in side panel.
+                    \item No interactivity yet.
+                    \item Deciding how I plan to spawn the buttons after they are clicked,
+                    or dragging them onto the main panel. \\
+                \end{itemize}
+            \textbf{Wednesday 3\textsuperscript{rd} March}
+                \begin{itemize}
+                    \item No further improvements to the project.
+                    \item Talking about what I'm stuck on, how to go further.
+                    \item Have I done any of this before? Check through my further programming
+                    work from First Year. \\
+                \end{itemize}
+            \textbf{Wednesday 10\textsuperscript{th} March}
+                \begin{itemize}
+                    \item Made some further progress on the project.
+                    \item Click the buttons on the side panel to clone them and spawn
+                    them on the main panel.
+                    \item Also implemented a drag class that deals with dragging the components
+                    on the main panel, some interactivity! \\
+                \end{itemize}
+            \textbf{Monday 19\textsuperscript{th} April}
+                \begin{itemize}
+                    \item Not much progress made. Tidied current implementations up a bit.
+                    \item Discussed current mental situation given the certain circumstances.
+                    \item Implemented variables that are stored in a hashmap with their value.
+                \end{itemize}
+            \textbf{Thursday 22\textsuperscript{nd} April}
+                \begin{itemize}
+                    \item Data structures! Working on the parser, explaining and helping me
+                    understand the fundamentals of the infrastructure needed to interact with
+                    variables.
+                \end{itemize}
+            \textbf{Monday 26\textsuperscript{th} April}
+                \begin{itemize}
+                    \item Sorted the components on the main panel.
+                    \item Procedural order of programming is maintained - components are organised
+                    by their Y-coordinate, and if they're equal they are ordered by their X
+                    -coordinate. \\
+                \end{itemize}
+            \textbf{Wednesday 5\textsuperscript{th}May}
+                \begin{itemize}
+                    \item Showed off all my current work completed. A parser that interacts with
+                    variables and print statements, as well as expressions to calculate variables
+                    or just perform arithmetic expressions.
+                    \item Talking about implementing a basic for loop to have a foundation for
+                    full funtionality to be completed in future work.
+                \end{itemize}
 
         \clearpage
         \subsection{Project Proposal}
@@ -893,9 +1162,9 @@
                     \item this includes \texttt{for} and \texttt{while} loops.
                 \end{itemize}
                 \item conditional statements, such as \texttt{if} statements.
-                \item implementing and interacting with data structures, such as lists.
-                \item procedures like methods/functions.
                 \item variables!
+                \item arithmetic expressions.
+                \item print statements.
             \end{itemize}
             
             This is necessary as it provides another programming viewpoint for the user,
@@ -912,7 +1181,7 @@
                 \item To investigate system requirements and produce a requirements specification.
                 \item To select and justify an appropiate research design for the project.
                 \item Implement a simple user-friendly interface which is easy to use.
-                \item Functional and working loops, conditionals and data stuctures that can be interacted
+                \item Functional and working loops, conditionals that can be interacted
                 with. \\
             \end{enumerate}        
             \textbf{Exta Objectives}

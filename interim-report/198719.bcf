@@ -2364,6 +2364,7 @@
     <bcf:citekey order="18">dragLayout</bcf:citekey>
     <bcf:citekey order="19">componentMover</bcf:citekey>
     <bcf:citekey order="20">jTextArea</bcf:citekey>
+    <bcf:citekey order="21">loops</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

@@ -1,16 +1,24 @@
 import javax.swing.*;
+import javax.swing.text.AbstractDocument;
+import javax.swing.text.AttributeSet;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.DocumentFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.io.*;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class GUI {
 
     private Console console = new Console();
     private JPanel buttonPanel, dragPanel, runPanel, consolePanel;
     private JButton runButton, printButton, variableButton, expButton, forButton, whileButton;
+    private JLabel instructions;
     private final ComponentMover cm;
     private HashMap<Character, Variable> variables;
+    private ArrayList<JButton> sortedArray = new ArrayList<>();
 
     public GUI() {
         // Initialising the frame for the program. This involves setting the size, creating the BorderLayout
@@ -68,6 +76,12 @@ public class GUI {
         //Implementing the button blocks.
         createButtons();
 
+        instructions = new JLabel("<html>Click to spawn a button. Once spawned, click and hold to drag the block around the canvas.<br/>" +
+                                       "Variables can only be named as a single character. Arithmetic expressions can be<br/>" +
+                                       "performed through the expressions block. The for loop will loop the block<br/>" +
+                                       "following it as many times as you enter, positive integers only.</html>");
+        titlePanel.add(instructions);
+
         // Adding the panels to the frame, assigning them to their locations.
         frame.add(buttonPanel, BorderLayout.WEST);
         frame.add(dragPanel, BorderLayout.CENTER);
@@ -85,6 +99,7 @@ public class GUI {
         printButton.setActionCommand("print");
         variableButton.setActionCommand("variable");
         expButton.setActionCommand("expression");
+        forButton.setActionCommand("for");
         runButton.addActionListener(this::runProcedure);
 
         printButton.addActionListener(e -> {
@@ -101,6 +116,11 @@ public class GUI {
             String action = e.getActionCommand();
             popUpFrame(action);
         });
+
+        forButton.addActionListener(e -> {
+            String action = e.getActionCommand();
+            popUpForLoop(action);
+        });
     }
 
     /**
@@ -115,41 +135,62 @@ public class GUI {
             variables = new HashMap<>();
 
             ArrayList<Component> componentArray = new ArrayList<>(Arrays.asList(dragPanel.getComponents()));
-            String[] stringSplit;
+            sortedArray = sortComponents(componentArray);
 
             if(componentArray.size() != 0) {
-                for (Component component : sortComponents(componentArray)) {
-                    JButton value = (JButton) component; // Casts it to JButton
-                    String stringText = value.getText(); // Gets the text in the button.
-
-                    if(value.getActionCommand().equals("variable")) {
-                        stringSplit = stringText.split("[@&.?$=]");
-
-                        String leftSide = stringSplit[0];
-                        String rightSide = stringSplit[1];
-                        char key = leftSide.charAt(0);
-                        char val = rightSide.charAt(0);
-
-                        if (Character.isDigit(val)) {
-                            variables.put(key, new Variable(key, Integer.parseInt(rightSide)));
-                        } else {
-                            if(!variables.containsKey(val)) {
-                                throw new NoSuchElementException(val + " does not exist.");
-                            }
-                            variables.put(key, new Variable(key, variables.get(val).value));
-                        }
-
-                    } else if(value.getActionCommand().equals("print")) {
-                        System.out.println(stringText); // Prints the text.
-                    } else if(value.getActionCommand().equals("expression")) {
-                        Parse p = new Parse(stringText, variables);
-                        Aexp e = p.parsePhrase();
-                        System.out.println(e.eval());
-                    }
+                for (JButton block : sortedArray) {
+                    handleBlockAction(block);
                 }
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
+        }
+    }
+
+    /**
+     * This method handles each block and performs the actions that their serve their
+     * purpose for.
+     *
+     * @param block - JButton block to be handled based on it's purpose/action command.
+     */
+    public void handleBlockAction(JButton block) throws Exception {
+        String[] stringSplit;
+        String stringText = block.getText(); // Gets the text in the button.
+        String action = block.getActionCommand();
+        JButton b = new JButton();
+
+        if(action.equals("variable")) {
+            stringSplit = stringText.split("[@&.?$=]");
+
+            String leftSide = stringSplit[0];
+            String rightSide = stringSplit[1];
+            char key = leftSide.charAt(0);
+            char val = rightSide.charAt(0);
+
+            if (Character.isDigit(val)) {
+                variables.put(key, new Variable(key, Integer.parseInt(rightSide)));
+            } else {
+                if(!variables.containsKey(val)) {
+                    throw new NoSuchElementException(val + " has not been initialised.");
+                }
+                variables.put(key, new Variable(key, variables.get(val).value));
+            }
+        } else if(action.equals("print")) {
+            System.out.println(stringText); // Prints the text.
+        } else if(action.equals("expression")) {
+            Parse p = new Parse(stringText, variables);
+            Aexp e = p.parsePhrase();
+            System.out.println(e.eval());
+        } else if(block.getActionCommand().contains("for")) {
+            for(int i = 0; i < sortedArray.size(); i -=-1) {
+                if(block == sortedArray.get(i) && i != sortedArray.size() - 1) {
+                    b = sortedArray.get(i+1);
+                }
+            }
+            String[] loop = block.getActionCommand().split("\\|");
+            for(int i = 0; i < Integer.parseInt(loop[1]) - 1; i -=- 1) {
+                handleBlockAction(b);
+            }
         }
     }
 
@@ -161,10 +202,16 @@ public class GUI {
      * @param array the initial array of the components captured from the dragPanel.
      * @return an arraylist of type <Component>, sorted.
      */
-    public ArrayList<Component> sortComponents(ArrayList<Component> array) {
+    public ArrayList<JButton> sortComponents(ArrayList<Component> array) {
+        ArrayList<JButton> jButtonArray = new ArrayList<>();
         Collections.sort(array, Comparator.comparingInt(Component::getY).
                 thenComparingInt(Component::getX)); // If both Y are equal -> compare X too
-        return array;
+
+        for(int i = 0; i < array.size(); i -=-1) {
+            JButton button = (JButton) array.get(i);
+            jButtonArray.add(button);
+        }
+        return jButtonArray;
     }
 
     /**
@@ -254,6 +301,72 @@ public class GUI {
                     JButton sourceButton = (JButton) e.getSource();
                     sourceButton.setText(input.getText());
                     sourceButton.setActionCommand(actionCommand);
+                    Component clone = cloneSwingComponent(sourceButton);
+
+                    clone.addMouseListener(new DeleteListener());
+                    clone.setFont(new Font("Arial", Font.PLAIN, 20));
+
+                    dragPanel.add(clone);
+                    cm.registerComponent(clone);
+                    frameWindow.dispose();
+
+                    dragPanel.repaint();
+                    dragPanel.revalidate();
+                }
+            });
+        });
+    }
+
+    /**
+     *
+     * @param actionCommand
+     */
+    public void popUpForLoop(String actionCommand) {
+        EventQueue.invokeLater(() -> {
+            JFrame frameWindow = new JFrame("For Loop");
+
+            JPanel inputPanel = new JPanel();
+            JLabel label = new JLabel("Amount of loops: ");
+            JTextField forLoop = new JTextField(20);
+            JButton enterButton = new JButton("Enter");
+
+            ((AbstractDocument) forLoop.getDocument()).setDocumentFilter(new DocumentFilter(){
+                Pattern regEx = Pattern.compile("\\d*");
+
+                @Override
+                public void replace(FilterBypass fb, int offset, int length, String text, AttributeSet attrs) throws BadLocationException {
+                    Matcher matcher = regEx.matcher(text);
+                    if(!matcher.matches()){
+                        return;
+                    }
+                    super.replace(fb, offset, length, text, attrs);
+                }
+            });
+
+            inputPanel.add(label);
+            inputPanel.add(forLoop, BorderLayout.CENTER);
+            inputPanel.add(enterButton, BorderLayout.CENTER);
+
+            frameWindow.getContentPane().add(BorderLayout.CENTER, inputPanel);
+            frameWindow.pack();
+            frameWindow.setLocationByPlatform(true);
+            frameWindow.setVisible(true);
+            frameWindow.setResizable(false);
+            forLoop.requestFocus();
+
+            frameWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            try
+            {
+                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            enterButton.addActionListener(e -> {
+                if(!forLoop.getText().isEmpty()) {
+                    JButton sourceButton = (JButton) e.getSource();
+                    sourceButton.setText("For Loop (" + forLoop.getText() + ")");
+                    sourceButton.setActionCommand(actionCommand + "|" + forLoop.getText());
                     Component clone = cloneSwingComponent(sourceButton);
 
                     clone.addMouseListener(new DeleteListener());

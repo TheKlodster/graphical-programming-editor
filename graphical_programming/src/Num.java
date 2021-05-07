@@ -1,6 +1,6 @@
 public class Num extends Aexp {
 
-    int value = 0;
+    int value;
 
     Num(int value) {
         this.value = value;

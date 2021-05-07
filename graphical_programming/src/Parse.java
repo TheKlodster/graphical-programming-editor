@@ -51,7 +51,7 @@ public class Parse {
 				nextToken();
 				return t;
 			} else {
-				throw new NoSuchElementException(token + " doesn't exist.");
+				throw new NoSuchElementException(token + " has not been initialised.");
 			}
         } else if (Character.isDigit(token)) {
 	    	String acc = token + "";

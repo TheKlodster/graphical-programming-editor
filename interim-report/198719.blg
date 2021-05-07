@@ -1,0 +1,21 @@
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is '198719.blg'
+[120] biber-MSWIN32:340> INFO - === 
+[160] Biber.pm:415> INFO - Reading '198719.bcf'
+[290] Biber.pm:952> INFO - Found 18 citekeys in bib section 0
+[307] Biber.pm:4340> INFO - Processing section 0
+[321] Biber.pm:4531> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[369] bibtex.pm:1689> INFO - LaTeX decoding ...
+[389] bibtex.pm:1494> INFO - Found BibTeX data source 'bibliography.bib'
+[456] Utils.pm:395> WARN - legacy year field 'January 4, 2002' in entry 'billVenners' is not an integer - this will probably not sort properly.
+[459] Utils.pm:395> WARN - legacy year field 'October 23, 2011' in entry 'dragLayout' is not an integer - this will probably not sort properly.
+[461] Utils.pm:395> WARN - legacy year field 'June 14, 2009' in entry 'componentMover' is not an integer - this will probably not sort properly.
+[464] Utils.pm:395> WARN - legacy year field 'November 18, 2015' in entry 'jTextArea' is not an integer - this will probably not sort properly.
+[466] Utils.pm:395> WARN - legacy year field 'July 26, 2014' in entry 'loops' is not an integer - this will probably not sort properly.
+[498] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[499] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[499] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[499] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[520] bbl.pm:654> INFO - Writing '198719.bbl' with encoding 'UTF-8'
+[528] bbl.pm:757> INFO - Output to 198719.bbl
+[528] Biber.pm:128> INFO - WARNINGS: 5
