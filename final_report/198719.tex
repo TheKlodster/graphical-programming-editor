@@ -33,11 +33,66 @@
 
 \begin{document}
 
-    \title{A Graphical Programming Language Editor}
-    \author{Candidate No. 198719}
-    \date{Final Year Project}
-    \clearpage\maketitle
+    \begin{titlepage}
+        \begin{center}
+            \vspace*{1cm}
+            \Large
+            \textbf{A Graphical Programming Language Editor}
+            \vspace{0.5cm}
+
+            School of Informations and Engineering, Univeristy of Sussex
+
+            MComp Computer Science
+            \vspace{1.5cm}
+
+            Candidate Number: 198719
+
+            Project Supervisor: Dr. Ian Mackie
+
+            \vspace{0.5cm}
+            Tuesday, 11th May 2021
+
+            \vspace{1.5cm}
+            \includegraphics[width=170mm]{showcase.png}
+        \end{center}
+    \end{titlepage}
+    
+    \clearpage
     \thispagestyle{empty}
+
+    \clearpage
+    \section*{Declaration}
+        This report is submitted as part requirement for the degree of MComp Computer Science at
+        the University of Sussex. It is the product of my own labour except where indicated in
+        the text. The report may be freely copied and distributed provided the source is
+        acknowledged. I hereby give permission for a copy of this report to be loaned out to
+        students in future years. \\
+
+        Date: Monday, 10\textsuperscript{th} May 2021 \\
+
+        Candidate Number: 198719 \\
+
+        Signed: Klodiano Gjergji
+
+    \section*{Acknowledgements}
+        Thank you to my supervisor Dr Ian Mackie for helping me through this tough time,
+        providing me with resources and information to complete my project to the best
+        of my ability. I would also like to thank my housemate who wishes to remain
+        anonymous, for their time to share their opinion on the project as constructive
+        feedback.
+
+    \section*{Summary}
+        The aim of this project was to build a graphical programming infrastructure in Java, where users
+        interact and program visually using graphical features, rather than textually. This is
+        targetted towards beginner programmers who are just learning in the field. This report
+        explores the design and implementation process of the system components and some key
+        issues that were encountered, as well as how they were tackled. Focus is on the implementation
+        of the system rather than on evaluative studies using several users as tests to the project. \\
+
+        Feedback was received by my housemate who volunteered to share their opinion on
+        the project as a beginner programmer with minimal experience, providing constructive
+        feedback. Their feedback highlighted a number of improvements which could be made to the
+        system for future work.
 
     \newpage\clearpage\thispagestyle{empty}
     \tableofcontents
@@ -50,12 +105,12 @@
     style, using whiteboards, drawing flowcharts, with boxes and arrows indicating the flow 
     of the program. Why can't we make programs in the same style if we find it so helpful to read? 
     The concept behind graphical programming is specifying the elements of the program graphically 
-    rather than textually~\cite{dehouck2015maturity}.
+    rather than textually~\cite{dehouck2015maturity}. \\
 
     Popular examples of graphical programming include Scratch, as well as a personal favourite that 
-    I used during my GCSE Computing education, App Inventor!
-    What's clever about Scratch is its simplicity due to the block-based visual programming, aimed 
-    towards younger children to help them get into coding!
+    I used during my GCSE Computing education, App Inventor! What's clever about Scratch is its 
+    simplicity due to the block-based visual programming, aimed  towards younger children to
+    help them get into coding and gauge their interest.
 
     \begin{figure}[h]
         \centering
@@ -65,9 +120,9 @@
 
     \clearpage
     MIT App Inventor is one of my personal favourites after experiencing it myself during GCSEs, 
-    having to building an on-campus application for a University! It uses a graphical user 
+    having to build an on-campus application for a University! It uses a graphical user 
     interface, similar to Scratch, as well as providing the blocks that you can use, visible on 
-    the left hand side.
+    the left-hand side.
 
     \begin{figure}[h]
         \centering
@@ -77,7 +132,7 @@
 
     Both what Scratch and App Inventor do superbly is colour code their blocks to identify 
     exactly what they are representing. There are colour coded blocks for variables, events 
-    and controls, and so on! For instance in App Inventor, variables are coloured in Orange 
+    and controls, and so on. For instance in App Inventor, variables are coloured in orange 
     blocks, and procedures and show in a big purple block, encapsulating all the blocks like 
     a function.
 
@@ -91,7 +146,7 @@
                     \item this includes \texttt{for} and \texttt{while} loops.
                 \end{itemize}
                 \item conditional statements, such as \texttt{if} statements.
-                \item variables!
+                \item variables.
                 \item arithmetic expression.
                 \item print statements.
             \end{itemize}
@@ -99,9 +154,9 @@
             This is necessary as it provides another programming viewpoint for the user,
             which can aid them understand the process and flow of how said program may
             be running. It is also friendly and less intimidating for newer users,
-            relative to a textual/command line script.
+            relative to a textual/command line script. \\
             
-            I am going to program this is Java, my most experienced language, making use
+            I am going to program this in Java, my most experienced language, making use
             of Java's smart GUI design feature, whilst learning and building knowledge on
             said feature for my own experience.
 
@@ -115,17 +170,17 @@
                 the game will not be properly functional. I investigated what requirements are mandatory
                 by doing research on existing softwares such as App Inventor and Blockly. For instance,
                 all softwares I found had a \texttt{run} button in order to be able to run the graphical
-                entities. Without this, how else is the canvas run? Of course it is not a big deal, and
+                entities. Without this, how else is the canvas run? Of course, it is not a big deal, and
                 there would probably be another solution, but it's a simple feature that also provides
-                simple UI for the user, which is self explanatory.
+                simple UI for the user, which is self-explanatory.
 
-            \subsubsection{To select and justify an appropiate simple design for the
+            \subsubsection{To select and justify an appropriate simple design for the
             project.}
                 This objective is to research other designs of similar projects and to understand
                 why their interface works well from a new user's perspective, but also why it
                 doesn't work very well. My knowledge in Human-Computer Interaction will help me
                 to focus on the design, and what defines a \textit{"user-friendly"} design.
-                The goal here isn't implementing the design, it's creating a design, on pen paper,
+                The goal here isn't implementing the design, it's creating a design, on pen \& paper,
                 attempting to make it as self-explanatory as possible. But that also begs the question,
                 \textit{"what determines a self-explanatory design?"} It's important to realise that
                 everyone's judgement of what a simple design looks like is different. It's a subjective
@@ -135,11 +190,11 @@
             \subsubsection{Implement a simple interface for users which is easy to
             understand.}
                 An important objective, which builds off of \texttt{1.2.2}. I have limited GUI
-                experience, where the first and last GUI building I engaged with was in 2nd year,
+                experience, where the first and last GUI building I engaged with was in 1st year,
                 Further Programming module, with Dr. Ian Wakeman. I spent a lot of time during that
-                assignment at the time focusing on a simple interface for the Futoshiki puzzle.
+                assignment at the time focusing on a simple interface for the Futoshiki puzzle. \\
 
-                This objective will benefit me greatly. Through research and problems, I will
+                This experience will benefit me greatly. Through research and problems, I will
                 get through this objective and implement an interface, whether it be outstanding,
                 or just about finished, and I will gain a lot of knowledge and experience on
                 the way.
@@ -149,7 +204,7 @@
                 What's the point of having a pretty canvas if you can't do anything with it?
                 This is the meat of the project, what's going to make the project be useful.
                 The main objective here is this one. My main priority is the ability to get
-                this project off its feet.
+                this project off its feet. \\
 
                 Variables for user's to be able to create and store data with, as well as
                 interact with within the project. Loops to allow the user to work with logic.
@@ -159,7 +214,6 @@
             The main challenge of implementing an interface to be able to program on is the required 
             time and skill set. This project may never be fully complete as more work can always be 
             done to improve the functionality of the interface, or making the interface more user-friendly.
-
             The project can be broken down into key areas that require focusing on:
         
             \begin{itemize}
@@ -167,10 +221,10 @@
                 \item Functionality - programming.
             \end{itemize}
 
-            I have limited GUI design in Java from my 2nd year module, Further Programming, therefore this 
+            I have limited GUI design in Java from my 1st year module, Further Programming, therefore this 
             process can be said to take up a large amount of time. Careful consideration is needed to 
             not overspend my time on the GUI design process, and rather get the functionality of said 
-            interface to work.
+            interface to work. \\
 
             Functionality requires programming to be clean and efficient, so not to go back over the code 
             and forget what was written. Code must be documented and commented along the way to make sure 
@@ -179,7 +233,7 @@
 
             \subsection{Expected Outcomes}
             The expected outcomes of this project are a fully working, functional graphical programming 
-            language interface. The user should use the tool independent from the back-end Java textual 
+            language interface. The user should use the tool independent of the back-end Java textual 
             code, and be able to perform the certain tasks:
 
             \begin{itemize}
@@ -190,15 +244,15 @@
             \end{itemize}
 
             What do we expect it to behave/look like? A blank canvas should appear upon starting, with
-            a heading on the left hand side, presenting the user with a selection of choice such as
-            \textit{"Loops, Procedures"} and so on, for each category of block. They will be able to click
+            a heading on the left-hand side, presenting the user with a selection of choice such as
+            \textit{Loops, Procedures} and so on, for each category of block. They will be able to click
             on said heading, which will expand and show the different blocks they can choose from. So if
-            they chose the \textit{loops} heading (a draft name for now, I know), this will expand and show
-            for \& while loops for them to choose from.
+            they chose the \textit{loops} heading (a draft name for now), this will expand and show
+            for \& while loops for them to choose from. \\
 
             An important point to address, is what will happen when the user runs the program? This is a key
             concept which will be an ongoing investigation throughout the project. But the current idea is
-            simple: an output screen showing the terminal. Upon running, a heading on the right hand side,
+            simple: an output screen showing the terminal. Upon running, a heading on the right-hand side,
             or perhaps underneath, will pop out with the terminal showing you the output of your program.
 
 
@@ -207,10 +261,10 @@
             used language across my university education thus far. This project will use skills learnt
             in Human Computer Interaction; test my ability to understand the user's perspective and
             struggles, involving the evaluation of the software, rather than my own when designing
-            the interface for them to use.
+            the interface for them to use. \\
         
             This project also incorporates key concepts understood from Software Engineering.
-            The ability to criticse my own work, collect requirements, manage time and manage an
+            The ability to criticise my own work, collect requirements, manage time and manage an
             agile approach to the project. Therefore, this project will test my ability to make use
             of several skills in such a way that they will be used outside of my university education.
 
@@ -226,7 +280,7 @@
             This project does not feature any distressing visuals that may harm the user. \\\\
             \textbf{2.1 - only undertake to do work or provide a service that is within your professional 
             competence;} \\\\
-            This project is within my professional skillset to complete. \\\\
+            This project is within my professional skill set to complete. \\\\
             \textbf{2.3 - develop your professional knowledge, skills and competence on a continuing 
             basis, maintaining awareness of technological developments, procedures, and standards 
             that are relevant to your field;} \\\\
@@ -246,7 +300,7 @@
             The key goal that Scratch sticks by is trying to introduce programming to those with no
             programming experience knowledge whatsoever. Scratch has been widely distributed to school
             systems and education organisations~\cite{maloney2010scratch}. Scratch also couldn't be any
-            more clearer to use, with a heading of categories for you to choose and select the difference
+            clearer to use, with a heading of categories for you to choose and select the difference
             blocks that provide different functionality.
 
             \begin{figure}[h]
@@ -274,11 +328,11 @@
             \clearpage
             Scratch and MIT App Inventor are the two most widely used block-based graphical programming
             languages for students and/or pupils. As of August 2019, there were 44,981,198 registered
-            users on Scratch, and 8,200,000 registered users on App Inventor~\cite{park2019comparing}.
+            users on Scratch, and 8,200,000 registered users on App Inventor~\cite{park2019comparing}. \\
 
             Both Scratch and App Inventor share the common goal of providing an educational programming
             language for new comers. Scratch is mainly used as a foundation to teach younger children
-            the concepts of code, whereas App Inventor is used as the \textit{"step up"}, but both are
+            the concepts of code, whereas App Inventor is used as the \textit{step up}, but both are
             used globally to make programming a bit more fun and interactive. App Inventor in particular
             is rewarding as upon running the code, an interactive mobile phone displaying your app is
             shown as the output!
@@ -298,8 +352,6 @@
                 \item PHP.
             \end{itemize}
 
-            It can also be edited to generate code in a different textual programming language!
-
             \begin{figure}[h]
                 \centering
                 \includegraphics[width=150mm]{blockly.png}
@@ -308,11 +360,12 @@
                 output as~\cite{blockly}.}
             \end{figure}
 
+            It can also be edited to generate code in a different textual programming language!
             Blockly is aimed towards new programmers to get them onboard and addicted to the visual 
             scene first. By providing the textual version of the code, perhaps this might spark a 
             passion within the user to follow through with programming. By being provided with the 
             textual code of their graphical app, they are learning and understanding what the code 
-            will really look like and how they could potentially implement it themselves.
+            will really look like and how they could potentially implement it themselves. \\
 
             A key part of Blockly that the developers undertook was user testing. The conditional and loop blocks were in the same category, with the same colour, 
             confusing the users who expected the program to run a certain way, when it ran differently 
@@ -325,7 +378,7 @@
         \subsection{Graphical Programming}
             What all three graphical programming editors do together is follow the convention 
             of lower-case naming of variables, functions and so on that is followed in textual-based
-            programming languages, for instance \textit{"if"} and \textit{"while"}. 
+            programming languages, for instance \textit{if} and \textit{while}. 
 
             \begin{figure}[h]
                 \centering
@@ -335,7 +388,7 @@
 
             Graphical programming is not a permanent solution to programming, but rather an 
             introduction~\cite{gregoryvisual}. Users are being taught the convention of the key
-            syntax that is used across all languages. I plan to follow this convetion too. A
+            syntax that is used across all languages. I plan to follow this convention too. A
             picture is worth a thousand words~\cite{petre1995looking}, and reading code isn't learnt
             nearly as fast and reading a picture. The strength of graphical representations is
             that they complement perceptually something also expressed textually in this case.
@@ -373,7 +426,7 @@
                     \multicolumn{2}{|c|}{\textbf{Desirable Requirements}}                                                                                                                                                                                                                                                                           \\ \hline
                     \textbf{Requirement}                                                   & \textbf{Specification}                                                                                                                                                                                                                                 \\ \hline
                     1. Colour coded blocks.                                                & \begin{tabular}[c]{@{}l@{}}The designs can be colour coded to visually\\ aid the user what they represent. For instance,\\ orange blocks for variables.\end{tabular}                                                                                   \\ \hline
-                    2. Interactive sound design.                                           & \begin{tabular}[c]{@{}l@{}}A potential sound that can be producing by\\ interacting with the program. For instance,\\ dragging and dropping, clicking, etc...\end{tabular}                                                                             \\ \hline
+                    2. Interactive sound design.                                           & \begin{tabular}[c]{@{}l@{}}A potential sound that can be producing by\\ interacting with the program. For instance,\\ dragging and dropping, clicking, etc.\end{tabular}                                                                             \\ \hline
                     \begin{tabular}[c]{@{}l@{}}3. Highlight when mouse\\ over\end{tabular} & \begin{tabular}[c]{@{}l@{}}When the mouse is hovered over an object,\\ said object could be highlighted by a glowing\\ fade, or perhaps an outline of the object.\end{tabular}                                                                         \\ \hline
                     4. Recycling bin.                                                      & \begin{tabular}[c]{@{}l@{}}A recycling bin in the bottom corner to show\\ users where they can drag and drop blocks\\ that are not needed. This could only be visible\\ when an object is being dragged, or it could always\\ be visible.\end{tabular} \\ \hline
                     5. Undo button.                                                        & A button to undo an action.                                                                                                                                                                                                                            \\ \hline
@@ -406,7 +459,7 @@
             far are the following:
 
             \begin{itemize}
-                \item Project proposal - outlining my objecives, aims and motivations for the
+                \item Project proposal - outlining my objectives, aims and motivations for the
                 project.
                 \item Background research - related work to the project I am working on.
                 \item Requirements gathering - software requirements that must be met for
@@ -416,9 +469,8 @@
             \end{itemize}
 
         \subsection{What's to come}
-            After completing this, I plan to have a meeting with my supervisor soon to discuss
+            After completing this, I have had meeting plans with my supervisor discussing
             design ideas for the project, and what the GUI might potentially look like.
-
             Of course, throughout the project my draft report will be the main task. Although
             my gantt chart shows a period in March-April where I will be hard focusing on it,
             throughout the project, I do plan to add bits here and there to it, to get started.
@@ -452,9 +504,9 @@
             ensure that whatever I do now will work for the remainder of the project, and that it will
             be compatible with any functionality I will implement later. If I don't consider this
             carefully, there may be a chance that I might hit a dead end and I will have to come back
-            to this stage, at a time where I shouldn't be. \\
+            to this stage, at a time when I shouldn't be. \\
 
-            Upon building basic GUI upon running the program, it would be nice if it was centered so it
+            Upon building basic GUI upon running the program, it would be nice if it was centred so it
             can be visible on any resolution that the user will be using. Thinking it would be a simple
             case of researching the Java JFrame documentation, I did not find what I was looking for and
             branched out. \textit{Jack} from this thread about setting up JFrames to the centre of the
@@ -464,7 +516,7 @@
             like. This may change in the near future when I begin implementing the JPanels, but for now
             this sort of design would look appropriate and make sense for the user. This type of formation
             is adopted too by other applications such as Scratch and App Inventor - both use a design
-            similar to this where the control panel is on the left hand side with all the different
+            similar to this where the control panel is on the left-hand side with all the different
             blocks the user can use, followed by the big canvas in the centre. \\
 
 
@@ -479,7 +531,7 @@
                 \caption{Drawn out plan on essentially what the interface may look like, subject to change.}
             \end{figure}
 
-            In regards to the console output for the user, I could do this several ways. A particular way
+            In regard to the console output for the user, I could do this several ways. A particular way
             I had in mind specifically was to research whether Java Swing could be able to open another
             window showing the output as a result of running the user's program. This is not the focus
             for the time being, so more on this later. Furthermore, I didn't want the user to be able
@@ -505,8 +557,8 @@
                 \includegraphics[width=100mm]{overfill_solution.png}
                 \includegraphics[width=80mm]{no_overfill.png}
                 \caption{The white background overflowing above the border in the top image; my solution
-                to the current problem, and the gray background now just appearing as a white background.
-                No one liked a gray background anyway.}
+                to the current problem, and the grey background now just appearing as a white background.
+                No one liked a grey background anyway.}
             \end{figure}
         
         \clearpage
@@ -532,7 +584,7 @@
         
             Upon completion of cloning the button blocks available to the user on the button panel,
             the user will need the ability to edit what's inside the print button to their choosing.
-            I implemented a simple window to popup to the user, whereby the user can enter what they
+            I implemented a simple window to pop up to the user, whereby the user can enter what they
             wish to be printed.
 
             \begin{figure}[h]
@@ -545,20 +597,20 @@
 
         \clearpage
         \subsection{DragLayout \& ComponentMover}
-            It is a key objecive, although it may not be explicitly noted in this report, but
+            It is a key objective, although it may not be explicitly noted in this report, but
             it is implied, that when designing a project such as this that the user has, not only
             to be able to interact with the features the program provides, but be able to edit these
             features - one way being through movement. The user will need access to drag
             components around to their desirable positions. \textit{Rob Camick's} blog on this specific
             feature provides a \texttt{DragLayout.java} class file that does exactly that, and it is
             paired up with another class file \texttt{ComponentMover.java}. Both classes are dependent
-            on eachother to work~\cite{dragLayout}. The decision was between using a null layout or a drag layout manager.
+            on each other to work~\cite{dragLayout}. The decision was between using a null layout or a drag layout manager.
             The answer is drawn from the 3 different functions a manager performs:
 
             \begin{itemize}
                 \item sets the locations of the components in the container.
                 \item sets the size of the components in the container.
-                \item calculates the preferred size of the containter.
+                \item calculates the preferred size of the container.
             \end{itemize}
 
             A null layout is a layout that technically it's a legitimate layout manager. This means that
@@ -582,7 +634,7 @@
             \cite{componentMover}.
 
             \clearpage
-            In regards to my action listener events, when a button on the side panel is clicked,
+            In regard to my action listener events, when a button on the side panel is clicked,
             it's going to do the same process every time, no matter what button is being
             clicked. It would be lazy to create action listener events for every single button
             to do the exact same process. Thinking ahead for when I add future buttons to the
@@ -599,7 +651,7 @@
         \clearpage
         \subsection{Deleting blocks}
             An important objective for the user is the ability to edit their programs. This includes
-            deleting blocks they have made by mistake/no longer want anymore. There isn't any
+            deleting blocks they have made by mistake/no longer want any more. There isn't any
             sense in having the user close and re-open the application each time they need to
             delete a block as this would also clear all their progress. This isn't smart.
 
@@ -609,11 +661,11 @@
             may be a recycling bin in the corner, where the user would be able to drag their blocks over
             there and drop them, causing the blocks to be deleted in the process. App Inventor uses this
             method, and Scratch uses a method where you drag the blocks back into the block palette on
-            the left hand side - where the blocks are to create your program - and this would cause those
-            blocks to be delete too. Both works with stacks of blocks too if they are interconnected. \\
+            the left-hand side - where the blocks are to create your program - and this would cause those
+            blocks to be deleted too. Both works with stacks of blocks too if they are interconnected. \\
 
-            Both current methods work and sound great - however I want to be a bit more simple than that.
-            My plan is to setup a new java class that deals specifically with deleting blocks. This class
+            Both current methods work and sound great - however I want to be a bit simpler than that.
+            My plan is to set up a new java class that deals specifically with deleting blocks. This class
             will extend the \texttt{MouseAdapter} library - this library will be the answer as it holds
             the functions that allow me to read mouse clicks - such as two specific functions that I will
             override: \texttt{mousePressed} and \texttt{mouseReleased}.
@@ -708,7 +760,7 @@
                 \caption{Normal block structure being sorted by their Y coordinates.}
             \end{figure}
 
-            In Figure 19, I reajust the program, moving one block further to the right but above the
+            In Figure 19, I readjust the program, moving one block further to the right but above the
             \texttt{Goodbye} print block. Running the program again also updates the block structure
             accordingly and correctly, sorted by their Y coordinate as main priority.
 
@@ -719,7 +771,7 @@
                 in this program.}
             \end{figure}
 
-            Figure 20 proves how when aligning all of the blocks by their Y coordinates, that their X
+            Figure 20 proves how when aligning all the blocks by their Y coordinates, that their X
             coordinates are then learnt and used to determine their knew positions. Note that if their
             X \& Y coordinates are identical, then the block that was instantiated first will take priority.
             Although it would not be ideal as a programmer to have blocks hidden on top of one another.
@@ -728,7 +780,7 @@
             \begin{figure}[h]
                 \centering
                 \includegraphics[width=120mm]{blockstructure3.png}
-                \caption{All Y coordinates are the same so they are sorted by their X coordinate.}
+                \caption{All Y coordinates are the same, so they are sorted by their X coordinate.}
             \end{figure}
 
             Furthermore in Figure 21, continuing from Figure 16, if I were to move just a few of the
@@ -746,7 +798,7 @@
 
         \clearpage
         \subsection{Console Output}
-            Earlier in the report I discussed about the means to which the user would be able to 
+            Earlier in the report I discussed the means to which the user would be able to 
             read their program outputs in a particular way, whether this be through a new window
             that would pop up as they ran their program, or perhaps a new side panel dedicated to
             a console output, similar to how Google's Blockly present how the user's blocks are
@@ -758,7 +810,7 @@
 
             Figure 22 below shows an updated sketch of Figure 9 about how I intend to present the
             application to the user, with the console fitted. As you can see the console fits neatly
-            along the right hand side of the program, showing clear output directly in front of
+            along the right-hand side of the program, showing clear output directly in front of
             the user. Obviously it is not for me to conclude whether this is ideal or not, hence why
             I will be asking my housemate for his permission on his opinion about the project and
             whether he finds it appealing or not.
@@ -773,7 +825,7 @@
             to represent the textual output of the console, rather than the even older API, \texttt{textArea}.
             The former API was developed after the significant issues that had come about with the latter,
             and it can be used within a \texttt{JScrollPane} so that it's content can extend beyond the
-            bounds of its layout, with a horizontal and/or vertical scrollbar, incase output is too long
+            bounds of its layout, with a horizontal and/or vertical scrollbar, in case output is too long
             in either direction~\cite{jTextArea}. Finally, I will place the scroll pane within the panel, which
             is placed within the border layout of the frame. That should complete the design side. \\
 
@@ -781,8 +833,8 @@
             that perhaps this was an issue with the border layout that I instantiated inside of the panel itself,
             since the panel is also being controlled by a border layout by the initial frame, so it's sort of like
             \textit{borderlayout-ception}. This was not the case. After researching the issue, I came to a
-            resolution, and that the problem occuring here is that there is a border for not only the scroll pane,
-            but for the text area too - thus I am seeing two different borders. To resolve this manually casted the
+            resolution, and that the problem occurring here is that there is a border for not only the scroll pane,
+            but for the text area too - thus I am seeing two different borders. To resolve, this manually casting the
             border of the scroll pane to \texttt{null}, removing it and therefore fixing the problem.
 
             By placing the text area inside the scroll pane, followed by adding the scroll pane to the panel
@@ -801,7 +853,7 @@
             \begin{figure}[h]
                 \centering
                 \includegraphics[width=160mm]{console.png}
-                \caption{Console on the newly created right hand side panel.}
+                \caption{Console on the newly created right-hand side panel.}
             \end{figure}
           
         
@@ -812,14 +864,14 @@
             to interact with these variables that they have created. So for instance if the user has
             initialised a variable of \texttt{x=3}, then they would be able to create a block, with an
             expression \texttt{x+3} and result in a console output of \texttt{6}. This would be developed
-            further to work with several variables. If initialised before hand, the user may also be able
+            further to work with several variables. If initialised beforehand, the user may also be able
             to interact with several variables, perhaps performing expressions such as \texttt{x*y}. \\
 
             To begin however, I think it's important to go back to our code and see if we can make anything
             a bit more abstract to make our job easier in terms of parsing the expressions. If the user is
             going to write the expressions in the print blocks, I would need to parse the print blocks each
             time to check whether what is written is an expression or just a regular statement. However,
-            this leads to complications. In regards to printing a sentence, it's perfectly legal for
+            this leads to complications. In regard to printing a sentence, it's perfectly legal for
             users to write meaningless expressions as a sentence. Furthermore, it's also legal for users
             to include names that may so happen to be the name of their variable too, within their print
             blocks as a sentence without actually parsing that name as a variable. They could be referring
@@ -835,7 +887,7 @@
             One being that if the user just wants to print out a statement, then if they're using a print
             block, I can simply write a condition where if the block is of action \textit{print} then simply
             print this out. That is the user's intention after all, I don't need to parse it and check for
-            special characters such as \texttt{=} incase the user is trying to assign a variable and so forth.
+            special characters such as \texttt{=} in case the user is trying to assign a variable and so forth.
             Users may want to use special characters and/or their variable names as a print statement, and
             should do so freely. \\
 
@@ -845,7 +897,7 @@
             button is pressed, I understand what the user is trying to do and I can begin implementing the
             functionality that will be used to calculate the expressions that the user is attempting to
             solve. This is practical, knowing what the user is doing at runtime rather that trying to
-            deciper what the user is thinking.
+            decipher what the user is thinking.
             
             \clearpage
             \begin{figure}[h]
@@ -873,7 +925,7 @@
             expression firstly by identifying the first token, which is a number. I start to build a
             string around this, scanning for the next token which is an operator, continuing the string
             and scanning for the next token which is another number. After scanning one last time and
-            finding \texttt{null} or and empty byte, the string is built and we continue on to the
+            finding \texttt{null} or and empty byte, the string is built, and we continue on to the
             operator process - what operator is it? Through simple conditionals, I can check the equality
             of the operator against the four different operators and those that match will then perform
             the equation using the numbers inherited from their own class. The equation is evaluated and
@@ -889,7 +941,7 @@
             \end{figure}
 
             \clearpage
-            In regards to interaction with variables, the parser works the same. After scanning a
+            In regard to interaction with variables, the parser works the same. After scanning a
             token, if said token happens to be a character, this token is searched up in the hashmap
             I created where variables are stored alongside their values. If the variable is found,
             their value is returned. If this variable is not found, a key exception is thrown,
@@ -901,13 +953,13 @@
             \begin{figure}[h]
                 \centering
                 \includegraphics[width=170mm]{working_interpreter.png}
-                \caption{The interpreter working and fully functional as it parse's the user's
+                \caption{The interpreter working and fully functional as it parses the user's
                 expressions and understands where to find the necessary variables and
                 what values are assigned to them.}
             \end{figure}
 
             I now have a fully working parser in my project which finally means this project
-            is a little bit more sophisticated than what it used to be! Although this was definitely
+            is a more sophisticated than what it used to be! Although this was definitely
             the most challenging part of the project thus far and took up far more time than I
             had planned, it's great to finally see the complexity of the project shining.
 
@@ -950,8 +1002,9 @@
     \section{User Feedback}
         This section of the report involves feedback from one user, being my housemate. I have asked for
         their permission and requested if they would like to take part and simply share their opinion on
-        the project. My housemate would use the program for fifteen minutes, and I handed them a task sheet
-        to complete the following tasks:
+        the project. Note that the user has minimal to no background experiences in programming. My
+        housemate would use the program for fifteen minutes, and I handed them a task sheet to complete
+        the following tasks:
 
         \begin{itemize}
             \item print out a sentence.
@@ -971,14 +1024,18 @@
 
         Afterwards, I let the user explore the remainder of the time and share their thoughts. Overall, the
         user reacted positively towards the compact but tidy layout of the program, with the console on the
-        right hand side being a fantastic feature that works dynamically with the programs they create. The
+        right-hand side being a fantastic feature that works dynamically with the programs they create. The
         instructions at the top were just written out in a long sentence and the user suggested perhaps
         formatting the instructions, making them larger and a less compact so it's not like a block of text.
         The user also pointed out the following when initialising a variable of \texttt{a=5}, and performing
         the expression \texttt{a/2} which printed out 2. All results are returned as integers hence why this
         had not returned a decimal. This will be a note for future work to return to this part of the project
         and develop the implementation further to allow float types to be returned, as well as long types
-        incase the numbers are too large to store in an integer type.
+        in case the numbers are too large to store in an integer type. \\
+
+        My user also uses a MacBook Pro, and I have a secondary Linux machine running ArchLinux. The program
+        executed perfectly on both OS which is great for branching out to users on different systems, given
+        that the only required software for this program to run was Java itself.
 
     \clearpage
     \section{Conclusions \& Evaluation}
@@ -987,15 +1044,15 @@
         two practices have a significant impact to increase the possibility of mistakes and
         problems appearing. In closing, I would consider this project to be a success - most,
         if not all, of the primary objectives have been met. A program has been made to
-        ultimately serve as an alternative, I would argue a more simple approach, to the
+        ultimately serve as an alternative, I would argue a simpler approach, to the
         current graphical programming languages out there, namely Scratch \& MIT App Inventor. \\
 
         I have learnt a lot from this project, especially the Java Swing API and what it is
         capable of creating. Skills I have learnt during my degree I put to practice in this
-        project, such as time management in regards to Software Engineering, keeping to an
+        project, such as time management in regard to Software Engineering, keeping to an
         agile plan and having regular meetings with my supervisor, as well as compiler design
         and building a parser. One feature in particular that I learnt was the debugging feature
-        in the IDE I was susing - IntelliJ. This feature helped me debug any errors I had
+        in the IDE I was using - IntelliJ. This feature helped me debug any errors I had
         throughout the program, in particular why my variables weren't being stored into the
         hashmap, or why my parser wasn't looping through the entire expression properly. Both
         issues were resolved through the debug feature - revealing that I had an infinite loop
@@ -1013,7 +1070,7 @@
         \textit{The user shall be able to use functional loops such as for and while loops}.
         I have a basic implementation of the for loop functional, but not as complex as it can
         be. As for the while loop, I have not implemented this at all. The basic infrastructure
-        for this project to evolve to become more sophistcated was the challenging part and
+        for this project to evolve to become more sophisticated was the challenging part and
         took a lot longer to complete than I aimed for, but it is complete. The infrastructure
         was the most important part of this project however. Now that this is completed, for
         future work I can continue to fully complete the basic features I have implemented,
@@ -1040,7 +1097,7 @@
         but I want to abstract this and have variables names of any length allowing users to
         use more meaningful variable names than just single characters. \\
 
-        In regards to the user feedback, I will definitely continue working on the design layout
+        In regard to the user feedback, I will definitely continue working on the design layout
         and making it more appealing and more \textit{comfortable} since currently it is a bit
         compact currently. Furthermore, all expressions are returned as integers, rather than
         the correct result, which may be a long and/or a float type. I can work on embellishing
@@ -1083,7 +1140,7 @@
                 \begin{itemize}
                     \item Basic GUI completed and shown.
                     \item Discussing the next steps, side panels.
-                    \item Begin with two panels, buttons on the left hand side. \\
+                    \item Begin with two panels, buttons on the left-hand side. \\
                 \end{itemize}
             \textbf{Monday 22\textsuperscript{nd} February}
                 \begin{itemize}
@@ -1133,7 +1190,7 @@
                     variables and print statements, as well as expressions to calculate variables
                     or just perform arithmetic expressions.
                     \item Talking about implementing a basic for loop to have a foundation for
-                    full funtionality to be completed in future work.
+                    full functionality to be completed in future work.
                 \end{itemize}
 
         \clearpage
@@ -1179,7 +1236,7 @@
             The main objectives are:
             \begin{enumerate}
                 \item To investigate system requirements and produce a requirements specification.
-                \item To select and justify an appropiate research design for the project.
+                \item To select and justify an appropriate research design for the project.
                 \item Implement a simple user-friendly interface which is easy to use.
                 \item Functional and working loops, conditionals that can be interacted
                 with. \\
@@ -1203,7 +1260,7 @@
             the interface for them to use.
         
             This project also incorporates key concepts understood from Software Engineering.
-            The ability to criticse my own work, collect requirements, manage time and manage an
+            The ability to criticise my own work, collect requirements, manage time and manage an
             agile approach to the project. Therefore, this project will test my ability to make use
             of several skills in such a way that they will be used outside of my university education. \\\\
             \textbf{Resources Required} \\\\

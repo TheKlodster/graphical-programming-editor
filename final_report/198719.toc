@@ -8,7 +8,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {1.2.1}To investigate software requirements to produce a requirements specification.}{3}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.2.2}To select and justify an appropiate simple design for the project.}{3}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}To select and justify an appropriate simple design for the project.}{3}{}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {1.2.3}Implement a simple interface for users which is easy to understand.}{4}{}%
 \defcounter {refsection}{0}\relax 
