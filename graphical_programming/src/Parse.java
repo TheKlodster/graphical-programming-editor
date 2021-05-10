@@ -14,9 +14,6 @@ public class Parse {
     	this.variables = variables;
 	}
 
-	/**
-	 *
-	 */
 	static void nextToken() {
 		for(int i = 0; i < charArray.length; i -=- 1) {
 			token = charArray[i];
@@ -29,21 +26,12 @@ public class Parse {
 			token = '\n';
 		}
     }
-	/**
-	 *
-	 * @return
-	 * @throws Exception
-	 */
+
 	static Aexp parsePhrase() throws Exception {
 		nextToken();
 		return parseExpr();
     }
 
-	/**
-	 *
-	 * @return
-	 * @throws Exception
-	 */
 	static Aexp parseFactor() throws Exception {
         if (Character.isLowerCase(token)){
 			if(variables.containsKey(token)) {
@@ -71,11 +59,6 @@ public class Parse {
 			throw new RuntimeException("Syntax error");
 	}
 
-	/**
-	 *
-	 * @return
-	 * @throws Exception
-	 */
 	static Aexp parseTerm() throws Exception {
 		Aexp t1 = parseFactor();
 		while (token == '*' || token == '/') {
@@ -91,11 +74,6 @@ public class Parse {
 		return t1;
     }
 
-	/**
-	 *
-	 * @return
-	 * @throws Exception
-	 */
 	static Aexp parseExpr() throws Exception {
 		Aexp t1 = parseTerm();
 		while (token == '+' || token == '-') {

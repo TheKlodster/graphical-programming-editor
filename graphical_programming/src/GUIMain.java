@@ -10,7 +10,7 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class GUI {
+public class GUIMain {
 
     private Console console = new Console();
     private JPanel buttonPanel, dragPanel, runPanel, consolePanel;
@@ -20,7 +20,7 @@ public class GUI {
     private HashMap<Character, Variable> variables;
     private ArrayList<JButton> sortedArray = new ArrayList<>();
 
-    public GUI() {
+    public GUIMain() {
         // Initialising the frame for the program. This involves setting the size, creating the BorderLayout
         // as well as choosing the background colour.
         JFrame frame = new JFrame();
@@ -100,6 +100,7 @@ public class GUI {
         variableButton.setActionCommand("variable");
         expButton.setActionCommand("expression");
         forButton.setActionCommand("for");
+        whileButton.setActionCommand("while");
         runButton.addActionListener(this::runProcedure);
 
         printButton.addActionListener(e -> {
@@ -318,8 +319,10 @@ public class GUI {
     }
 
     /**
+     * Creating a small window frame for the for loop. The user
+     * will be able to enter how many times they wish to loop.
      *
-     * @param actionCommand
+     * @param actionCommand the string name set for the button.
      */
     public void popUpForLoop(String actionCommand) {
         EventQueue.invokeLater(() -> {
@@ -381,5 +384,9 @@ public class GUI {
                 }
             });
         });
+    }
+
+    public static void main(String[] args) {
+        new GUIMain();
     }
 }
